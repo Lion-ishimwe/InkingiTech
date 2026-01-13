@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: CCTV Cameras - Collections
+---
+
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="absolute inset-0 opacity-25" style="background-image:url('https://images.unsplash.com/photo-1431440869543-efaf3388c585?w=1600&h=900&fit=crop');background-size:cover;background-position:center;"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4 relative z-10">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">CCTV Cameras</p>
+    <h1 class="text-4xl font-bold">Camera Kits & Monitoring Bundles</h1>
+    <p class="text-gray-200">Choose from dome, bullet, and PTZ packages with installation-ready accessories and smartphone monitoring.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/cctv/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to CCTV overview</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterInputs = document.querySelectorAll('.filter-input');
+    filterInputs.forEach(input => {
+      const listClass = input.dataset.filterList;
+      input.addEventListener('input', () => {
+        const query = input.value.toLowerCase();
+        document.querySelectorAll(`.${listClass}`).forEach(card => {
+          card.style.display = card.innerText.toLowerCase().includes(query) ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="camera-search">Search cameras</label>
+    <div class="relative">
+      <input id="camera-search" type="text" placeholder="Type to filter kits..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="camera-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set cameras = [
+      {title:"2MP Analog Black & White", price:"RWF 30,000", desc:"2MP analog black and white Hikvision.", img:"/assets/product/cctv 2mp.jpg"},
+      {title:"4MP Analog Black & White", price:"RWF 420,000", desc:"4MP analog black and white Hikvision.", img:"/assets/product/analog 4mp.jpg"},
+      {title:"8MP Analog Black & White ", price:"RWF 980,000", desc:"8MP analog black and white Hikvision.", img:"/assets/product/analog 8mp.jpg"},
+      {title:"6MP Analog B/W Hikvision", price:"RWF 530,000", desc:"High-resolution 6MP analog black & white cameras with long-range IR.", img:"/assets/product/analog 6mp.jpg"},
+      {title:"2MP Analog ColorVu Hikvision", price:"RWF 460,000", desc:"Full-color 2MP analog ColorVu cameras with built-in warm LEDs.", img:"/assets/product/2mp full.jpg"},
+      {title:"4MP Analog ColorVu Hikvision", price:"RWF 520,000", desc:"4MP analog ColorVu units ideal for retail and offices.", img:"/assets/product/4mp full.png"},
+      {title:"6MP Analog ColorVu Hikvision", price:"RWF 650,000", desc:"Enhanced 6MP ColorVu cameras with smart deterrent lights.", img:"/assets/product/6mp full.jpg"},
+      {title:"8MP Analog ColorVu Hikvision", price:"RWF 780,000", desc:"Ultra HD analog color system with HDR night imaging.", img:"/assets/product/CCTV1 8MP.jpg"},
+      {title:"2MP IP ColorVu Hikvision", price:"RWF 495,000", desc:"Network ColorVu cameras bringing vivid imagery to smart homes.", img:"/assets/product/2MP IP.jpg"},
+      {title:"4MP IP ColorVu Hikvision", price:"RWF 555,000", desc:"Mid-tier IP ColorVu set with analytics and PoE power.", img:"/assets/product/4MP IP.jpg"},
+      {title:"6MP IP ColorVu Hikvision", price:"RWF 690,000", desc:"High-resolution ColorVu IP cameras with AI-based detection.", img:"/assets/product/6MP IP.jpg"},
+      {title:"8MP IP ColorVu Hikvision", price:"RWF 830,000", desc:"Flagship 8MP IP ColorVu suite delivering cinematic night footage.", img:"/assets/product/8MP IP.jpg"},
+      {title:"Kit of 4 Cameras Black & White", price:"RWF 890,000", desc:"Complete 4-camera Hikvision kit with NVR, cabling, and power.", img:"/assets/product/KIT 4.jpg"},
+      {title:"Kit of 8 Cameras Black & White", price:"RWF 1,450,000", desc:"8-camera Hikvision bundle with storage, PoE, and mobile app setup.", img:"/assets/product/KIT 8.jpg"},
+      {title:"Kit of 4 Cameras ColorVu", price:"RWF 1,020,000", desc:"ColorVu Hikvision bundle with four cameras plus NVR.", img:"/assets/product/KIT 4 color.jpg"},
+      {title:"Kit of 8 Cameras ColorVu", price:"RWF 1,780,000", desc:"Eight-camera ColorVu kit with storage, PoE, and mobile app setup.", img:"/assets/product/KIT 8 color.jpg"},
+      {title:"Wi-Fi Panorama Camera", price:"RWF 50,000", desc:"360° Wi-Fi camera ideal for small shops and apartments.", img:"/assets/product/panaroma.jpg"},
+      {title:"Hikvision DeepinView 12MP", price:"RWF 460,000", desc:"IDS-2CD7A26G0-IZS camera with analytics and varifocal lens.", img:"/assets/product/12mp.jpg"},
+      {title:"Hikvision DS-2CD3686G2T-IZS (8MP)", price:"Contact for quote", desc:"8MP varifocal camera with AcuSense for false alarm reduction.", img:"/assets/product/8mp dome.jpg"},
+      {title:"Wifi Uniarch 3MP 360° Camera", price:"RWF 110,000", desc:"Panoramic Uniarch camera ideal for offices and boutiques.", img:"/assets/product/uniarch.png"},
+      {title:"Wifi IMILAB C22 Home Security Camera", price:"RWF 65,000", desc:"Smart home security camera with crystal-clear video.", img:"/assets/product/imilab.JPG"},
+      {title:"Wifi EZVIZ EC Dual 2K (3MP)", price:"RWF 117,000", desc:"Dual-lens EZVIZ camera capturing vivid 3MP footage.", img:"/assets/product/EZVIZ EC.jpg"},
+      {title:"Wifi IMILAB EC3 Lite 2K HD", price:"RWF 70,000", desc:"Outdoor-ready IMILAB camera with night vision and alerts.", img:"/assets/product/imilabec3.jpg"}
+    ] %}
+    {% for cam in cameras %}
+    {% set slug = cam.title | slug %}
+    <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="{{ cam.title }}" data-search-category="CCTV Cameras" data-search-description="{{ cam.desc }} {{ cam.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+      <img src="{{ cam.img }}" alt="{{ cam.title }}" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">{{ cam.title }}</h2>
+        <p class="text-gray-600 flex-1">{{ cam.desc }}</p>
+        <span class="text-blue-600 font-bold">{{ cam.price }}</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-{{ slug }}"
+            data-cart-title="{{ cam.title }}"
+            data-cart-price="{{ cam.price }}"
+            data-cart-desc="{{ cam.desc }}"
+            data-cart-img="{{ cam.img }}"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030711">
+  <title>Air Conditions - A&amp;B Innovation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/index.css">
+</head>
+<body class="min-h-screen antialiased">
+  <nav class="sticky top-0 z-50 bg-slate-950 bg-opacity-80 backdrop-blur-xl border-b border-white border-opacity-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-15 flex items-center justify-center">
+          <img src="/assets/product/logo.png" alt="A&amp;B Innovation logo" class="h-10 w-10 object-contain">
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.6em] text-gray-500">A&amp;B</p>
+          <p class="text-xl font-semibold text-white">A&amp;B Innovation</p>
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center space-x-4 text-sm font-semibold">
+        <a href="/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Home</a>
+        <a href="/services/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Services</a>
+        <a href="/products/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Products</a>
+        <a href="/gallery/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Gallery</a>
+        <a href="/about/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">About</a>
+        <a href="/contact/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center space-x-3">
+        <button type="button" class="ink-action text-sm bg-white text-green-900 border-white" data-search-trigger>
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+          Search
+        </button>
+        <a href="tel:+250785576541" class="ink-action text-sm bg-white text-green-900 border-white">
+          Call dispatch
+        </a>
+      </div>
+      <div class="flex items-center gap-3 lg:hidden">
+        <button type="button" class="p-2 rounded-full border border-white border-opacity-20 text-gray-200" data-search-trigger>
+          <span class="sr-only">Search catalog</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+        </button>
+        <button type="button" class="p-2 rounded-full border border-white border-opacity-20 text-gray-200" id="mobile-menu-button" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="lg:hidden hidden border-t border-white border-opacity-10 bg-slate-950 bg-opacity-90" id="mobile-menu">
+    <div class="px-4 py-4 space-y-2">
+      <button type="button" class="w-full flex items-center justify-center ink-action bg-white text-green-900 border-white" data-search-trigger>
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+        </svg>
+        Search catalog
+      </button>
+      <a href="/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Home</a>
+      <a href="/services/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Services</a>
+      <a href="/products/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Products</a>
+      <a href="/gallery/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Gallery</a>
+      <a href="/about/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">About</a>
+      <a href="/contact/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Contact</a>
+      <a href="tel:+250785576541" class="block text-center ink-action bg-white text-green-900 border-white w-full">Call dispatch</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!expanded).toString());
+    });
+  }
+</script>
+
+  <div id="global-search-overlay" class="hidden fixed inset-0 bg-slate-950 bg-opacity-90 backdrop-blur-2xl px-4 py-12 z-50 overflow-y-auto">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="ink-card p-8 relative space-y-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div>
+            <p class="ink-chip text-xs">Quick lookup</p>
+            <h2 class="text-3xl font-semibold mt-3">Search products & services</h2>
+            <p class="text-sm text-gray-500">Type at least two letters and press Enter to open the leading suggestion.</p>
+          </div>
+          <button type="button" class="ink-action ink-action--secondary px-4 py-2 text-sm" data-search-close>
+            Close overlay
+          </button>
+        </div>
+        <div class="relative">
+          <input id="global-search-input" type="text" placeholder="Search devices, services, accessories..." class="w-full filter-input pl-12 pr-4 py-3 text-base bg-transparent" autocomplete="off" />
+          <svg class="w-5 h-5 absolute left-4 top-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+        </div>
+        <div id="global-search-results" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+          <p class="text-sm text-gray-500">Start typing to see matching items.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button type="button" class="ink-action ink-action--secondary" data-search-close>Cancel</button>
+          <a href="/contact/" class="ink-action ink-action--primary">Talk to an engineer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="relative z-10">
+    
+<div class="bg-blue-900 text-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">Air Conditioning</p>
+    <h1 class="text-4xl font-bold">Cooling Units & Installation Kits</h1>
+    <p class="text-blue-100">
+      Energy-efficient AC systems, spare parts, and controls available with full installation in Rwanda.
+    </p>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+  <a href="/products/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
+    &#8592; Back to Categories
+  </a>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+  <div class="bg-white rounded-2xl border border-blue-100 shadow p-6 space-y-3">
+    <p class="text-sm text-gray-600">A&amp;B Innovation stocks full Bosch and LG climate systems plus every installation consumable required on site. The catalog below references the requested line items with their model numbers, descriptions, and WhatsApp cart toggles so you can mix equipment and fittings \"one on one.\"</p>
+    <p class="text-sm text-gray-600">Need a configuration not listed? Tap any card to add it to the WhatsApp cart and include your notes before sending.</p>
+  </div>
+
+  
+  <section class="space-y-6">
+    <div class="space-y-2">
+      <p class="uppercase tracking-[0.3em] text-xs text-blue-500">Featured Systems</p>
+      <h2 class="text-3xl font-semibold text-slate-900">Bosch & LG Climate Lineup</h2>
+      <p class="text-gray-600">Mix inverter splits, VRF outdoor units, cassette bodies, and fascia panels as needed. Each card lists the exact model reference from your inventory sheet.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      
+      
+      <div id="item-bosch-wall-mount-split-12000-btu-(inverter)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch Wall Mount Split 12,000 BTU (Inverter)" data-search-category="Air Conditions" data-search-description="High-efficiency inverter split for bedrooms, clinics, and compact offices. RWF 800,000" data-search-url="/products/air/#item-bosch-wall-mount-split-12000-btu-(inverter)">
+        <img src="/assets/product/landing/inverter.jpg" alt="Bosch Wall Mount Split 12,000 BTU (Inverter)" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch Wall Mount Split 12,000 BTU (Inverter)</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE Line 5000i CLL5000i W35</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">High-efficiency inverter split for bedrooms, clinics, and compact offices.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 800,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-wall-mount-split-12000-btu-(inverter)"
+            data-cart-title="Bosch Wall Mount Split 12,000 BTU (Inverter)"
+            data-cart-price="RWF 800,000"
+            data-cart-desc="High-efficiency inverter split for bedrooms, clinics, and compact offices."
+            data-cart-img="/assets/product/landing/inverter.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-wall-mount-split-12000-btu-(inverter)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-wall-mount-split-12000-btu-(non-inverter)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch Wall Mount Split 12,000 BTU (Non-Inverter)" data-search-category="Air Conditions" data-search-description="Fixed-speed wall mount supplied with remote control and copper kit. RWF 700,000" data-search-url="/products/air/#item-bosch-wall-mount-split-12000-btu-(non-inverter)">
+        <img src="/assets/product/landing/non-inverter.JPG" alt="Bosch Wall Mount Split 12,000 BTU (Non-Inverter)" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch Wall Mount Split 12,000 BTU (Non-Inverter)</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE Line 2000 CLL2000 W35</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Fixed-speed wall mount supplied with remote control and copper kit.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 700,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-wall-mount-split-12000-btu-(non-inverter)"
+            data-cart-title="Bosch Wall Mount Split 12,000 BTU (Non-Inverter)"
+            data-cart-price="RWF 700,000"
+            data-cart-desc="Fixed-speed wall mount supplied with remote control and copper kit."
+            data-cart-img="/assets/product/landing/non-inverter.JPG"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-wall-mount-split-12000-btu-(non-inverter)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-wall-mount-split-18000-btu-(inverter)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch Wall Mount Split 18,000 BTU (Inverter)" data-search-category="Air Conditions" data-search-description="Bigger 18k BTU inverter delivering silent performance and rapid cooling. RWF 1,100,000" data-search-url="/products/air/#item-bosch-wall-mount-split-18000-btu-(inverter)">
+        <img src="/assets/product/landing/18k inverter.png" alt="Bosch Wall Mount Split 18,000 BTU (Inverter)" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch Wall Mount Split 18,000 BTU (Inverter)</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE Line 5000i CLL5000i W53</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Bigger 18k BTU inverter delivering silent performance and rapid cooling.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 1,100,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-wall-mount-split-18000-btu-(inverter)"
+            data-cart-title="Bosch Wall Mount Split 18,000 BTU (Inverter)"
+            data-cart-price="RWF 1,100,000"
+            data-cart-desc="Bigger 18k BTU inverter delivering silent performance and rapid cooling."
+            data-cart-img="/assets/product/landing/18k inverter.png"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-wall-mount-split-18000-btu-(inverter)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-wall-mount-split-18000-btu-(non-inverter)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch Wall Mount Split 18,000 BTU (Non-Inverter)" data-search-category="Air Conditions" data-search-description="Reliable fixed-speed split ideal for living rooms and executive suites. RWF 1,000,000" data-search-url="/products/air/#item-bosch-wall-mount-split-18000-btu-(non-inverter)">
+        <img src="/assets/product/landing/18k non-inverter.jpg" alt="Bosch Wall Mount Split 18,000 BTU (Non-Inverter)" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch Wall Mount Split 18,000 BTU (Non-Inverter)</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE Line 2000 CLL2000 W53</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Reliable fixed-speed split ideal for living rooms and executive suites.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 1,000,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-wall-mount-split-18000-btu-(non-inverter)"
+            data-cart-title="Bosch Wall Mount Split 18,000 BTU (Non-Inverter)"
+            data-cart-price="RWF 1,000,000"
+            data-cart-desc="Reliable fixed-speed split ideal for living rooms and executive suites."
+            data-cart-img="/assets/product/landing/18k non-inverter.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-wall-mount-split-18000-btu-(non-inverter)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-wall-mount-split-24000-btu-(non-inverter)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch Wall Mount Split 24,000 BTU (Non-Inverter)" data-search-category="Air Conditions" data-search-description="Large capacity wall mount for open-plan offices and reception halls. RWF 1,400,000" data-search-url="/products/air/#item-bosch-wall-mount-split-24000-btu-(non-inverter)">
+        <img src="/assets/product/landing/24k non-inverter.jpg" alt="Bosch Wall Mount Split 24,000 BTU (Non-Inverter)" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch Wall Mount Split 24,000 BTU (Non-Inverter)</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE Line 2000 CLL2000 W70</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Large capacity wall mount for open-plan offices and reception halls.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 1,400,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-wall-mount-split-24000-btu-(non-inverter)"
+            data-cart-title="Bosch Wall Mount Split 24,000 BTU (Non-Inverter)"
+            data-cart-price="RWF 1,400,000"
+            data-cart-desc="Large capacity wall mount for open-plan offices and reception halls."
+            data-cart-img="/assets/product/landing/24k non-inverter.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-wall-mount-split-24000-btu-(non-inverter)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-wall-mount-split-22000-btu-(inverter)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch Wall Mount Split 22,000 BTU (Inverter)" data-search-category="Air Conditions" data-search-description="22k BTU inverter split bridging the gap between commercial and residential needs. RWF 1,450,000" data-search-url="/products/air/#item-bosch-wall-mount-split-22000-btu-(inverter)">
+        <img src="/assets/product/landing/22k inverter.png" alt="Bosch Wall Mount Split 22,000 BTU (Inverter)" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch Wall Mount Split 22,000 BTU (Inverter)</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE Line 5000i CLL5000i W65</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">22k BTU inverter split bridging the gap between commercial and residential needs.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 1,450,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-wall-mount-split-22000-btu-(inverter)"
+            data-cart-title="Bosch Wall Mount Split 22,000 BTU (Inverter)"
+            data-cart-price="RWF 1,450,000"
+            data-cart-desc="22k BTU inverter split bridging the gap between commercial and residential needs."
+            data-cart-img="/assets/product/landing/22k inverter.png"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-wall-mount-split-22000-btu-(inverter)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-vrf-outdoor-18-kw" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch VRF Outdoor 18 kW" data-search-category="Air Conditions" data-search-description="VRF outdoor module supporting multiple indoor units on a single loop. RWF 4,500,000" data-search-url="/products/air/#item-bosch-vrf-outdoor-18-kw">
+        <img src="/assets/product/landing/vrf 18k.jpg" alt="Bosch VRF Outdoor 18 kW" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch VRF Outdoor 18 kW</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE 5000 VRF MDCI18-3 60btu</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">VRF outdoor module supporting multiple indoor units on a single loop.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 4,500,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-vrf-outdoor-18-kw"
+            data-cart-title="Bosch VRF Outdoor 18 kW"
+            data-cart-price="RWF 4,500,000"
+            data-cart-desc="VRF outdoor module supporting multiple indoor units on a single loop."
+            data-cart-img="/assets/product/landing/vrf 18k.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-vrf-outdoor-18-kw"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-vrf-outdoor-56-kw" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch VRF Outdoor 56 kW" data-search-category="Air Conditions" data-search-description="High-tonnage VRF condenser for malls, hospitals, and campuses. RWF 9,550,000" data-search-url="/products/air/#item-bosch-vrf-outdoor-56-kw">
+        <img src="/assets/product/landing/vrf 56kw.png" alt="Bosch VRF Outdoor 56 kW" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch VRF Outdoor 56 kW</h3>
+            
+            <p class="text-sm text-gray-500">Model: AIR FLUX 5300 A AF5300A 56-3</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">High-tonnage VRF condenser for malls, hospitals, and campuses.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 9,550,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-vrf-outdoor-56-kw"
+            data-cart-title="Bosch VRF Outdoor 56 kW"
+            data-cart-price="RWF 9,550,000"
+            data-cart-desc="High-tonnage VRF condenser for malls, hospitals, and campuses."
+            data-cart-img="/assets/product/landing/vrf 56kw.png"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-vrf-outdoor-56-kw"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-bosch-18000-btu-ductable-split" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Bosch 18,000 BTU Ductable Split" data-search-category="Air Conditions" data-search-description="Ductable indoor/outdoor pair ready for concealed distribution. RWF 3,500,000" data-search-url="/products/air/#item-bosch-18000-btu-ductable-split">
+        <img src="/assets/product/landing/18k Ductable Split.jpg" alt="Bosch 18,000 BTU Ductable Split" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Bosch 18,000 BTU Ductable Split</h3>
+            
+            <p class="text-sm text-gray-500">Model: CLIMATE 5000 SCI 18-1 OU</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Ductable indoor/outdoor pair ready for concealed distribution.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 3,500,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-bosch-18000-btu-ductable-split"
+            data-cart-title="Bosch 18,000 BTU Ductable Split"
+            data-cart-price="RWF 3,500,000"
+            data-cart-desc="Ductable indoor/outdoor pair ready for concealed distribution."
+            data-cart-img="/assets/product/landing/18k Ductable Split.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-bosch-18000-btu-ductable-split"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-lg-cassette-18000-btu-4-way" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="LG Cassette 18,000 BTU 4-Way" data-search-category="Air Conditions" data-search-description="Four-way cassette with drain pump and round diffuser fascia. RWF 2,100,000" data-search-url="/products/air/#item-lg-cassette-18000-btu-4-way">
+        <img src="/assets/product/landing/casette 18k LG.jpg" alt="LG Cassette 18,000 BTU 4-Way" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">LG Cassette 18,000 BTU 4-Way</h3>
+            
+            <p class="text-sm text-gray-500">Model: ATUQ22GPLA2</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Four-way cassette with drain pump and round diffuser fascia.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 2,100,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-lg-cassette-18000-btu-4-way"
+            data-cart-title="LG Cassette 18,000 BTU 4-Way"
+            data-cart-price="RWF 2,100,000"
+            data-cart-desc="Four-way cassette with drain pump and round diffuser fascia."
+            data-cart-img="/assets/product/landing/casette 18k LG.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-lg-cassette-18000-btu-4-way"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-lg-cassette-24000-btu-4-way" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="LG Cassette 24,000 BTU 4-Way" data-search-category="Air Conditions" data-search-description="Mid-size cassette for boardrooms and retail spaces. RWF 2,400,000" data-search-url="/products/air/#item-lg-cassette-24000-btu-4-way">
+        <img src="/assets/product/landing/LG Cassette 24k.jpg" alt="LG Cassette 24,000 BTU 4-Way" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">LG Cassette 24,000 BTU 4-Way</h3>
+            
+            <p class="text-sm text-gray-500">Model: ATUQ30GPLA2</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Mid-size cassette for boardrooms and retail spaces.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 2,400,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-lg-cassette-24000-btu-4-way"
+            data-cart-title="LG Cassette 24,000 BTU 4-Way"
+            data-cart-price="RWF 2,400,000"
+            data-cart-desc="Mid-size cassette for boardrooms and retail spaces."
+            data-cart-img="/assets/product/landing/LG Cassette 24k.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-lg-cassette-24000-btu-4-way"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-lg-cassette-36000-btu-4-way" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="LG Cassette 36,000 BTU 4-Way" data-search-category="Air Conditions" data-search-description="High-capacity LG cassette with 360-degree discharge and wired controller. RWF 3,400,000" data-search-url="/products/air/#item-lg-cassette-36000-btu-4-way">
+        <img src="/assets/product/landing/LG Cassette 36k.jpg" alt="LG Cassette 36,000 BTU 4-Way" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">LG Cassette 36,000 BTU 4-Way</h3>
+            
+          </div>
+          <p class="text-gray-600 flex-1">High-capacity LG cassette with 360-degree discharge and wired controller.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 3,400,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-lg-cassette-36000-btu-4-way"
+            data-cart-title="LG Cassette 36,000 BTU 4-Way"
+            data-cart-price="RWF 3,400,000"
+            data-cart-desc="High-capacity LG cassette with 360-degree discharge and wired controller."
+            data-cart-img="/assets/product/landing/LG Cassette 36k.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-lg-cassette-36000-btu-4-way"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-lg-cassette-48000-btu-4-way" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="LG Cassette 48,000 BTU 4-Way" data-search-category="Air Conditions" data-search-description="Largest LG cassette supporting expansive halls up to 48k BTU. RWF 4,500,000" data-search-url="/products/air/#item-lg-cassette-48000-btu-4-way">
+        <img src="/assets/product/landing/LG Cassette 48k.JPG" alt="LG Cassette 48,000 BTU 4-Way" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">LG Cassette 48,000 BTU 4-Way</h3>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Largest LG cassette supporting expansive halls up to 48k BTU.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 4,500,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-lg-cassette-48000-btu-4-way"
+            data-cart-title="LG Cassette 48,000 BTU 4-Way"
+            data-cart-price="RWF 4,500,000"
+            data-cart-desc="Largest LG cassette supporting expansive halls up to 48k BTU."
+            data-cart-img="/assets/product/landing/LG Cassette 48k.JPG"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-lg-cassette-48000-btu-4-way"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-floor-standing-60000-btu" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="Floor Standing 60,000 BTU" data-search-category="Air Conditions" data-search-description="Tower-style indoor unit for showrooms and churches. RWF 2,600,000" data-search-url="/products/air/#item-floor-standing-60000-btu">
+        <img src="/assets/product/landing/Floor Standing 60k.png" alt="Floor Standing 60,000 BTU" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">Floor Standing 60,000 BTU</h3>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Tower-style indoor unit for showrooms and churches.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 2,600,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-floor-standing-60000-btu"
+            data-cart-title="Floor Standing 60,000 BTU"
+            data-cart-price="RWF 2,600,000"
+            data-cart-desc="Tower-style indoor unit for showrooms and churches."
+            data-cart-img="/assets/product/landing/Floor Standing 60k.png"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-floor-standing-60000-btu"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-vrf-cassette-bosch-90-1p" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="VRF Cassette Bosch 90-1P" data-search-category="Air Conditions" data-search-description="Bosch VRF cassette with Y-branch-ready headers. RWF 2,000,000" data-search-url="/products/air/#item-vrf-cassette-bosch-90-1p">
+        <img src="/assets/product/landing/VRF Cassette Bosch 90-1P.jpg" alt="VRF Cassette Bosch 90-1P" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">VRF Cassette Bosch 90-1P</h3>
+            
+            <p class="text-sm text-gray-500">Model: AF-4CR 90-1 P (36000 BTU)</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Bosch VRF cassette with Y-branch-ready headers.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 2,000,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-vrf-cassette-bosch-90-1p"
+            data-cart-title="VRF Cassette Bosch 90-1P"
+            data-cart-price="RWF 2,000,000"
+            data-cart-desc="Bosch VRF cassette with Y-branch-ready headers."
+            data-cart-img="/assets/product/landing/VRF Cassette Bosch 90-1P.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-vrf-cassette-bosch-90-1p"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-vrf-cassette-bosch-71-2p" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="VRF Cassette Bosch 71-2P" data-search-category="Air Conditions" data-search-description="Compact VRF cassette optimized for hotel rooms. RWF 1,000,000" data-search-url="/products/air/#item-vrf-cassette-bosch-71-2p">
+        <img src="/assets/product/landing/VRF Cassette Bosch 71-2P.png" alt="VRF Cassette Bosch 71-2P" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">VRF Cassette Bosch 71-2P</h3>
+            
+            <p class="text-sm text-gray-500">Model: AF-4CR 71-2 P (24000 BTU)</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Compact VRF cassette optimized for hotel rooms.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 1,000,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-vrf-cassette-bosch-71-2p"
+            data-cart-title="VRF Cassette Bosch 71-2P"
+            data-cart-price="RWF 1,000,000"
+            data-cart-desc="Compact VRF cassette optimized for hotel rooms."
+            data-cart-img="/assets/product/landing/VRF Cassette Bosch 71-2P.png"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-vrf-cassette-bosch-71-2p"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-vrf-panel-bosch-90-1p" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="VRF Panel Bosch 90-1P" data-search-category="Air Conditions" data-search-description="Bosch fascia panel for 90-1P cassette bodies. RWF 680,000" data-search-url="/products/air/#item-vrf-panel-bosch-90-1p">
+        <img src="/assets/product/landing/VRF Panel Bosch 90-1P.jpg" alt="VRF Panel Bosch 90-1P" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">VRF Panel Bosch 90-1P</h3>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Bosch fascia panel for 90-1P cassette bodies.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 680,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-vrf-panel-bosch-90-1p"
+            data-cart-title="VRF Panel Bosch 90-1P"
+            data-cart-price="RWF 680,000"
+            data-cart-desc="Bosch fascia panel for 90-1P cassette bodies."
+            data-cart-img="/assets/product/landing/VRF Panel Bosch 90-1P.jpg"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-vrf-panel-bosch-90-1p"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+      
+      <div id="item-vrf-panel-bosch-71-2p" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="VRF Panel Bosch 71-2P" data-search-category="Air Conditions" data-search-description="Decor panel matched to Bosch 71-2P cassettes. RWF 580,000" data-search-url="/products/air/#item-vrf-panel-bosch-71-2p">
+        <img src="/assets/product/landing/VRF Panel Bosch 71-2P.JPG" alt="VRF Panel Bosch 71-2P" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">VRF Panel Bosch 71-2P</h3>
+            
+            <p class="text-sm text-gray-500">Model: AF-P 4CR8733500457</p>
+            
+          </div>
+          <p class="text-gray-600 flex-1">Decor panel matched to Bosch 71-2P cassettes.</p>
+          <p class="text-xl font-bold text-blue-600">RWF 580,000</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/air/-system-vrf-panel-bosch-71-2p"
+            data-cart-title="VRF Panel Bosch 71-2P"
+            data-cart-price="RWF 580,000"
+            data-cart-desc="Decor panel matched to Bosch 71-2P cassettes."
+            data-cart-img="/assets/product/landing/VRF Panel Bosch 71-2P.JPG"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="/products/air/#item-vrf-panel-bosch-71-2p"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  
+  <section class="space-y-6">
+    <div class="space-y-2">
+      <p class="uppercase tracking-[0.3em] text-xs text-blue-500">Installation Parts</p>
+      <h2 class="text-3xl font-semibold text-slate-900">Accessories, Copper, Insulation & Controls</h2>
+      <p class="text-gray-600">Each consumable below corresponds to the provided spreadsheet so site engineers can pick only what is needed.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      
+      
+      <div id="item-insulation-kit-14&quot;-+-38&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Insulation Kit 1/4&quot; + 3/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Twin-tube elastomeric insulation sized for standard mini-split lines. RWF 52,000" data-search-url="/products/air/#item-insulation-kit-14&quot;-+-38&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Insulation Kit 1/4&quot; + 3/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Twin-tube elastomeric insulation sized for standard mini-split lines.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 52,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-insulation-kit-14&quot;-+-38&quot;"
+          data-cart-title="Insulation Kit 1/4&quot; + 3/8&quot;"
+          data-cart-price="RWF 52,000"
+          data-cart-desc="Twin-tube elastomeric insulation sized for standard mini-split lines."
+          data-cart-img="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-insulation-kit-14&quot;-+-38&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-insulation-kit-14&quot;-+-12&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Insulation Kit 1/4&quot; + 1/2&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Pre-slit insulation for medium capacity suction + liquid lines. RWF 55,000" data-search-url="/products/air/#item-insulation-kit-14&quot;-+-12&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Insulation Kit 1/4&quot; + 1/2&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Pre-slit insulation for medium capacity suction + liquid lines.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 55,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-insulation-kit-14&quot;-+-12&quot;"
+          data-cart-title="Insulation Kit 1/4&quot; + 1/2&quot;"
+          data-cart-price="RWF 55,000"
+          data-cart-desc="Pre-slit insulation for medium capacity suction + liquid lines."
+          data-cart-img="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-insulation-kit-14&quot;-+-12&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-insulation-kit-38&quot;-+-58&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Insulation Kit 3/8&quot; + 5/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Thicker kit to keep VRF branch runs sweat-free. RWF 75,000" data-search-url="/products/air/#item-insulation-kit-38&quot;-+-58&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Insulation Kit 3/8&quot; + 5/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Thicker kit to keep VRF branch runs sweat-free.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 75,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-insulation-kit-38&quot;-+-58&quot;"
+          data-cart-title="Insulation Kit 3/8&quot; + 5/8&quot;"
+          data-cart-price="RWF 75,000"
+          data-cart-desc="Thicker kit to keep VRF branch runs sweat-free."
+          data-cart-img="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-insulation-kit-38&quot;-+-58&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-air-condition-af-bj03-y-branch" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Air Condition AF-BJ03 Y-Branch" data-search-category="Air Conditioning Accessories" data-search-description="Refnet kit for splitting VRF refrigerant circuits. RWF 120,000" data-search-url="/products/air/#item-air-condition-af-bj03-y-branch">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Air Condition AF-BJ03 Y-Branch</p>
+          
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: AF-BJ03</p>
+          
+        </div>
+        <p class="text-gray-600">Refnet kit for splitting VRF refrigerant circuits.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 120,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-air-condition-af-bj03-y-branch"
+          data-cart-title="Air Condition AF-BJ03 Y-Branch"
+          data-cart-price="RWF 120,000"
+          data-cart-desc="Refnet kit for splitting VRF refrigerant circuits."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-air-condition-af-bj03-y-branch"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-air-condition-af-bj05-y-branch" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Air Condition AF-BJ05 Y-Branch" data-search-category="Air Conditioning Accessories" data-search-description="Heavy-duty Y-branch for multi-port VRF trees. RWF 170,000" data-search-url="/products/air/#item-air-condition-af-bj05-y-branch">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Air Condition AF-BJ05 Y-Branch</p>
+          
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: AF-BJ05</p>
+          
+        </div>
+        <p class="text-gray-600">Heavy-duty Y-branch for multi-port VRF trees.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 170,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-air-condition-af-bj05-y-branch"
+          data-cart-title="Air Condition AF-BJ05 Y-Branch"
+          data-cart-price="RWF 170,000"
+          data-cart-desc="Heavy-duty Y-branch for multi-port VRF trees."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-air-condition-af-bj05-y-branch"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-air-condition-af-bj06-y-branch" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Air Condition AF-BJ06 Y-Branch" data-search-category="Air Conditioning Accessories" data-search-description="Supports additional indoor heads and longer piping. RWF 200,000" data-search-url="/products/air/#item-air-condition-af-bj06-y-branch">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Air Condition AF-BJ06 Y-Branch</p>
+          
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: AF-BJ06</p>
+          
+        </div>
+        <p class="text-gray-600">Supports additional indoor heads and longer piping.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 200,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-air-condition-af-bj06-y-branch"
+          data-cart-title="Air Condition AF-BJ06 Y-Branch"
+          data-cart-price="RWF 200,000"
+          data-cart-desc="Supports additional indoor heads and longer piping."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-air-condition-af-bj06-y-branch"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-air-condition-af-bj07-y-branch" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Air Condition AF-BJ07 Y-Branch" data-search-category="Air Conditioning Accessories" data-search-description="Largest Bosch refnet with brazed reducers. RWF 390,000" data-search-url="/products/air/#item-air-condition-af-bj07-y-branch">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Air Condition AF-BJ07 Y-Branch</p>
+          
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: AF-BJ07</p>
+          
+        </div>
+        <p class="text-gray-600">Largest Bosch refnet with brazed reducers.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 390,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-air-condition-af-bj07-y-branch"
+          data-cart-title="Air Condition AF-BJ07 Y-Branch"
+          data-cart-price="RWF 390,000"
+          data-cart-desc="Largest Bosch refnet with brazed reducers."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-air-condition-af-bj07-y-branch"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-axial-ventilation-fan" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Axial Ventilation Fan" data-search-category="Air Conditioning Accessories" data-search-description="Large axial fan for plant rooms and heat exhaust. Contact for quote" data-search-url="/products/air/#item-axial-ventilation-fan">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Axial Ventilation Fan</p>
+          
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: AXC900-10/13-4(B)</p>
+          
+        </div>
+        <p class="text-gray-600">Large axial fan for plant rooms and heat exhaust.</p>
+        <p class="text-lg font-bold text-blue-600">Contact for quote</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-axial-ventilation-fan"
+          data-cart-title="Axial Ventilation Fan"
+          data-cart-price="Contact for quote"
+          data-cart-desc="Large axial fan for plant rooms and heat exhaust."
+          data-cart-img="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-axial-ventilation-fan"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-black-rubber-insulation-1-18&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Black Rubber Insulation 1 1/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Flexible insulation sleeve for suction pipes. RWF 2,500" data-search-url="/products/air/#item-black-rubber-insulation-1-18&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Black Rubber Insulation 1 1/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Flexible insulation sleeve for suction pipes.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 2,500</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-black-rubber-insulation-1-18&quot;"
+          data-cart-title="Black Rubber Insulation 1 1/8&quot;"
+          data-cart-price="RWF 2,500"
+          data-cart-desc="Flexible insulation sleeve for suction pipes."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-black-rubber-insulation-1-18&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-black-rubber-insulation-1-38&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Black Rubber Insulation 1 3/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Thick wall insulation for larger VRF lines. RWF 3,500" data-search-url="/products/air/#item-black-rubber-insulation-1-38&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Black Rubber Insulation 1 3/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Thick wall insulation for larger VRF lines.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 3,500</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-black-rubber-insulation-1-38&quot;"
+          data-cart-title="Black Rubber Insulation 1 3/8&quot;"
+          data-cart-price="RWF 3,500"
+          data-cart-desc="Thick wall insulation for larger VRF lines."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-black-rubber-insulation-1-38&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-black-rubber-insulation-1-58&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Black Rubber Insulation 1 5/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Premium elastomeric insulation for 1 5/8&quot; pipes. RWF 4,000" data-search-url="/products/air/#item-black-rubber-insulation-1-58&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Black Rubber Insulation 1 5/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Premium elastomeric insulation for 1 5/8&quot; pipes.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 4,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-black-rubber-insulation-1-58&quot;"
+          data-cart-title="Black Rubber Insulation 1 5/8&quot;"
+          data-cart-price="RWF 4,000"
+          data-cart-desc="Premium elastomeric insulation for 1 5/8&quot; pipes."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-black-rubber-insulation-1-58&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-black-rubber-insulation-1-34&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Black Rubber Insulation 1 3/4&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Continuous tube insulation for risers and plenums. RWF 3,000" data-search-url="/products/air/#item-black-rubber-insulation-1-34&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Black Rubber Insulation 1 3/4&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Continuous tube insulation for risers and plenums.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 3,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-black-rubber-insulation-1-34&quot;"
+          data-cart-title="Black Rubber Insulation 1 3/4&quot;"
+          data-cart-price="RWF 3,000"
+          data-cart-desc="Continuous tube insulation for risers and plenums."
+          data-cart-img="https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-black-rubber-insulation-1-34&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-copper-coil-14&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Copper Coil 1/4&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Soft-drawn refrigeration copper for liquid lines. RWF 42,000" data-search-url="/products/air/#item-copper-coil-14&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Copper Coil 1/4&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Soft-drawn refrigeration copper for liquid lines.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 42,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-copper-coil-14&quot;"
+          data-cart-title="Copper Coil 1/4&quot;"
+          data-cart-price="RWF 42,000"
+          data-cart-desc="Soft-drawn refrigeration copper for liquid lines."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-copper-coil-14&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-copper-coil-38&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Copper Coil 3/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="Flexible 3/8&quot; coil for VRF branches and drain pans. RWF 67,000" data-search-url="/products/air/#item-copper-coil-38&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Copper Coil 3/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">Flexible 3/8&quot; coil for VRF branches and drain pans.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 67,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-copper-coil-38&quot;"
+          data-cart-title="Copper Coil 3/8&quot;"
+          data-cart-price="RWF 67,000"
+          data-cart-desc="Flexible 3/8&quot; coil for VRF branches and drain pans."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-copper-coil-38&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-copper-coil-12&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Copper Coil 1/2&quot;" data-search-category="Air Conditioning Accessories" data-search-description="1/2&quot; refrigeration tubing supplied in 15m rolls. RWF 75,000" data-search-url="/products/air/#item-copper-coil-12&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Copper Coil 1/2&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">1/2&quot; refrigeration tubing supplied in 15m rolls.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 75,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-copper-coil-12&quot;"
+          data-cart-title="Copper Coil 1/2&quot;"
+          data-cart-price="RWF 75,000"
+          data-cart-desc="1/2&quot; refrigeration tubing supplied in 15m rolls."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-copper-coil-12&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-copper-coil-58&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Copper Coil 5/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="5/8&quot; coil for high-capacity suction lines. RWF 125,000" data-search-url="/products/air/#item-copper-coil-58&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Copper Coil 5/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">5/8&quot; coil for high-capacity suction lines.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 125,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-copper-coil-58&quot;"
+          data-cart-title="Copper Coil 5/8&quot;"
+          data-cart-price="RWF 125,000"
+          data-cart-desc="5/8&quot; coil for high-capacity suction lines."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-copper-coil-58&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-copper-coil-34&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Copper Coil 3/4&quot;" data-search-category="Air Conditioning Accessories" data-search-description="3/4&quot; refrigeration coil for long VRF runs. RWF 156,000" data-search-url="/products/air/#item-copper-coil-34&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Copper Coil 3/4&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">3/4&quot; refrigeration coil for long VRF runs.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 156,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-copper-coil-34&quot;"
+          data-cart-title="Copper Coil 3/4&quot;"
+          data-cart-price="RWF 156,000"
+          data-cart-desc="3/4&quot; refrigeration coil for long VRF runs."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-copper-coil-34&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-copper-coil-78&quot;" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Copper Coil 7/8&quot;" data-search-category="Air Conditioning Accessories" data-search-description="7/8&quot; soft copper for trunk lines. RWF 243,000" data-search-url="/products/air/#item-copper-coil-78&quot;">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Copper Coil 7/8&quot;</p>
+          
+        </div>
+        <p class="text-gray-600">7/8&quot; soft copper for trunk lines.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 243,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-copper-coil-78&quot;"
+          data-cart-title="Copper Coil 7/8&quot;"
+          data-cart-price="RWF 243,000"
+          data-cart-desc="7/8&quot; soft copper for trunk lines."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-copper-coil-78&quot;"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-fire-dump" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Fire Dump" data-search-category="Air Conditioning Accessories" data-search-description="Fire damper/dump assembly for duct safety shutoff. RWF 250,000" data-search-url="/products/air/#item-fire-dump">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Fire Dump</p>
+          
+        </div>
+        <p class="text-gray-600">Fire damper/dump assembly for duct safety shutoff.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 250,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-fire-dump"
+          data-cart-title="Fire Dump"
+          data-cart-price="RWF 250,000"
+          data-cart-desc="Fire damper/dump assembly for duct safety shutoff."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-fire-dump"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-galvanized-sheet-0.6-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Galvanized Sheet 0.6 mm" data-search-category="Air Conditioning Accessories" data-search-description="Gauge 0.6 mm sheet for duct fabrication. RWF 36,000" data-search-url="/products/air/#item-galvanized-sheet-0.6-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Galvanized Sheet 0.6 mm</p>
+          
+        </div>
+        <p class="text-gray-600">Gauge 0.6 mm sheet for duct fabrication.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 36,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-galvanized-sheet-0.6-mm"
+          data-cart-title="Galvanized Sheet 0.6 mm"
+          data-cart-price="RWF 36,000"
+          data-cart-desc="Gauge 0.6 mm sheet for duct fabrication."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-galvanized-sheet-0.6-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-galvanized-sheet-0.8-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Galvanized Sheet 0.8 mm" data-search-category="Air Conditioning Accessories" data-search-description="Stiffer GI sheet for plenums and transitions. RWF 48,000" data-search-url="/products/air/#item-galvanized-sheet-0.8-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Galvanized Sheet 0.8 mm</p>
+          
+        </div>
+        <p class="text-gray-600">Stiffer GI sheet for plenums and transitions.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 48,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-galvanized-sheet-0.8-mm"
+          data-cart-title="Galvanized Sheet 0.8 mm"
+          data-cart-price="RWF 48,000"
+          data-cart-desc="Stiffer GI sheet for plenums and transitions."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-galvanized-sheet-0.8-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-galvanized-sheet-1.0-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Galvanized Sheet 1.0 mm" data-search-category="Air Conditioning Accessories" data-search-description="Heavy gauge duct sheet for outdoor sections. RWF 65,000" data-search-url="/products/air/#item-galvanized-sheet-1.0-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Galvanized Sheet 1.0 mm</p>
+          
+        </div>
+        <p class="text-gray-600">Heavy gauge duct sheet for outdoor sections.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 65,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-galvanized-sheet-1.0-mm"
+          data-cart-title="Galvanized Sheet 1.0 mm"
+          data-cart-price="RWF 65,000"
+          data-cart-desc="Heavy gauge duct sheet for outdoor sections."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-galvanized-sheet-1.0-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-pvc-pipe-pn16-50-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="PVC Pipe PN16 50 mm" data-search-category="Air Conditioning Accessories" data-search-description="High-pressure condensate/header drain pipe. RWF 11,000" data-search-url="/products/air/#item-pvc-pipe-pn16-50-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">PVC Pipe PN16 50 mm</p>
+          
+        </div>
+        <p class="text-gray-600">High-pressure condensate/header drain pipe.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 11,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-pvc-pipe-pn16-50-mm"
+          data-cart-title="PVC Pipe PN16 50 mm"
+          data-cart-price="RWF 11,000"
+          data-cart-desc="High-pressure condensate/header drain pipe."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-pvc-pipe-pn16-50-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-pvc-pipe-63-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="PVC Pipe 63 mm" data-search-category="Air Conditioning Accessories" data-search-description="Rigid PVC for gravity drains and pump discharge. RWF 16,000" data-search-url="/products/air/#item-pvc-pipe-63-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">PVC Pipe 63 mm</p>
+          
+        </div>
+        <p class="text-gray-600">Rigid PVC for gravity drains and pump discharge.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 16,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-pvc-pipe-63-mm"
+          data-cart-title="PVC Pipe 63 mm"
+          data-cart-price="RWF 16,000"
+          data-cart-desc="Rigid PVC for gravity drains and pump discharge."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-pvc-pipe-63-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-pvc-pipe-90-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="PVC Pipe 90 mm" data-search-category="Air Conditioning Accessories" data-search-description="90 mm drain/duct sleeve pipe. RWF 26,000" data-search-url="/products/air/#item-pvc-pipe-90-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">PVC Pipe 90 mm</p>
+          
+        </div>
+        <p class="text-gray-600">90 mm drain/duct sleeve pipe.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 26,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-pvc-pipe-90-mm"
+          data-cart-title="PVC Pipe 90 mm"
+          data-cart-price="RWF 26,000"
+          data-cart-desc="90 mm drain/duct sleeve pipe."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-pvc-pipe-90-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-pvc-pipe-110-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="PVC Pipe 110 mm" data-search-category="Air Conditioning Accessories" data-search-description="Oversized PVC for multiple condensate lines. Contact for quote" data-search-url="/products/air/#item-pvc-pipe-110-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">PVC Pipe 110 mm</p>
+          
+        </div>
+        <p class="text-gray-600">Oversized PVC for multiple condensate lines.</p>
+        <p class="text-lg font-bold text-blue-600">Contact for quote</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-pvc-pipe-110-mm"
+          data-cart-title="PVC Pipe 110 mm"
+          data-cart-price="Contact for quote"
+          data-cart-desc="Oversized PVC for multiple condensate lines."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-pvc-pipe-110-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-refrigerant-gas-r410a" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Refrigerant Gas R410A" data-search-category="Air Conditioning Accessories" data-search-description="Virgin R410A cylinders suitable for inverter units. RWF 130,000" data-search-url="/products/air/#item-refrigerant-gas-r410a">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Refrigerant Gas R410A</p>
+          
+        </div>
+        <p class="text-gray-600">Virgin R410A cylinders suitable for inverter units.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 130,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-refrigerant-gas-r410a"
+          data-cart-title="Refrigerant Gas R410A"
+          data-cart-price="RWF 130,000"
+          data-cart-desc="Virgin R410A cylinders suitable for inverter units."
+          data-cart-img="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-refrigerant-gas-r410a"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-remote-controller-(not-wired)" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Remote Controller (Not Wired)" data-search-category="Air Conditioning Accessories" data-search-description="IR remote kit for wall splits and consoles. RWF 60,000" data-search-url="/products/air/#item-remote-controller-(not-wired)">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Remote Controller (Not Wired)</p>
+          
+        </div>
+        <p class="text-gray-600">IR remote kit for wall splits and consoles.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 60,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-remote-controller-(not-wired)"
+          data-cart-title="Remote Controller (Not Wired)"
+          data-cart-price="RWF 60,000"
+          data-cart-desc="IR remote kit for wall splits and consoles."
+          data-cart-img="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-remote-controller-(not-wired)"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-remote-controller-(wired)" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Remote Controller (Wired)" data-search-category="Air Conditioning Accessories" data-search-description="Wall-mounted wired controller for VRF/ducted units. RWF 260,000" data-search-url="/products/air/#item-remote-controller-(wired)">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Remote Controller (Wired)</p>
+          
+        </div>
+        <p class="text-gray-600">Wall-mounted wired controller for VRF/ducted units.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 260,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-remote-controller-(wired)"
+          data-cart-title="Remote Controller (Wired)"
+          data-cart-price="RWF 260,000"
+          data-cart-desc="Wall-mounted wired controller for VRF/ducted units."
+          data-cart-img="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-remote-controller-(wired)"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-small-fan-assembly" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Small Fan Assembly" data-search-category="Air Conditioning Accessories" data-search-description="Compact fresh air fan for utility rooms. RWF 300,000" data-search-url="/products/air/#item-small-fan-assembly">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Small Fan Assembly</p>
+          
+        </div>
+        <p class="text-gray-600">Compact fresh air fan for utility rooms.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 300,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-small-fan-assembly"
+          data-cart-title="Small Fan Assembly"
+          data-cart-price="RWF 300,000"
+          data-cart-desc="Compact fresh air fan for utility rooms."
+          data-cart-img="https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-small-fan-assembly"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-vrf-panel-bosch-90-1p" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="VRF Panel Bosch 90-1P" data-search-category="Air Conditioning Accessories" data-search-description="Replacement decorative panel for 90-1P cassette. RWF 680,000" data-search-url="/products/air/#item-vrf-panel-bosch-90-1p">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">VRF Panel Bosch 90-1P</p>
+          
+        </div>
+        <p class="text-gray-600">Replacement decorative panel for 90-1P cassette.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 680,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-vrf-panel-bosch-90-1p"
+          data-cart-title="VRF Panel Bosch 90-1P"
+          data-cart-price="RWF 680,000"
+          data-cart-desc="Replacement decorative panel for 90-1P cassette."
+          data-cart-img="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-vrf-panel-bosch-90-1p"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-vrf-panel-bosch-71-2p" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="VRF Panel Bosch 71-2P" data-search-category="Air Conditioning Accessories" data-search-description="Panel for Bosch 71-2P units. RWF 580,000" data-search-url="/products/air/#item-vrf-panel-bosch-71-2p">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">VRF Panel Bosch 71-2P</p>
+          
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: AF-P 4CR8733500457</p>
+          
+        </div>
+        <p class="text-gray-600">Panel for Bosch 71-2P units.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 580,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-vrf-panel-bosch-71-2p"
+          data-cart-title="VRF Panel Bosch 71-2P"
+          data-cart-price="RWF 580,000"
+          data-cart-desc="Panel for Bosch 71-2P units."
+          data-cart-img="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-vrf-panel-bosch-71-2p"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-mdb1-distribution-board" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="MDB1 Distribution Board" data-search-category="Air Conditioning Accessories" data-search-description="Main distribution board for HVAC plant control. RWF 6,500,000" data-search-url="/products/air/#item-mdb1-distribution-board">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">MDB1 Distribution Board</p>
+          
+        </div>
+        <p class="text-gray-600">Main distribution board for HVAC plant control.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 6,500,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-mdb1-distribution-board"
+          data-cart-title="MDB1 Distribution Board"
+          data-cart-price="RWF 6,500,000"
+          data-cart-desc="Main distribution board for HVAC plant control."
+          data-cart-img="https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-mdb1-distribution-board"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-mdb2-distribution-board" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="MDB2 Distribution Board" data-search-category="Air Conditioning Accessories" data-search-description="Redundant MDB tailored for multi-compressor sites. RWF 6,500,000" data-search-url="/products/air/#item-mdb2-distribution-board">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">MDB2 Distribution Board</p>
+          
+        </div>
+        <p class="text-gray-600">Redundant MDB tailored for multi-compressor sites.</p>
+        <p class="text-lg font-bold text-blue-600">RWF 6,500,000</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-mdb2-distribution-board"
+          data-cart-title="MDB2 Distribution Board"
+          data-cart-price="RWF 6,500,000"
+          data-cart-desc="Redundant MDB tailored for multi-compressor sites."
+          data-cart-img="https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-mdb2-distribution-board"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+      
+      <div id="item-grill-150-x-600-mm" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="Grill 150 x 600 mm" data-search-category="Air Conditioning Accessories" data-search-description="Supply or return aluminum grill powder-coated to spec. Contact for quote" data-search-url="/products/air/#item-grill-150-x-600-mm">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">Grill 150 x 600 mm</p>
+          
+        </div>
+        <p class="text-gray-600">Supply or return aluminum grill powder-coated to spec.</p>
+        <p class="text-lg font-bold text-blue-600">Contact for quote</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="/products/air/-component-grill-150-x-600-mm"
+          data-cart-title="Grill 150 x 600 mm"
+          data-cart-price="Contact for quote"
+          data-cart-desc="Supply or return aluminum grill powder-coated to spec."
+          data-cart-img="https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&amp;h=600&amp;fit=crop"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="/products/air/#item-grill-150-x-600-mm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      
+    </div>
+  </section>
+
+  
+  <section class="bg-white rounded-2xl border border-gray-200 shadow p-6 space-y-4">
+    <div>
+      <p class="uppercase tracking-[0.3em] text-xs text-blue-500">Quick Reference</p>
+      <h3 class="text-2xl font-semibold text-slate-900">Warranty Snapshot (per provided sheet)</h3>
+      <p class="text-gray-600">This table replicates the warranty/price pairs from your scanned attachment for fast quoting.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50 text-xs font-semibold uppercase tracking-wider text-gray-500">
+          <tr>
+            <th class="px-4 py-2 text-left">Model</th>
+            <th class="px-4 py-2 text-left">Capacity</th>
+            <th class="px-4 py-2 text-left">Warranty</th>
+            <th class="px-4 py-2 text-left">Price</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 text-sm text-gray-700">
+          
+          <tr>
+            <td class="px-4 py-2">Bosch Wall Mount Split</td>
+            <td class="px-4 py-2">12,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 680,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">Bosch Wall Mount Split</td>
+            <td class="px-4 py-2">18,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 950,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">Bosch Wall Mount Split</td>
+            <td class="px-4 py-2">24,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 1,400,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">LG Cassette Units</td>
+            <td class="px-4 py-2">18,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 2,100,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">LG Cassette Units</td>
+            <td class="px-4 py-2">24,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 2,400,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">LG Cassette Units</td>
+            <td class="px-4 py-2">36,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 3,400,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">LG Cassette Units</td>
+            <td class="px-4 py-2">48,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 4,500,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">VRF Units</td>
+            <td class="px-4 py-2">Custom tonnage</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">Depends on design</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">Floor Standing</td>
+            <td class="px-4 py-2">60,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 2,600,000</td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-2">Ductable Air Conditioner</td>
+            <td class="px-4 py-2">18,000 BTU</td>
+            <td class="px-4 py-2">1 year</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">RWF 3,500,000</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+  </main>
+  <div id="whatsapp-cart" class="hidden fixed bottom-5 right-5 w-full max-w-sm px-4 sm:px-0 z-40">
+    <div class="ink-card ink-card--soft p-5 space-y-4 border border-white border-opacity-10">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-blue-500">WhatsApp Cart</p>
+          <p class="text-lg font-semibold" data-cart-count>0 items selected</p>
+        </div>
+        <button type="button" class="text-xs text-gray-500 hover:text-gray-300 font-semibold" data-cart-clear>Clear</button>
+      </div>
+      <p class="text-sm text-gray-500" data-cart-preview>Add products to get started.</p>
+      <p class="text-sm font-semibold" data-cart-total-label></p>
+      <div class="flex flex-col sm:flex-row gap-2">
+        <a href="/contact/" class="flex-1 inline-flex items-center justify-center ink-action ink-action--secondary text-sm" data-cart-review>Review items</a>
+        <button type="button" class="flex-1 inline-flex items-center justify-center ink-action ink-action--primary text-sm" data-cart-send disabled>Send on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <section class="px-4 sm:px-6 lg:px-8 py-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="ink-card ink-card--soft p-6 sm:p-8 text-sm space-y-3">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="ink-chip">Service terms</span>
+          <p class="text-xs text-gray-500">Transparent logistics & installation policy</p>
+        </div>
+        <p><strong>Payment policy:</strong> Pay after receiving standard products. For delivery + installation, settle 50% before dispatch and the remaining 50% once installation is completed. Installations outside Kigali can be negotiated.</p>
+        <p><strong>Delivery:</strong> Free within Kigali. Outside Kigali, delivery terms are negotiable based on destination.</p>
+      <p><strong>Installation-only:</strong> If you prefer A&amp;B Innovation to install equipment you already have on site, services are available and priced on a negotiated rate.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-slate-950 bg-opacity-80 border-t border-white border-opacity-10 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid gap-10 lg:grid-cols-4">
+      <div class="space-y-4">
+        <p class="ink-chip">A&amp;B Innovation</p>
+        <p class="text-2xl font-semibold">Engineering immersive, resilient infrastructure for Africa.</p>
+        <p class="text-sm text-gray-500">CCTV, networking, HVAC, fire safety, power, and digital experiences orchestrated by a single crew.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/contact/" class="ink-action ink-action--primary text-sm">Schedule a discovery call</a>
+          <a href="/gallery/" class="ink-action ink-action--secondary text-sm">See deployments</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Navigation</p>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-white transition">Home</a></li>
+          <li><a href="/services/" class="hover:text-white transition">Services</a></li>
+          <li><a href="/products/" class="hover:text-white transition">Product catalog</a></li>
+          <li><a href="/gallery/" class="hover:text-white transition">Project gallery</a></li>
+          <li><a href="/about/" class="hover:text-white transition">About the team</a></li>
+          <li><a href="/contact/" class="hover:text-white transition">Contact & support</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Reach us</p>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li>
+            <p class="font-semibold text-white">Dispatch line</p>
+            <a href="tel:+250785576541" class="hover:text-white transition">+250 785 576 541</a>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Email</p>
+            <a href="mailto:technicprosolution@gmail.com" class="hover:text-white transition">technicprosolution@gmail.com</a>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Office</p>
+            <p class="text-gray-500">123 Tech Avenue, Kigali, Rwanda</p>
+          </li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Operations</p>
+        <div class="ink-card p-4 space-y-2 text-sm">
+          <p class="text-gray-400">Working hours</p>
+          <p class="text-lg font-semibold text-white">24/7 response crews</p>
+          <p class="text-gray-500 text-sm">Emergency technicians available in Kigali and across the region.</p>
+        </div>
+        <div class="ink-card p-4 space-y-2 text-sm">
+          <p class="text-gray-400">WhatsApp command</p>
+          <p class="text-lg font-semibold text-white">+250 785 576 541</p>
+          <p class="text-gray-500 text-sm">Send your cart or ping us for immediate coordination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white border-opacity-5 text-center text-xs text-gray-500 py-6">
+    © 2026 A&amp;B Innovation — Built with Eleventy & human touch.
+  </div>
+</footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script id="global-search-data" type="application/json">
+        []
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('global-search-overlay');
+      const input = document.getElementById('global-search-input');
+      const results = document.getElementById('global-search-results');
+      const dataElement = document.getElementById('global-search-data');
+      if (!overlay || !input || !results || !dataElement) {
+        return;
+      }
+
+      let staticEntries = [];
+      try {
+        staticEntries = JSON.parse(dataElement.textContent.trim()) || [];
+      } catch (error) {
+        console.error('Failed to parse search index', error);
+      }
+      let searchIndex = staticEntries.slice();
+      let indexReady = false;
+      const remoteIndexUrl = '/assets/search-index.json';
+      let remoteIndexPromise = null;
+
+      const triggers = document.querySelectorAll('[data-search-trigger]');
+      const closeButtons = overlay.querySelectorAll('[data-search-close]');
+
+      const fetchRemoteIndex = () => {
+        if (!remoteIndexPromise) {
+          remoteIndexPromise = fetch(remoteIndexUrl, { cache: 'force-cache' })
+            .then(response => response.ok ? response.json() : [])
+            .catch(() => []);
+        }
+        return remoteIndexPromise;
+      };
+
+      const collectDynamicEntries = () => {
+        return Array.from(document.querySelectorAll('[data-search-entry]')).map(node => {
+          const title = (node.dataset.searchTitle || node.getAttribute('data-search-title') || '').trim();
+          const url = (node.dataset.searchUrl || node.getAttribute('data-search-url') || '').trim();
+          if (!title || !url) {
+            return null;
+          }
+          return {
+            title,
+            category: (node.dataset.searchCategory || node.getAttribute('data-search-category') || 'Products').trim(),
+            description: (node.dataset.searchDescription || node.getAttribute('data-search-description') || '').trim(),
+            url
+          };
+        }).filter(Boolean);
+      };
+
+      const refreshSearchIndex = () => {
+        indexReady = false;
+        return fetchRemoteIndex().then(remoteEntries => {
+          const unique = new Map();
+          [...staticEntries, ...(remoteEntries || []), ...collectDynamicEntries()].forEach(item => {
+            const key = `${item.title}-${item.url}`;
+            if (!unique.has(key)) {
+              unique.set(key, item);
+            }
+          });
+          searchIndex = Array.from(unique.values());
+          indexReady = true;
+        }).catch(() => {
+          const unique = new Map();
+          [...staticEntries, ...collectDynamicEntries()].forEach(item => {
+            const key = `${item.title}-${item.url}`;
+            if (!unique.has(key)) {
+              unique.set(key, item);
+            }
+          });
+          searchIndex = Array.from(unique.values());
+          indexReady = true;
+        });
+      };
+
+      const lockScroll = (shouldLock) => {
+        document.body.classList.toggle('overflow-hidden', shouldLock);
+      };
+
+      const openOverlay = () => {
+        overlay.classList.remove('hidden');
+        input.value = '';
+        results.innerHTML = '<p class="text-sm text-gray-500">Loading search index...</p>';
+        lockScroll(true);
+        setTimeout(() => input.focus(), 100);
+        refreshSearchIndex().then(() => renderResults(''));
+      };
+
+      const closeOverlay = () => {
+        overlay.classList.add('hidden');
+        lockScroll(false);
+      };
+
+      const getMatches = (term) => {
+        if (!term) {
+          return searchIndex.slice(0, 12);
+        }
+        const q = term.toLowerCase();
+        return searchIndex.filter(item => {
+          return `${item.title} ${item.description} ${item.category} ${item.keywords || ''}`.toLowerCase().includes(q);
+        }).slice(0, 12);
+      };
+
+      const renderResults = (term) => {
+        const matches = getMatches(term);
+        if (!matches.length) {
+          results.innerHTML = '<p class="text-sm text-gray-500">No matches yet. Try refining your keywords.</p>';
+          return;
+        }
+
+        results.innerHTML = matches.map(item => `
+          <a href="${item.url}" class="block border border-gray-200 rounded-2xl px-4 py-3 hover:border-blue-500 hover:-translate-y-0.5 transition transform">
+            <div class="flex items-center justify-between text-xs uppercase tracking-wide text-blue-500">
+              <span>${item.category}</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+            <p class="text-lg font-semibold text-gray-900 mt-1">${item.title}</p>
+            <p class="text-sm text-gray-500 mt-1">${item.description}</p>
+          </a>
+        `).join('');
+      };
+
+      triggers.forEach(button => button.addEventListener('click', () => openOverlay()));
+      closeButtons.forEach(button => button.addEventListener('click', () => closeOverlay()));
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      input.addEventListener('input', (event) => {
+        if (!indexReady) {
+          results.innerHTML = '<p class="text-sm text-gray-500">Loading search index...</p>';
+          return;
+        }
+        renderResults(event.target.value.trim());
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (overlay.classList.contains('hidden')) {
+          return;
+        }
+        if (event.key === 'Escape') {
+          closeOverlay();
+        }
+        if (event.key === 'Enter') {
+          if (!indexReady) {
+            return;
+          }
+          const firstResult = results.querySelector('a');
+          if (firstResult) {
+            firstResult.click();
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+    (function() {
+      const CART_STORAGE_KEY = 'abinnovation-cart-items';
+      const WHATSAPP_NUMBER = '250785576541';
+      const DEFAULT_MESSAGE = 'Hello, I would like to speak with A&B Innovation about your products and services.';
+      const subscribers = new Set();
+      const state = {
+        cart: []
+      };
+
+      const parsePriceText = (value) => {
+        if (value === undefined || value === null) {
+          return null;
+        }
+        const numeric = String(value).replace(/[^0-9.]/g, '');
+        if (!numeric) {
+          return null;
+        }
+        const parsed = parseFloat(numeric);
+        return Number.isFinite(parsed) ? parsed : null;
+      };
+
+      const formatCurrency = (amount) => {
+        if (typeof amount !== 'number' || !Number.isFinite(amount) || amount <= 0) {
+          return '';
+        }
+        return `RWF ${Math.round(amount).toLocaleString('en-US')}`;
+      };
+
+      const normalizeItem = (item) => {
+        if (!item) {
+          return null;
+        }
+        const normalized = Object.assign({}, item);
+        const parsedAmount = typeof normalized.amount === 'number' && Number.isFinite(normalized.amount)
+          ? normalized.amount
+          : parsePriceText(normalized.price);
+        normalized.amount = parsedAmount || null;
+        return normalized;
+      };
+
+      const readCartFromStorage = () => {
+        try {
+          const stored = sessionStorage.getItem(CART_STORAGE_KEY);
+          if (!stored) {
+            return [];
+          }
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            return parsed.map(normalizeItem).filter(item => item && item.id);
+          }
+          return [];
+        } catch (error) {
+          console.warn('Unable to read cart state', error);
+          return [];
+        }
+      };
+
+      state.cart = readCartFromStorage();
+
+      const persistCart = () => {
+        try {
+          sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(state.cart));
+        } catch (error) {
+          console.warn('Unable to persist cart selection', error);
+        }
+      };
+
+      const getItems = () => state.cart.slice();
+      const getCartTotal = () => state.cart.reduce((sum, item) => sum + (item.amount || 0), 0);
+
+      const findIndex = (id) => {
+        if (!id) {
+          return -1;
+        }
+        return state.cart.findIndex(item => item.id === id);
+      };
+
+      const buildCartMessage = (items) => {
+        if (!items || !items.length) {
+          return DEFAULT_MESSAGE;
+        }
+        const lines = [
+          'Hello, I would like to discuss the following A&B Innovation items:',
+          ''
+        ];
+        items.forEach((item, index) => {
+          const displayPrice = item.price || (item.amount ? formatCurrency(item.amount) : '');
+          lines.push(`${index + 1}. ${item.title || 'Unnamed item'}${displayPrice ? ` (${displayPrice})` : ''}`);
+          if (item.category) {
+            lines.push(`   Category: ${item.category}`);
+          }
+          if (item.description) {
+            lines.push(`   Details: ${item.description}`);
+          }
+          if (item.url) {
+            lines.push(`   Link: ${item.url}`);
+          }
+          lines.push('');
+        });
+        lines.push('Please advise pricing, delivery, and installation support.');
+        return lines.join('\n');
+      };
+
+      const updateToggleButtons = () => {
+        const items = getItems();
+        document.querySelectorAll('[data-cart-toggle]').forEach((button) => {
+          const id = button.getAttribute('data-cart-id');
+          const isSelected = findIndex(id) !== -1;
+          const label = button.querySelector('[data-cart-label]');
+          if (label) {
+            label.textContent = isSelected ? 'Added to WhatsApp cart' : 'Add to WhatsApp cart';
+          }
+          button.classList.toggle('bg-green-600', isSelected);
+          button.classList.toggle('text-white', isSelected);
+          button.classList.toggle('border-green-600', isSelected);
+          button.classList.toggle('border-gray-300', !isSelected);
+          button.classList.toggle('text-gray-900', !isSelected);
+        });
+      };
+
+      const updateFloatingWidget = () => {
+        const wrapper = document.getElementById('whatsapp-cart');
+        if (!wrapper) {
+          return;
+        }
+        const count = state.cart.length;
+        wrapper.classList.toggle('hidden', count === 0);
+        const countNode = wrapper.querySelector('[data-cart-count]');
+        if (countNode) {
+          countNode.textContent = count ? `${count} item${count === 1 ? '' : 's'} selected` : '0 items selected';
+        }
+        const previewNode = wrapper.querySelector('[data-cart-preview]');
+        if (previewNode) {
+          if (!count) {
+            previewNode.textContent = 'Add products to get started.';
+          } else {
+            const titles = state.cart.map(item => item.title || 'Unnamed item').slice(0, 3);
+            previewNode.textContent = titles.join(', ') + (count > 3 ? ` +${count - 3} more` : '');
+          }
+        }
+        const totalNode = wrapper.querySelector('[data-cart-total-label]');
+        if (totalNode) {
+          const totalAmount = getCartTotal();
+          totalNode.textContent = totalAmount ? `Estimated total: ${formatCurrency(totalAmount)}` : 'Estimated total: --';
+        }
+        const sendButton = wrapper.querySelector('[data-cart-send]');
+        if (sendButton) {
+          sendButton.disabled = count === 0;
+          sendButton.classList.toggle('opacity-50', count === 0);
+          sendButton.classList.toggle('cursor-not-allowed', count === 0);
+        }
+      };
+
+      const notify = () => {
+        updateToggleButtons();
+        updateFloatingWidget();
+        subscribers.forEach((callback) => {
+          try {
+            callback(getItems());
+          } catch (error) {
+            console.warn('Cart subscriber error', error);
+          }
+        });
+      };
+
+      const addItem = (item) => {
+        const normalized = normalizeItem(item);
+        if (!normalized || !normalized.id) {
+          return;
+        }
+        const index = findIndex(normalized.id);
+        if (index === -1) {
+          state.cart.push(normalized);
+        } else {
+          state.cart[index] = Object.assign({}, state.cart[index], normalized);
+        }
+        persistCart();
+        notify();
+      };
+
+      const removeItem = (id) => {
+        const index = findIndex(id);
+        if (index === -1) {
+          return;
+        }
+        state.cart.splice(index, 1);
+        persistCart();
+        notify();
+      };
+
+      const toggleItem = (item) => {
+        if (!item || !item.id) {
+          return;
+        }
+        if (findIndex(item.id) === -1) {
+          addItem(item);
+        } else {
+          removeItem(item.id);
+        }
+      };
+
+      const clearCart = () => {
+        if (!state.cart.length) {
+          return;
+        }
+        state.cart = [];
+        persistCart();
+        notify();
+      };
+
+      const readItemFromNode = (node) => {
+        const get = (attr, fallbackAttr) => node.getAttribute(attr) || (fallbackAttr ? node.getAttribute(fallbackAttr) : '') || '';
+        const title = get('data-cart-title', 'data-order-title');
+        const id = get('data-cart-id') || `${title}-${get('data-cart-price', 'data-order-price')}`;
+        return normalizeItem({
+          id,
+          title,
+          price: get('data-cart-price', 'data-order-price'),
+          description: get('data-cart-desc', 'data-order-desc'),
+          image: get('data-cart-img', 'data-order-img'),
+          category: get('data-cart-category', 'data-order-category'),
+          url: get('data-cart-url') || node.getAttribute('href') || window.location.href
+        });
+      };
+
+      const sendCartToWhatsApp = () => {
+        const message = buildCartMessage(getItems());
+        const encoded = encodeURIComponent(message.trim());
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+        window.open(url, '_blank');
+      };
+
+      document.addEventListener('click', (event) => {
+        const toggle = event.target.closest('[data-cart-toggle]');
+        if (toggle) {
+          event.preventDefault();
+          toggleItem(readItemFromNode(toggle));
+          return;
+        }
+        const clearButton = event.target.closest('[data-cart-clear]');
+        if (clearButton) {
+          event.preventDefault();
+          clearCart();
+          return;
+        }
+        const sendButton = event.target.closest('[data-cart-send]');
+        if (sendButton) {
+          event.preventDefault();
+          if (getItems().length) {
+            sendCartToWhatsApp();
+          }
+        }
+      });
+
+      window.abInnovationCart = {
+        getItems,
+        getTotal: () => getCartTotal(),
+        addItem,
+        removeItem,
+        toggleItem,
+        clear: clearCart,
+        buildMessage: buildCartMessage,
+        formatCurrency,
+        subscribe: (callback) => {
+          if (typeof callback !== 'function') {
+            return () => {};
+          }
+          subscribers.add(callback);
+          return () => subscribers.delete(callback);
+        }
+      };
+
+      notify();
+    })();
+  </script>
+</body>
+</html>

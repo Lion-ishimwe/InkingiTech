@@ -1,0 +1,86 @@
+---
+layout: base.njk
+title: Portable Storage
+---
+
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">IT Office Equipment</p>
+    <h1 class="text-4xl font-bold">Storage & Flash Media</h1>
+    <p class="text-gray-200">External drives and flash disks for backups, transfers, and quick deployments.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/it-office/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to IT Equipment</a>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="storage-search">Search storage devices</label>
+    <div class="relative">
+      <input id="storage-search" type="text" placeholder="Type to filter devices..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="storage-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set storage = [
+      {title:"External HDD 500GB", price:"RWF 20,000", desc:"Portable 500GB drive for quick backups.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"External HDD 1TB", price:"RWF 45,000", desc:"1TB USB 3.0 drive for documents and media.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"External HDD 2TB", price:"RWF 65,000", desc:"Rugged 2TB drive for field teams.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"External HDD 4TB", price:"RWF 90,000", desc:"High-capacity portable drive for creative workloads.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"RAM DDR4 8GB", price:"RWF 35,000", desc:"8GB DDR4 module to upgrade modern PCs.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"RAM DDR4 16GB", price:"RWF 45,000", desc:"16GB DDR4 stick for multitasking power.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"RAM DDR3 8GB", price:"RWF 30,000", desc:"DDR3 memory upgrade for legacy setups.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"RAM DDR3 4GB", price:"RWF 24,000", desc:"Cost-effective 4GB DDR3 module.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"RAM DDR4 4GB", price:"RWF 25,000", desc:"Entry-level DDR4 RAM for light machines.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"Flash Disk 4GB", price:"RWF 5,000", desc:"Entry-level flash drive for firmware updates.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"Flash Disk 8GB", price:"RWF 7,500", desc:"Everyday 8GB flash drive for small transfers.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"Flash Disk 16GB", price:"RWF 8,000", desc:"Reliable 16GB USB stick for documents.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"Flash Disk 32GB", price:"RWF 10,000", desc:"32GB USB drive for presentations and media kits.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"Flash Disk 64GB", price:"RWF 15,000", desc:"High-capacity 64GB flash disk for installers.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+      {title:"Memory Card 128GB", price:"RWF 37,000", desc:"High-endurance microSD for on-camera storage.", img:"/assets/product/Memory card 128GB.JPG"}
+    ] %}
+    {% for item in storage %}
+    {% set slug = item.title | slug %}
+    <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col storage-card" data-search-entry data-search-title="{{ item.title }}" data-search-category="Portable Storage" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+      <img src="{{ item.img }}" alt="{{ item.title }}" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">{{ item.title }}</h2>
+        <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+        <span class="text-blue-600 font-bold">{{ item.price }}</span>
+        <button
+          type="button"
+          class="mt-auto inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="{{ page.url }}-{{ slug }}"
+          data-cart-title="{{ item.title }}"
+          data-cart-price="{{ item.price }}"
+          data-cart-desc="{{ item.desc }}"
+          data-cart-img="{{ item.img }}"
+          data-cart-category="Portable Storage"
+          data-cart-url="{{ page.url }}#item-{{ slug }}"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.querySelector('#storage-search');
+    const cards = document.querySelectorAll('.storage-card');
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase();
+      cards.forEach(card => card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none');
+    });
+  });
+</script>

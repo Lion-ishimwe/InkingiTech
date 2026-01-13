@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: CCTV Storage & Accessories
+---
+
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="absolute inset-0 opacity-25" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&h=900&fit=crop');background-size:cover;background-position:center;"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4 relative z-10">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">Storage & PoE</p>
+    <h1 class="text-4xl font-bold">Hard Drives, NVRs & Power Gear</h1>
+    <p class="text-gray-200">High-duty storage with PoE switches and accessories, ready for professional installs.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/cctv/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to CCTV overview</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterInputs = document.querySelectorAll('.filter-input');
+    filterInputs.forEach(input => {
+      const listClass = input.dataset.filterList;
+      input.addEventListener('input', () => {
+        const query = input.value.toLowerCase();
+        document.querySelectorAll(`.${listClass}`).forEach(card => {
+          card.style.display = card.innerText.toLowerCase().includes(query) ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="drive-search">Search storage & power gear</label>
+    <div class="relative">
+      <input id="drive-search" type="text" placeholder="Type to filter accessories..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="drive-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set drives = [
+      {title:"1TB Surveillance HDD", price:"RWF 80,000", desc:"Entry-level 24/7 rated SATA drive with 3-year warranty.", img:"/assets/product/landing/1TB.JPG"},
+      {title:"2TB Surveillance HDD", price:"RWF 120,000", desc:"Reliable 2TB workload drive with vibration protection.", img:"/assets/product/landing/2TB.JPG"},
+      {title:"4TB Surveillance HDD", price:"RWF 170,000", desc:"Large capacity drive balanced for NVR deployments.", img:"/assets/product/landing/4TB.JPG"},
+      {title:"6TB Surveillance HDD", price:"RWF 210,000", desc:"High-capacity 6TB disk ready for mission-critical retention.", img:"/assets/product/landing/6TB.JPG"},
+      {title:"8TB Surveillance HDD", price:"RWF 270,000", desc:"Enterprise 8TB disk with smart vibration and cooling design.", img:"/assets/product/landing/8TB.JPG"},
+      {title:"10TB Surveillance HDD", price:"RWF 300,000", desc:"Massive 10TB drive for multi-site recording archives.", img:"/assets/product/landing/10TB.JPG"},
+      {title:"1TB Standard HDD", price:"RWF 180,000", desc:"General-purpose 1TB SATA drive for auxiliary storage.", img:"/assets/product/landing/1TB.JPG"},
+      {title:"2TB Standard HDD", price:"RWF 320,000", desc:"2TB desktop-class drive suitable for backup footage.", img:"/assets/product/landing/2TB.JPG"},
+      {title:"4TB Standard HDD", price:"RWF 480,000", desc:"Balanced 4TB drive for archives that don't require 24/7 duty.", img:"/assets/product/landing/4TB.JPG"},
+      {title:"6TB Standard HDD", price:"RWF 720,000", desc:"Capacity expansion drive for secondary NVR bays.", img:"/assets/product/landing/6TB.JPG"},
+      {title:"8TB Standard HDD", price:"RWF 880,000", desc:"High-capacity 8TB desktop disk for long-term footage.", img:"/assets/product/landing/8TB.JPG"},
+      {title:"10TB Standard HDD", price:"RWF 980,000", desc:"10TB general-purpose drive for nightly snapshots and exports.", img:"/assets/product/landing/10TB.JPG"},
+      {title:"32GB Wi-Fi Camera Card", price:"RWF 35,000", desc:"High-endurance microSD card tuned for basic Wi-Fi cameras.", img:"/assets/product/landing/32 GB memory card.png"},
+      {title:"64GB Wi-Fi Camera Card", price:"RWF 55,000", desc:"Extended recording for smart cameras needing longer clips.", img:"/assets/product/landing/64 GB Memory card.JPG"},
+      {title:"128GB Wi-Fi Camera Card", price:"RWF 85,000", desc:"High-endurance 128GB microSD for busy home installations.", img:"/assets/product/landing/128 GB Memory card.jpg"},
+      {title:"256GB Wi-Fi Camera Card", price:"RWF 120,000", desc:"Top-tier 256GB card for long-term on-camera storage.", img:"/assets/product/landing/256 GB Memory card.JPG"},
+      {title:"4-Channel DVR", price:"RWF 160,000", desc:"Supports 2MP analog black & white kits with HDMI output and mobile app.", img:"/assets/product/landing/dvr 4.jpg"},
+      {title:"8-Channel DVR", price:"RWF 650,000", desc:"Handles analog ColorVu cameras with smart search and QR setup.", img:"/assets/product/landing/dvr 8.jpg"},
+      {title:"16-Channel DVR", price:"RWF 980,000", desc:"Hybrid DVR for analog PTZ and domes, includes redundant HDD bays.", img:"/assets/product/landing/dvr 16.png"},
+      {title:"4-Channel NVR", price:"RWF 160,000", desc:"PoE NVR tuned for IP ColorVu cameras with AI events.", img:"/assets/product/landing/nvr 4.jfif"},
+      {title:"8-Channel NVR", price:"RWF 1,150,000", desc:"PoE NVR tuned for IP ColorVu cameras with AI events.", img:"/assets/product/landing/nvr 8 channel.JPG"},
+      {title:"16-Channel NVR", price:"RWF 1,380,000", desc:"Dual NICs, RAID-ready and ideal for 6-8MP ColorVu/IP turrets.", img:"/assets/product/landing/nvr 16 channel.jpg"},
+      {title:"32-Channel NVR", price:"RWF 2,250,000", desc:"Large-scale NVR supporting thermal, ColorVu, and PTZ in one rack.", img:"/assets/product/landing/nvr 32 channel.jfif"}
+    ] %}
+    {% for item in drives %}
+    {% set slug = item.title | slug %}
+    <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col drive-card" data-search-entry data-search-title="{{ item.title }}" data-search-category="CCTV Storage & Power" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+      <img src="{{ item.img }}" alt="{{ item.title }}" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">{{ item.title }}</h2>
+        <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+        <span class="text-blue-600 font-bold">{{ item.price }}</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-{{ slug }}"
+            data-cart-title="{{ item.title }}"
+            data-cart-price="{{ item.price }}"
+            data-cart-desc="{{ item.desc }}"
+            data-cart-img="{{ item.img }}"
+            data-cart-category="CCTV Storage & Power"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

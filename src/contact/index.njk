@@ -1,0 +1,199 @@
+---
+layout: base.njk
+title: Contact Us
+---
+
+<section class="px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-6xl mx-auto space-y-10">
+    <div class="text-center space-y-3">
+      <p class="ink-chip">Contact</p>
+      <h1 class="text-4xl font-bold">Talk directly to our engineers.</h1>
+      <p class="text-gray-400">Skip the forms. Call, WhatsApp, or drop a note and the dispatch desk will respond immediately.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="ink-card p-8 space-y-6">
+        <div class="space-y-3">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Get in touch</p>
+          <h2 class="text-2xl font-bold">We're reachable 24/7</h2>
+        </div>
+        <div class="space-y-4 text-sm text-gray-300">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <div>
+              <p class="font-semibold text-white">Address</p>
+              <p>123 Tech Avenue, Kigali, Rwanda</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <div>
+              <p class="font-semibold text-white">Phone</p>
+              <a href="tel:+250785576541" class="text-blue-400 hover:text-blue-200 transition">+250 785 576 541</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <div>
+              <p class="font-semibold text-white">Email</p>
+              <a href="mailto:technicprosolution@gmail.com" class="text-blue-400 hover:text-blue-200 transition">technicprosolution@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+              <p class="font-semibold text-white">Working hours</p>
+              <p>All days · 24 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ink-card p-8 space-y-6">
+        <div>
+          <h3 class="text-xl font-bold">Talk to our team</h3>
+          <p class="text-gray-400 text-sm">Skip the form and connect instantly. Call us or start a WhatsApp chat and we will respond right away.</p>
+        </div>
+        <div id="cart-summary" class="hidden ink-card ink-card--soft p-4 space-y-4">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-gray-500">WhatsApp Cart</p>
+              <p class="text-lg font-semibold" data-contact-cart-count>0 items selected</p>
+              <p class="text-sm font-semibold text-gray-400" data-contact-cart-total>Estimated total: --</p>
+            </div>
+            <button type="button" class="text-xs text-blue-400 hover:text-blue-200 font-semibold" data-contact-cart-clear>Clear all</button>
+          </div>
+          <div id="cart-items-list" class="space-y-4"></div>
+        </div>
+        <div id="cart-empty" class="text-sm text-gray-500 border border-dashed border-white border-opacity-20 rounded-2xl p-4">
+          Select products across categories and use the "Add to WhatsApp cart" button to see them listed here.
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a id="contact-phone" href="tel:+250785576541" class="flex-1 inline-flex items-center justify-center gap-2 ink-action ink-action--primary">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Call us
+          </a>
+          <a id="contact-whatsapp" href="https://wa.me/250785576541" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 ink-action ink-action--secondary border border-green-400 text-green-300">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a9.93 9.93 0 00-7.07 2.93A9.9 9.9 0 002 12a9.92 9.92 0 001.64 5.47L2 22l4.7-1.51A9.94 9.94 0 0012 22a10 10 0 000-20zm0 18a8 8 0 01-4.08-1.1l-.29-.17-2.79.89.91-2.71-.18-.28A7.94 7.94 0 014 12a8 8 0 018-8 8.07 8.07 0 015.66 2.34A7.94 7.94 0 0120 12a8 8 0 01-8 8zm4.35-5.65c-.24-.12-1.43-.71-1.65-.79s-.38-.12-.54.12-.62.79-.76.95-.28.18-.52.06a6.49 6.49 0 01-1.91-1.18 7 7 0 01-1.3-1.61c-.14-.24 0-.37.11-.49s.24-.28.37-.43a1.65 1.65 0 00.24-.41.44.44 0 000-.42c-.06-.12-.54-1.3-.74-1.78s-.39-.41-.54-.42h-.46a.89.89 0 00-.64.3 2.71 2.71 0 00-.85 2c0 1.18.85 2.33 1 2.5s1.67 2.55 4 3.48a13.49 13.49 0 001.35.4 3.25 3.25 0 001.49.09 2.44 2.44 0 001.6-1.09 2 2 0 00.14-1.09c-.06-.09-.21-.15-.45-.27z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <p class="text-sm text-gray-400">Our engineers are available 24/7 to answer service questions, help you plan an installation, or handle urgent support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const WHATSAPP_NUMBER = '250785576541';
+    const DEFAULT_MESSAGE = 'Hello, I would like to speak with A&B Innovation about your products and services.';
+    const cartSummary = document.getElementById('cart-summary');
+    const cartEmptyState = document.getElementById('cart-empty');
+    const cartList = document.getElementById('cart-items-list');
+    const cartCount = document.querySelector('[data-contact-cart-count]');
+    const cartTotalText = document.querySelector('[data-contact-cart-total]');
+    const clearButton = document.querySelector('[data-contact-cart-clear]');
+    const whatsappButton = document.getElementById('contact-whatsapp');
+    const whatsappCart = window.abInnovationCart || null;
+    let unsubscribe = null;
+    const formatTotal = (amount) => {
+      if (whatsappCart && typeof whatsappCart.formatCurrency === 'function') {
+        const formatted = whatsappCart.formatCurrency(amount);
+        if (formatted) {
+          return formatted;
+        }
+      }
+      if (typeof amount !== 'number' || !Number.isFinite(amount) || amount <= 0) {
+        return '';
+      }
+      return `RWF ${Math.round(amount).toLocaleString('en-US')}`;
+    };
+
+    const setWhatsappLink = (items) => {
+      if (!whatsappButton) {
+        return;
+      }
+      const baseMessage = (whatsappCart && typeof whatsappCart.buildMessage === 'function')
+        ? whatsappCart.buildMessage(items)
+        : DEFAULT_MESSAGE;
+      const encoded = encodeURIComponent((baseMessage || DEFAULT_MESSAGE).trim());
+      whatsappButton.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+    };
+
+    const renderCartItems = (items) => {
+      const hasItems = items && items.length > 0;
+      if (cartSummary) {
+        cartSummary.classList.toggle('hidden', !hasItems);
+      }
+      if (cartEmptyState) {
+        cartEmptyState.classList.toggle('hidden', hasItems);
+      }
+      if (cartCount) {
+        cartCount.textContent = hasItems ? `${items.length} item${items.length === 1 ? '' : 's'} selected` : 'No items selected';
+      }
+      if (cartTotalText) {
+        const totalAmount = items.reduce((sum, item) => sum + (item.amount || 0), 0);
+        cartTotalText.textContent = totalAmount ? `Estimated total: ${formatTotal(totalAmount)}` : 'Estimated total: --';
+      }
+      if (cartList) {
+        if (!hasItems) {
+          cartList.innerHTML = '';
+        } else {
+          cartList.innerHTML = items.map((item) => `
+            <div class="flex gap-4 items-start border border-white rounded-2xl bg-white p-3 shadow-sm">
+              <img src="${item.image || 'https://via.placeholder.com/96x96?text=Item'}" alt="${item.title || 'Selected item'}" class="w-20 h-20 rounded-xl object-cover border border-gray-100">
+              <div class="flex-1 space-y-1">
+                <p class="font-semibold text-gray-900">${item.title || 'Selected item'}</p>
+                <p class="text-sm text-gray-500">${item.category || 'Product'}${item.price ? ` - ${item.price}` : ''}</p>
+                <p class="text-sm text-gray-600">${item.description || ''}</p>
+                ${item.url ? `<a href="${item.url}" class="text-xs text-blue-600 hover:text-blue-800 font-semibold" target="_blank" rel="noopener noreferrer">View product</a>` : ''}
+              </div>
+              <button type="button" class="text-xs text-red-600 hover:text-red-700 font-semibold" data-cart-remove="${item.id}">Remove</button>
+            </div>
+          `).join('');
+        }
+      }
+      setWhatsappLink(items || []);
+    };
+
+    const initialItems = whatsappCart && typeof whatsappCart.getItems === 'function'
+      ? whatsappCart.getItems()
+      : [];
+    renderCartItems(initialItems);
+
+    if (cartList) {
+      cartList.addEventListener('click', (event) => {
+        const removeButton = event.target.closest('[data-cart-remove]');
+        if (removeButton && whatsappCart && typeof whatsappCart.removeItem === 'function') {
+          event.preventDefault();
+          whatsappCart.removeItem(removeButton.getAttribute('data-cart-remove'));
+        }
+      });
+    }
+
+    if (clearButton && whatsappCart && typeof whatsappCart.clear === 'function') {
+      clearButton.addEventListener('click', () => whatsappCart.clear());
+    }
+
+    if (whatsappCart && typeof whatsappCart.subscribe === 'function') {
+      unsubscribe = whatsappCart.subscribe(renderCartItems);
+    }
+
+    window.addEventListener('beforeunload', () => {
+      if (typeof unsubscribe === 'function') {
+        unsubscribe();
+      }
+    });
+  });
+</script>

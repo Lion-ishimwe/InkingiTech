@@ -1,0 +1,81 @@
+---
+layout: base.njk
+title: Network Range Extension
+---
+
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">IT Office Equipment</p>
+    <h1 class="text-4xl font-bold">Access Points & Wi-Fi Routers</h1>
+    <p class="text-gray-200">Boost coverage with trusted TP-Link, D-Link, and Ubiquiti hardware.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/it-office/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to IT Equipment</a>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="network-search">Search range extenders</label>
+    <div class="relative">
+      <input id="network-search" type="text" placeholder="Type to filter devices..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="network-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set aps = [
+      {title:"TP-Link 300 Mbps Wi-Fi Router", price:"RWF 75,000", desc:"4G LTE router delivering steady coverage for small offices.", img:"https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop"},
+      {title:"Ubiquiti / UniFi Dual-Radio AP", price:"RWF 320,000", desc:"Long-range 2.4/5GHz access point with enterprise management.", img:"https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop"},
+      {title:"D-Link Wi-Fi Router", price:"RWF 65,000", desc:"Reliable router for homes and branch offices.", img:"https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop"},
+      {title:"D-Link 4G LTE DWR-1920 Router", price:"RWF 90,000", desc:"High-speed LTE router with failover and VPN support.", img:"https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop"},
+      {title:"D-Link DES-1008C Switch", price:"RWF 27,000", desc:"8-port 10/100 Mbps desktop switch for LAN expansion.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+      {title:"D-Link DES-1005C Switch", price:"RWF 20,000", desc:"5-port 10/100 Mbps switch for desks and small pods.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+      {title:"Hikvision 24-Port Smart Managed Switch", price:"RWF 300,000", desc:"24-port 10/100 Mbps switch with smart features for CCTV networks.", img:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800&h=600&fit=crop"},
+      {title:"Hikvision 16-Port Smart Managed Switch", price:"RWF 270,000", desc:"16-port managed switch optimized for Hikvision deployments.", img:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800&h=600&fit=crop"}
+    ] %}
+    {% for item in aps %}
+    {% set slug = item.title | slug %}
+    <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col network-card" data-search-entry data-search-title="{{ item.title }}" data-search-category="Network Range Extension" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+      <img src="{{ item.img }}" alt="{{ item.title }}" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">{{ item.title }}</h2>
+        <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+        <span class="text-blue-600 font-bold">{{ item.price }}</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-{{ slug }}"
+            data-cart-title="{{ item.title }}"
+            data-cart-price="{{ item.price }}"
+            data-cart-desc="{{ item.desc }}"
+            data-cart-img="{{ item.img }}"
+            data-cart-category="Network Range Extension"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.querySelector('#network-search');
+    const cards = document.querySelectorAll('.network-card');
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase();
+      cards.forEach(card => card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none');
+    });
+  });
+</script>

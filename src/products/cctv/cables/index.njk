@@ -1,0 +1,83 @@
+---
+layout: base.njk
+title: CCTV Cables & Connectors
+---
+
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">Cabling & Accessories</p>
+    <h1 class="text-4xl font-bold">Cables, Connectors & Mounting Kits</h1>
+    <p class="text-gray-200">Everything needed to wire, terminate, and mount professional surveillance systems.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/cctv/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to CCTV overview</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterInputs = document.querySelectorAll('.filter-input');
+    filterInputs.forEach(input => {
+      const listClass = input.dataset.filterList;
+      input.addEventListener('input', () => {
+        const query = input.value.toLowerCase();
+        document.querySelectorAll(`.${listClass}`).forEach(card => {
+          card.style.display = card.innerText.toLowerCase().includes(query) ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="cable-search">Search cabling & connectors</label>
+    <div class="relative">
+      <input id="cable-search" type="text" placeholder="Type to filter accessories..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="cable-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set cables = [
+      {title:"Coaxial Cable 20m", price:"RWF 16,000", desc:"20m pre-terminated coaxial cable for single-camera drops.", img:"https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&h=600&fit=crop"},
+      {title:"Coaxial Cable 30m", price:"RWF 25,000", desc:"30m heavy-duty coaxial run with copper conductors.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+      {title:"Cat 6 Cable 305m", price:"RWF 75,000", desc:"Full 305m box of Cat6 cabling for large IP deployments.", img:"https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=800&h=600&fit=crop"},
+      {title:"Video Baluns (Pair)", price:"RWF 5,000", desc:"Convert coax runs to twisted pair for long-distance analog feeds.", img:"https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=800&h=600&fit=crop"},
+      {title:"BNC Connector", price:"RWF 2,000", desc:"High-quality BNC connectors for quick field termination.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"Power Connector (Male/Female) Pair", price:"RWF 3,500", desc:"DC power connectors for camera pigtails and power supplies.", img:"/assets/product/landing/power.jpg"}
+    ] %}
+    {% for item in cables %}
+    {% set slug = item.title | slug %}
+    <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col cable-card" data-search-entry data-search-title="{{ item.title }}" data-search-category="CCTV Cables & Connectors" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+      <img src="{{ item.img }}" alt="{{ item.title }}" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">{{ item.title }}</h2>
+        <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+        <span class="text-blue-600 font-bold">{{ item.price }}</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-{{ slug }}"
+            data-cart-title="{{ item.title }}"
+            data-cart-price="{{ item.price }}"
+            data-cart-desc="{{ item.desc }}"
+            data-cart-img="{{ item.img }}"
+            data-cart-category="Cabling & Accessories"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

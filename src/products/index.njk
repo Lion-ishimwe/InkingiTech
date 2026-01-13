@@ -1,0 +1,46 @@
+---
+layout: base.njk
+title: Products
+---
+
+<section class="px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-6xl mx-auto text-center space-y-6">
+    <div class="ink-shell space-y-6">
+      <p class="ink-chip">Premium hardware</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold">Trusted technology products sourced for African deployments.</h1>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">Surveillance, networking, HVAC, safety, security, and IT gear with installation, configuration, and after-care support.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/contact/" class="ink-action ink-action--primary">Request quote</a>
+        <a href="/gallery/" class="ink-action ink-action--secondary">See deployments</a>
+      </div>
+    </div>
+    <p class="text-gray-400">Select a category below to explore accessories, technical details, and Rwanda franc pricing.</p>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 pb-20">
+  <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set categories = [
+      {title:"CCTV Cameras", desc:"Camera kits, NVRs, storage drives, and mounting accessories.", link:"/products/cctv/", img:"/assets/product/landing/cctv1.jpg"},
+      {title:"Fire Arms & Safety", desc:"Alarm panels, detectors, extinguishers, and alert beacons.", link:"/products/fire/", img:"/assets/product/Service/alarm.png"},
+      {title:"Air Conditions", desc:"Split units, ducts, thermostats, and installation kits.", link:"/products/air/", img:"/assets/product/Service/air.jpg"},
+      {title:"Network Equipments", desc:"Routers, switches, racks, and structured cabling supplies.", link:"/products/network/", img:"/assets/product/Service/Network.JPG"},
+      {title:"Security System", desc:"Access control, perimeter sensors, and monitoring consoles.", link:"/products/security/", img:"/assets/product/Service/fingerprint.jpg"},
+      {title:"IT Office Equipment", desc:"NIC cards, laptops, mice, network boosters, and more.", link:"/products/it-office/", img:"/assets/product/Service/office.jpg"}
+    ] %}
+    {% for item in categories %}
+    <a href="{{ item.link }}" class="ink-card overflow-hidden group" data-search-entry data-search-title="{{ item.title }}" data-search-category="Product Categories" data-search-description="{{ item.desc }}" data-search-url="{{ item.link }}">
+      <img src="{{ item.img }}" alt="{{ item.title }}" class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
+      <div class="p-6 space-y-3">
+        <p class="ink-chip">Category</p>
+        <h2 class="text-2xl font-semibold">{{ item.title }}</h2>
+        <p class="text-gray-400 text-sm">{{ item.desc }}</p>
+        <span class="inline-flex items-center text-blue-400 font-semibold text-sm">
+          Browse accessories
+          <svg class="w-4 h-4 ml-2 transition group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

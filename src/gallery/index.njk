@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Gallery
+---
+
+<section class="px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-6xl mx-auto space-y-6 text-center">
+    <p class="ink-chip">Project archive</p>
+    <h1 class="text-4xl font-extrabold">Step into the environments we craft.</h1>
+    <p class="text-gray-400">Browse deployments by discipline and see how engineering and storytelling meet on every site.</p>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 pb-20">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% set galleries = [
+      {title:"CCTV Systems", desc:"Surveillance and monitoring installations.", link:"/gallery/cctv/", img:"/assets/product/cctv1.jpg"},
+      {title:"Network Solutions", desc:"Core & access infrastructure builds.", link:"/gallery/network/", img:"/assets/product/network.jpg"},
+      {title:"Security Systems", desc:"Access control, biometrics, and SOC views.", link:"/gallery/security/", img:"https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=600&fit=crop"},
+      {title:"HVAC Services", desc:"Climate control deployments across industries.", link:"/gallery/hvac/", img:"https://images.unsplash.com/photo-1581092918484-8313e1f7e8d6?w=800&h=600&fit=crop"},
+      {title:"Fire Alarm Systems", desc:"Fire safety, evacuation lighting, and testing.", link:"/gallery/fire/", img:"https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&h=600&fit=crop"},
+      {title:"Generator Engineers", desc:"Backup power integration and ATS builds.", link:"/gallery/generator/", img:"https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop"},
+      {title:"Digital & Web", desc:"Immersive web experiences backing each build.", link:"/gallery/webdev/", img:"https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop"}
+    ] %}
+    {% for item in galleries %}
+    <a href="{{ item.link }}" class="ink-card overflow-hidden group" data-search-entry data-search-title="{{ item.title }} projects" data-search-category="Gallery" data-search-description="{{ item.desc }}" data-search-url="{{ item.link }}">
+      <div class="relative h-56 overflow-hidden">
+        <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      </div>
+      <div class="p-6 space-y-3">
+        <p class="ink-chip">Deployment</p>
+        <h3 class="text-2xl font-semibold">{{ item.title }}</h3>
+        <p class="text-gray-400 text-sm">{{ item.desc }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

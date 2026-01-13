@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030711">
+  <title>Fire Alarm Systems - A&amp;B Innovation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/index.css">
+</head>
+<body class="min-h-screen antialiased">
+  <nav class="sticky top-0 z-50 bg-slate-950 bg-opacity-80 backdrop-blur-xl border-b border-white border-opacity-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-15 flex items-center justify-center">
+          <img src="/assets/product/logo.png" alt="A&amp;B Innovation logo" class="h-10 w-10 object-contain">
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.6em] text-gray-500">A&amp;B</p>
+          <p class="text-xl font-semibold text-white">A&amp;B Innovation</p>
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center space-x-4 text-sm font-semibold">
+        <a href="/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Home</a>
+        <a href="/services/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Services</a>
+        <a href="/products/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Products</a>
+        <a href="/gallery/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Gallery</a>
+        <a href="/about/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">About</a>
+        <a href="/contact/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center space-x-3">
+        <button type="button" class="ink-action text-sm bg-white text-green-900 border-white" data-search-trigger>
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+          Search
+        </button>
+        <a href="tel:+250785576541" class="ink-action text-sm bg-white text-green-900 border-white">
+          Call dispatch
+        </a>
+      </div>
+      <div class="flex items-center gap-3 lg:hidden">
+        <button type="button" class="p-2 rounded-full border border-white border-opacity-20 text-gray-200" data-search-trigger>
+          <span class="sr-only">Search catalog</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+        </button>
+        <button type="button" class="p-2 rounded-full border border-white border-opacity-20 text-gray-200" id="mobile-menu-button" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="lg:hidden hidden border-t border-white border-opacity-10 bg-slate-950 bg-opacity-90" id="mobile-menu">
+    <div class="px-4 py-4 space-y-2">
+      <button type="button" class="w-full flex items-center justify-center ink-action bg-white text-green-900 border-white" data-search-trigger>
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+        </svg>
+        Search catalog
+      </button>
+      <a href="/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Home</a>
+      <a href="/services/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Services</a>
+      <a href="/products/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Products</a>
+      <a href="/gallery/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Gallery</a>
+      <a href="/about/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">About</a>
+      <a href="/contact/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Contact</a>
+      <a href="tel:+250785576541" class="block text-center ink-action bg-white text-green-900 border-white w-full">Call dispatch</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!expanded).toString());
+    });
+  }
+</script>
+
+  <div id="global-search-overlay" class="hidden fixed inset-0 bg-slate-950 bg-opacity-90 backdrop-blur-2xl px-4 py-12 z-50 overflow-y-auto">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="ink-card p-8 relative space-y-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div>
+            <p class="ink-chip text-xs">Quick lookup</p>
+            <h2 class="text-3xl font-semibold mt-3">Search products & services</h2>
+            <p class="text-sm text-gray-500">Type at least two letters and press Enter to open the leading suggestion.</p>
+          </div>
+          <button type="button" class="ink-action ink-action--secondary px-4 py-2 text-sm" data-search-close>
+            Close overlay
+          </button>
+        </div>
+        <div class="relative">
+          <input id="global-search-input" type="text" placeholder="Search devices, services, accessories..." class="w-full filter-input pl-12 pr-4 py-3 text-base bg-transparent" autocomplete="off" />
+          <svg class="w-5 h-5 absolute left-4 top-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+        </div>
+        <div id="global-search-results" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+          <p class="text-sm text-gray-500">Start typing to see matching items.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button type="button" class="ink-action ink-action--secondary" data-search-close>Cancel</button>
+          <a href="/contact/" class="ink-action ink-action--primary">Talk to an engineer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="relative z-10">
+    
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="mb-8">
+    <a href="/services/" class="text-blue-600 hover:text-blue-800 mb-4 inline-block">&larr; Back to Services</a>
+    <h1 class="text-4xl font-bold mb-4">Fire Alarm Systems</h1>
+    <p class="text-xl text-gray-600">Life-saving fire detection and emergency response systems</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-12 items-start">
+    <div>
+      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&h=600&fit=crop" alt="Fire Alarm Systems" class="w-full rounded-lg shadow-lg" />
+    </div>
+    <div>
+      <h2 class="text-2xl font-bold mb-4">Advanced Fire Safety Solutions</h2>
+      <p class="text-gray-700 mb-6">
+        Our fire alarm systems provide life-saving fire detection with automatic alerts and emergency response integration. We install compliant fire safety systems that meet all regulatory standards and ensure the safety of occupants in buildings across Rwanda.
+      </p>
+
+      <h3 class="text-xl font-semibold mb-3">Our Fire Safety Services Include:</h3>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Fire alarm system installation
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Smoke and heat detection
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Emergency notification systems
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          System testing and certification
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Maintenance and inspections
+        </li>
+      </ul>
+
+      <a href="/contact/" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition inline-block">
+        Get Fire Safety Consultation
+      </a>
+    </div>
+  </div>
+</div>
+  </main>
+  <div id="whatsapp-cart" class="hidden fixed bottom-5 right-5 w-full max-w-sm px-4 sm:px-0 z-40">
+    <div class="ink-card ink-card--soft p-5 space-y-4 border border-white border-opacity-10">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-blue-500">WhatsApp Cart</p>
+          <p class="text-lg font-semibold" data-cart-count>0 items selected</p>
+        </div>
+        <button type="button" class="text-xs text-gray-500 hover:text-gray-300 font-semibold" data-cart-clear>Clear</button>
+      </div>
+      <p class="text-sm text-gray-500" data-cart-preview>Add products to get started.</p>
+      <p class="text-sm font-semibold" data-cart-total-label></p>
+      <div class="flex flex-col sm:flex-row gap-2">
+        <a href="/contact/" class="flex-1 inline-flex items-center justify-center ink-action ink-action--secondary text-sm" data-cart-review>Review items</a>
+        <button type="button" class="flex-1 inline-flex items-center justify-center ink-action ink-action--primary text-sm" data-cart-send disabled>Send on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <section class="px-4 sm:px-6 lg:px-8 py-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="ink-card ink-card--soft p-6 sm:p-8 text-sm space-y-3">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="ink-chip">Service terms</span>
+          <p class="text-xs text-gray-500">Transparent logistics & installation policy</p>
+        </div>
+        <p><strong>Payment policy:</strong> Pay after receiving standard products. For delivery + installation, settle 50% before dispatch and the remaining 50% once installation is completed. Installations outside Kigali can be negotiated.</p>
+        <p><strong>Delivery:</strong> Free within Kigali. Outside Kigali, delivery terms are negotiable based on destination.</p>
+      <p><strong>Installation-only:</strong> If you prefer A&amp;B Innovation to install equipment you already have on site, services are available and priced on a negotiated rate.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-slate-950 bg-opacity-80 border-t border-white border-opacity-10 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid gap-10 lg:grid-cols-4">
+      <div class="space-y-4">
+        <p class="ink-chip">A&amp;B Innovation</p>
+        <p class="text-2xl font-semibold">Engineering immersive, resilient infrastructure for Africa.</p>
+        <p class="text-sm text-gray-500">CCTV, networking, HVAC, fire safety, power, and digital experiences orchestrated by a single crew.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/contact/" class="ink-action ink-action--primary text-sm">Schedule a discovery call</a>
+          <a href="/gallery/" class="ink-action ink-action--secondary text-sm">See deployments</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Navigation</p>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-white transition">Home</a></li>
+          <li><a href="/services/" class="hover:text-white transition">Services</a></li>
+          <li><a href="/products/" class="hover:text-white transition">Product catalog</a></li>
+          <li><a href="/gallery/" class="hover:text-white transition">Project gallery</a></li>
+          <li><a href="/about/" class="hover:text-white transition">About the team</a></li>
+          <li><a href="/contact/" class="hover:text-white transition">Contact & support</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Reach us</p>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li>
+            <p class="font-semibold text-white">Dispatch line</p>
+            <a href="tel:+250785576541" class="hover:text-white transition">+250 785 576 541</a>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Email</p>
+            <a href="mailto:technicprosolution@gmail.com" class="hover:text-white transition">technicprosolution@gmail.com</a>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Office</p>
+            <p class="text-gray-500">123 Tech Avenue, Kigali, Rwanda</p>
+          </li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Operations</p>
+        <div class="ink-card p-4 space-y-2 text-sm">
+          <p class="text-gray-400">Working hours</p>
+          <p class="text-lg font-semibold text-white">24/7 response crews</p>
+          <p class="text-gray-500 text-sm">Emergency technicians available in Kigali and across the region.</p>
+        </div>
+        <div class="ink-card p-4 space-y-2 text-sm">
+          <p class="text-gray-400">WhatsApp command</p>
+          <p class="text-lg font-semibold text-white">+250 785 576 541</p>
+          <p class="text-gray-500 text-sm">Send your cart or ping us for immediate coordination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white border-opacity-5 text-center text-xs text-gray-500 py-6">
+    © 2026 A&amp;B Innovation — Built with Eleventy & human touch.
+  </div>
+</footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script id="global-search-data" type="application/json">
+        []
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('global-search-overlay');
+      const input = document.getElementById('global-search-input');
+      const results = document.getElementById('global-search-results');
+      const dataElement = document.getElementById('global-search-data');
+      if (!overlay || !input || !results || !dataElement) {
+        return;
+      }
+
+      let staticEntries = [];
+      try {
+        staticEntries = JSON.parse(dataElement.textContent.trim()) || [];
+      } catch (error) {
+        console.error('Failed to parse search index', error);
+      }
+      let searchIndex = staticEntries.slice();
+      let indexReady = false;
+      const remoteIndexUrl = '/assets/search-index.json';
+      let remoteIndexPromise = null;
+
+      const triggers = document.querySelectorAll('[data-search-trigger]');
+      const closeButtons = overlay.querySelectorAll('[data-search-close]');
+
+      const fetchRemoteIndex = () => {
+        if (!remoteIndexPromise) {
+          remoteIndexPromise = fetch(remoteIndexUrl, { cache: 'force-cache' })
+            .then(response => response.ok ? response.json() : [])
+            .catch(() => []);
+        }
+        return remoteIndexPromise;
+      };
+
+      const collectDynamicEntries = () => {
+        return Array.from(document.querySelectorAll('[data-search-entry]')).map(node => {
+          const title = (node.dataset.searchTitle || node.getAttribute('data-search-title') || '').trim();
+          const url = (node.dataset.searchUrl || node.getAttribute('data-search-url') || '').trim();
+          if (!title || !url) {
+            return null;
+          }
+          return {
+            title,
+            category: (node.dataset.searchCategory || node.getAttribute('data-search-category') || 'Products').trim(),
+            description: (node.dataset.searchDescription || node.getAttribute('data-search-description') || '').trim(),
+            url
+          };
+        }).filter(Boolean);
+      };
+
+      const refreshSearchIndex = () => {
+        indexReady = false;
+        return fetchRemoteIndex().then(remoteEntries => {
+          const unique = new Map();
+          [...staticEntries, ...(remoteEntries || []), ...collectDynamicEntries()].forEach(item => {
+            const key = `${item.title}-${item.url}`;
+            if (!unique.has(key)) {
+              unique.set(key, item);
+            }
+          });
+          searchIndex = Array.from(unique.values());
+          indexReady = true;
+        }).catch(() => {
+          const unique = new Map();
+          [...staticEntries, ...collectDynamicEntries()].forEach(item => {
+            const key = `${item.title}-${item.url}`;
+            if (!unique.has(key)) {
+              unique.set(key, item);
+            }
+          });
+          searchIndex = Array.from(unique.values());
+          indexReady = true;
+        });
+      };
+
+      const lockScroll = (shouldLock) => {
+        document.body.classList.toggle('overflow-hidden', shouldLock);
+      };
+
+      const openOverlay = () => {
+        overlay.classList.remove('hidden');
+        input.value = '';
+        results.innerHTML = '<p class="text-sm text-gray-500">Loading search index...</p>';
+        lockScroll(true);
+        setTimeout(() => input.focus(), 100);
+        refreshSearchIndex().then(() => renderResults(''));
+      };
+
+      const closeOverlay = () => {
+        overlay.classList.add('hidden');
+        lockScroll(false);
+      };
+
+      const getMatches = (term) => {
+        if (!term) {
+          return searchIndex.slice(0, 12);
+        }
+        const q = term.toLowerCase();
+        return searchIndex.filter(item => {
+          return `${item.title} ${item.description} ${item.category} ${item.keywords || ''}`.toLowerCase().includes(q);
+        }).slice(0, 12);
+      };
+
+      const renderResults = (term) => {
+        const matches = getMatches(term);
+        if (!matches.length) {
+          results.innerHTML = '<p class="text-sm text-gray-500">No matches yet. Try refining your keywords.</p>';
+          return;
+        }
+
+        results.innerHTML = matches.map(item => `
+          <a href="${item.url}" class="block border border-gray-200 rounded-2xl px-4 py-3 hover:border-blue-500 hover:-translate-y-0.5 transition transform">
+            <div class="flex items-center justify-between text-xs uppercase tracking-wide text-blue-500">
+              <span>${item.category}</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+            <p class="text-lg font-semibold text-gray-900 mt-1">${item.title}</p>
+            <p class="text-sm text-gray-500 mt-1">${item.description}</p>
+          </a>
+        `).join('');
+      };
+
+      triggers.forEach(button => button.addEventListener('click', () => openOverlay()));
+      closeButtons.forEach(button => button.addEventListener('click', () => closeOverlay()));
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      input.addEventListener('input', (event) => {
+        if (!indexReady) {
+          results.innerHTML = '<p class="text-sm text-gray-500">Loading search index...</p>';
+          return;
+        }
+        renderResults(event.target.value.trim());
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (overlay.classList.contains('hidden')) {
+          return;
+        }
+        if (event.key === 'Escape') {
+          closeOverlay();
+        }
+        if (event.key === 'Enter') {
+          if (!indexReady) {
+            return;
+          }
+          const firstResult = results.querySelector('a');
+          if (firstResult) {
+            firstResult.click();
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+    (function() {
+      const CART_STORAGE_KEY = 'abinnovation-cart-items';
+      const WHATSAPP_NUMBER = '250785576541';
+      const DEFAULT_MESSAGE = 'Hello, I would like to speak with A&B Innovation about your products and services.';
+      const subscribers = new Set();
+      const state = {
+        cart: []
+      };
+
+      const parsePriceText = (value) => {
+        if (value === undefined || value === null) {
+          return null;
+        }
+        const numeric = String(value).replace(/[^0-9.]/g, '');
+        if (!numeric) {
+          return null;
+        }
+        const parsed = parseFloat(numeric);
+        return Number.isFinite(parsed) ? parsed : null;
+      };
+
+      const formatCurrency = (amount) => {
+        if (typeof amount !== 'number' || !Number.isFinite(amount) || amount <= 0) {
+          return '';
+        }
+        return `RWF ${Math.round(amount).toLocaleString('en-US')}`;
+      };
+
+      const normalizeItem = (item) => {
+        if (!item) {
+          return null;
+        }
+        const normalized = Object.assign({}, item);
+        const parsedAmount = typeof normalized.amount === 'number' && Number.isFinite(normalized.amount)
+          ? normalized.amount
+          : parsePriceText(normalized.price);
+        normalized.amount = parsedAmount || null;
+        return normalized;
+      };
+
+      const readCartFromStorage = () => {
+        try {
+          const stored = sessionStorage.getItem(CART_STORAGE_KEY);
+          if (!stored) {
+            return [];
+          }
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            return parsed.map(normalizeItem).filter(item => item && item.id);
+          }
+          return [];
+        } catch (error) {
+          console.warn('Unable to read cart state', error);
+          return [];
+        }
+      };
+
+      state.cart = readCartFromStorage();
+
+      const persistCart = () => {
+        try {
+          sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(state.cart));
+        } catch (error) {
+          console.warn('Unable to persist cart selection', error);
+        }
+      };
+
+      const getItems = () => state.cart.slice();
+      const getCartTotal = () => state.cart.reduce((sum, item) => sum + (item.amount || 0), 0);
+
+      const findIndex = (id) => {
+        if (!id) {
+          return -1;
+        }
+        return state.cart.findIndex(item => item.id === id);
+      };
+
+      const buildCartMessage = (items) => {
+        if (!items || !items.length) {
+          return DEFAULT_MESSAGE;
+        }
+        const lines = [
+          'Hello, I would like to discuss the following A&B Innovation items:',
+          ''
+        ];
+        items.forEach((item, index) => {
+          const displayPrice = item.price || (item.amount ? formatCurrency(item.amount) : '');
+          lines.push(`${index + 1}. ${item.title || 'Unnamed item'}${displayPrice ? ` (${displayPrice})` : ''}`);
+          if (item.category) {
+            lines.push(`   Category: ${item.category}`);
+          }
+          if (item.description) {
+            lines.push(`   Details: ${item.description}`);
+          }
+          if (item.url) {
+            lines.push(`   Link: ${item.url}`);
+          }
+          lines.push('');
+        });
+        lines.push('Please advise pricing, delivery, and installation support.');
+        return lines.join('\n');
+      };
+
+      const updateToggleButtons = () => {
+        const items = getItems();
+        document.querySelectorAll('[data-cart-toggle]').forEach((button) => {
+          const id = button.getAttribute('data-cart-id');
+          const isSelected = findIndex(id) !== -1;
+          const label = button.querySelector('[data-cart-label]');
+          if (label) {
+            label.textContent = isSelected ? 'Added to WhatsApp cart' : 'Add to WhatsApp cart';
+          }
+          button.classList.toggle('bg-green-600', isSelected);
+          button.classList.toggle('text-white', isSelected);
+          button.classList.toggle('border-green-600', isSelected);
+          button.classList.toggle('border-gray-300', !isSelected);
+          button.classList.toggle('text-gray-900', !isSelected);
+        });
+      };
+
+      const updateFloatingWidget = () => {
+        const wrapper = document.getElementById('whatsapp-cart');
+        if (!wrapper) {
+          return;
+        }
+        const count = state.cart.length;
+        wrapper.classList.toggle('hidden', count === 0);
+        const countNode = wrapper.querySelector('[data-cart-count]');
+        if (countNode) {
+          countNode.textContent = count ? `${count} item${count === 1 ? '' : 's'} selected` : '0 items selected';
+        }
+        const previewNode = wrapper.querySelector('[data-cart-preview]');
+        if (previewNode) {
+          if (!count) {
+            previewNode.textContent = 'Add products to get started.';
+          } else {
+            const titles = state.cart.map(item => item.title || 'Unnamed item').slice(0, 3);
+            previewNode.textContent = titles.join(', ') + (count > 3 ? ` +${count - 3} more` : '');
+          }
+        }
+        const totalNode = wrapper.querySelector('[data-cart-total-label]');
+        if (totalNode) {
+          const totalAmount = getCartTotal();
+          totalNode.textContent = totalAmount ? `Estimated total: ${formatCurrency(totalAmount)}` : 'Estimated total: --';
+        }
+        const sendButton = wrapper.querySelector('[data-cart-send]');
+        if (sendButton) {
+          sendButton.disabled = count === 0;
+          sendButton.classList.toggle('opacity-50', count === 0);
+          sendButton.classList.toggle('cursor-not-allowed', count === 0);
+        }
+      };
+
+      const notify = () => {
+        updateToggleButtons();
+        updateFloatingWidget();
+        subscribers.forEach((callback) => {
+          try {
+            callback(getItems());
+          } catch (error) {
+            console.warn('Cart subscriber error', error);
+          }
+        });
+      };
+
+      const addItem = (item) => {
+        const normalized = normalizeItem(item);
+        if (!normalized || !normalized.id) {
+          return;
+        }
+        const index = findIndex(normalized.id);
+        if (index === -1) {
+          state.cart.push(normalized);
+        } else {
+          state.cart[index] = Object.assign({}, state.cart[index], normalized);
+        }
+        persistCart();
+        notify();
+      };
+
+      const removeItem = (id) => {
+        const index = findIndex(id);
+        if (index === -1) {
+          return;
+        }
+        state.cart.splice(index, 1);
+        persistCart();
+        notify();
+      };
+
+      const toggleItem = (item) => {
+        if (!item || !item.id) {
+          return;
+        }
+        if (findIndex(item.id) === -1) {
+          addItem(item);
+        } else {
+          removeItem(item.id);
+        }
+      };
+
+      const clearCart = () => {
+        if (!state.cart.length) {
+          return;
+        }
+        state.cart = [];
+        persistCart();
+        notify();
+      };
+
+      const readItemFromNode = (node) => {
+        const get = (attr, fallbackAttr) => node.getAttribute(attr) || (fallbackAttr ? node.getAttribute(fallbackAttr) : '') || '';
+        const title = get('data-cart-title', 'data-order-title');
+        const id = get('data-cart-id') || `${title}-${get('data-cart-price', 'data-order-price')}`;
+        return normalizeItem({
+          id,
+          title,
+          price: get('data-cart-price', 'data-order-price'),
+          description: get('data-cart-desc', 'data-order-desc'),
+          image: get('data-cart-img', 'data-order-img'),
+          category: get('data-cart-category', 'data-order-category'),
+          url: get('data-cart-url') || node.getAttribute('href') || window.location.href
+        });
+      };
+
+      const sendCartToWhatsApp = () => {
+        const message = buildCartMessage(getItems());
+        const encoded = encodeURIComponent(message.trim());
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+        window.open(url, '_blank');
+      };
+
+      document.addEventListener('click', (event) => {
+        const toggle = event.target.closest('[data-cart-toggle]');
+        if (toggle) {
+          event.preventDefault();
+          toggleItem(readItemFromNode(toggle));
+          return;
+        }
+        const clearButton = event.target.closest('[data-cart-clear]');
+        if (clearButton) {
+          event.preventDefault();
+          clearCart();
+          return;
+        }
+        const sendButton = event.target.closest('[data-cart-send]');
+        if (sendButton) {
+          event.preventDefault();
+          if (getItems().length) {
+            sendCartToWhatsApp();
+          }
+        }
+      });
+
+      window.abInnovationCart = {
+        getItems,
+        getTotal: () => getCartTotal(),
+        addItem,
+        removeItem,
+        toggleItem,
+        clear: clearCart,
+        buildMessage: buildCartMessage,
+        formatCurrency,
+        subscribe: (callback) => {
+          if (typeof callback !== 'function') {
+            return () => {};
+          }
+          subscribers.add(callback);
+          return () => subscribers.delete(callback);
+        }
+      };
+
+      notify();
+    })();
+  </script>
+</body>
+</html>

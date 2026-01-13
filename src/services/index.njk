@@ -1,0 +1,111 @@
+---
+layout: base.njk
+title: Services
+---
+
+<section class="px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-6xl mx-auto space-y-8">
+    <div class="ink-shell space-y-6">
+      <p class="ink-chip">A&amp;B Innovation service stack</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Immersive infrastructure engineered for spaces that never stop.</h1>
+      <p class="text-lg text-gray-300">Our crews deliver CCTV, networking, HVAC, fire safety, security, power, and digital experiences as a single orchestrated engagement.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="ink-action ink-action--primary">Plan a project</a>
+        <a href="/products/" class="ink-action ink-action--secondary">Browse hardware</a>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="ink-card p-6 space-y-3">
+        <p class="ink-chip">01 · Discovery</p>
+        <h3 class="text-xl font-semibold">Experience-first design</h3>
+        <p class="text-gray-400 text-sm">Journey mapping, floor sensing, and mood boards so stakeholders can feel the deployment before cables arrive.</p>
+      </div>
+      <div class="ink-card p-6 space-y-3">
+        <p class="ink-chip">02 · Build</p>
+        <h3 class="text-xl font-semibold">Premium installation</h3>
+        <p class="text-gray-400 text-sm">Clean racks, labeled runs, and factory-calibrated devices delivered by safety-certified technicians.</p>
+      </div>
+      <div class="ink-card p-6 space-y-3">
+        <p class="ink-chip">03 · Operate</p>
+        <h3 class="text-xl font-semibold">Always-on care</h3>
+        <p class="text-gray-400 text-sm">Remote monitoring, predictive maintenance, and playbooks for facility teams to run confidently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16 bg-black bg-opacity-20">
+  <div class="max-w-6xl mx-auto space-y-10">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div class="space-y-3 max-w-2xl">
+        <p class="ink-chip">Service catalog</p>
+        <h2 class="text-3xl font-bold">Choose a mission, we handle the rest.</h2>
+        <p class="text-gray-400">Every capability is delivered end-to-end with documentation, visuals, and on-call support.</p>
+      </div>
+      <a href="/contact/" class="ink-action ink-action--primary">Book a technical survey</a>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% set services = [
+        {title:"CCTV & Command", body:"4K domes, PTZ towers, SOC dashboards, and AI alerts for campuses, retail, and estates.", link:"/services/cctv/", image:"/assets/product/service/cctv.jpg"},
+        {title:"Enterprise Networking", body:"Fiber backbones, Wi-Fi 6 design, Starlink redundancy, and SD-WAN security.", link:"/services/network/", image:"/assets/product/service/network.jpg"},
+        {title:"Security & Access", body:"Biometrics, visitor management, intrusion alarms, and control room orchestration.", link:"/services/security/", image:"/assets/product/service/fingerprint.jpg"},
+        {title:"HVAC & Air Quality", body:"Split units, ducted systems, smart thermostats, and energy analytics for comfort.", link:"/services/hvac/", image:"/assets/product/service/air.jpg"},
+        {title:"Fire & Safety", body:"Addressable panels, detection, evacuation lighting, and drills.", link:"/services/fire/", image:"/assets/product/service/alarm.png"},
+        {title:"Power & Generators", body:"Sizing, installation, ATS integration, and remote diagnostics for clean power.", link:"/services/generator/", image:"/assets/product/service/generator.png"},
+        {title:"Digital & Web", body:"Web platforms, intranets, and dashboards that extend physical investments online.", link:"/services/webdev/", image:"/assets/product/service/web.jpg"},
+        {title:"Special Projects", body:"Starlink estates, industrial IoT, bespoke fabrication, and rapid pop-up spaces.", link:"/products/", image:"/assets/product/service/fingerprint.jpg"}
+      ] %}
+      {% for item in services %}
+      <a href="{{ item.link }}" class="ink-card overflow-hidden flex flex-col lg:flex-row" data-search-entry data-search-title="{{ item.title }}" data-search-category="Services" data-search-description="{{ item.body }}" data-search-url="{{ item.link }}">
+        <img src="{{ item.image }}" alt="{{ item.title }}" class="lg:w-1/3 h-52 lg:h-auto object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <p class="ink-chip">Capability</p>
+          <h3 class="text-2xl font-semibold">{{ item.title }}</h3>
+          <p class="text-gray-400 flex-1 text-sm">{{ item.body }}</p>
+          <span class="text-sm text-blue-400 font-semibold inline-flex items-center">Explore details
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set steps = [
+  {title:"Site pulse", body:"Laser scans, electrical audits, and user interviews to model a living brief."},
+  {title:"Co-create", body:"Experience boards, bill of quantities, and live demos so you see the future state."},
+  {title:"Deploy", body:"Clean-room installation standards with daily reports, drone visuals, and QA sheets."},
+  {title:"Support", body:"24/7 monitoring, response teams, and quarterly optimization workshops."}
+] %}
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto space-y-8">
+    <div class="text-center space-y-3">
+      <p class="ink-chip">Engagement blueprint</p>
+      <h2 class="text-3xl font-bold">What collaboration with A&amp;B Innovation feels like.</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      {% for step in steps %}
+      <div class="ink-card p-6 space-y-2">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Step {{ loop.index }}</p>
+        <h3 class="text-xl font-semibold">{{ step.title }}</h3>
+        <p class="text-sm text-gray-400">{{ step.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 pb-20">
+  <div class="ink-shell flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+    <div>
+      <p class="ink-chip">Ready when you are</p>
+      <h2 class="text-3xl font-bold mt-3">Let us craft a service blueprint for your site.</h2>
+      <p class="text-gray-300 mt-2">From Kigali HQs to remote field offices, A&amp;B Innovation deploys the same quality bar everywhere.</p>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/contact/" class="ink-action ink-action--primary">Schedule a walkthrough</a>
+      <a href="/gallery/" class="ink-action ink-action--secondary">See recent builds</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,1059 @@
+[
+  {
+    "title": "Products Overview",
+    "category": "Navigation",
+    "description": "Browse every hardware category we stock.",
+    "url": "/products/",
+    "keywords": "catalog categories hardware overview"
+  },
+  {
+    "title": "Services Overview",
+    "category": "Navigation",
+    "description": "See how we integrate CCTV, networking, HVAC, and more.",
+    "url": "/services/",
+    "keywords": "services portfolio"
+  },
+  {
+    "title": "Contact Sales Team",
+    "category": "Navigation",
+    "description": "Request pricing, site visits, or support.",
+    "url": "/contact/",
+    "keywords": "contact quote"
+  },
+  {
+    "title": "Gallery of Deployments",
+    "category": "Navigation",
+    "description": "See recent CCTV, HVAC, and networking builds.",
+    "url": "/gallery/",
+    "keywords": "portfolio gallery"
+  },
+  {
+    "title": "CCTV Cameras Category",
+    "category": "Product Categories",
+    "description": "Camera kits, NVRs, storage drives, and mounting accessories.",
+    "url": "/products/cctv/",
+    "keywords": "cctv cameras products"
+  },
+  {
+    "title": "Fire Arms & Safety Category",
+    "category": "Product Categories",
+    "description": "Alarm panels, detectors, extinguishers, and alert beacons.",
+    "url": "/products/fire/",
+    "keywords": "fire alarm safety"
+  },
+  {
+    "title": "Air Conditions Category",
+    "category": "Product Categories",
+    "description": "Split units, ducts, thermostats, and installation kits.",
+    "url": "/products/air/",
+    "keywords": "hvac air conditioning"
+  },
+  {
+    "title": "Network Equipments Category",
+    "category": "Product Categories",
+    "description": "Routers, switches, racks, and structured cabling supplies.",
+    "url": "/products/network/",
+    "keywords": "network hardware routers switches"
+  },
+  {
+    "title": "Security System Category",
+    "category": "Product Categories",
+    "description": "Access control, perimeter sensors, and monitoring consoles.",
+    "url": "/products/security/",
+    "keywords": "security access control"
+  },
+  {
+    "title": "IT Office Equipment Category",
+    "category": "Product Categories",
+    "description": "NIC cards, laptops, mice, boosters, USB cables, printer cables, and more.",
+    "url": "/products/it-office/",
+    "keywords": "office equipment peripherals"
+  },
+  {
+    "title": "Cameras Overview",
+    "category": "CCTV Overview",
+    "description": "Camera kits and accessories for every deployment.",
+    "url": "/products/cctv/cameras/",
+    "keywords": "cctv cameras details"
+  },
+  {
+    "title": "HDD & NVR/DVR Overview",
+    "category": "CCTV Overview",
+    "description": "Storage and recorder gear ready for installation.",
+    "url": "/products/cctv/drives/",
+    "keywords": "cctv storage nvr dvr"
+  },
+  {
+    "title": "Cables & Connectors Overview",
+    "category": "CCTV Overview",
+    "description": "Cabling, termination kits, and mounting accessories.",
+    "url": "/products/cctv/cables/",
+    "keywords": "cctv cabling accessories"
+  },
+  {
+    "title": "2MP Analog Black & White",
+    "category": "CCTV Cameras",
+    "description": "2MP analog black and white Hikvision.",
+    "url": "/products/cctv/cameras/#item-2mp-analog-black-white",
+    "keywords": "2mp analog camera hikvision"
+  },
+  {
+    "title": "4MP Analog Black & White",
+    "category": "CCTV Cameras",
+    "description": "4MP analog black and white Hikvision.",
+    "url": "/products/cctv/cameras/#item-4mp-analog-black-white",
+    "keywords": "4mp analog camera"
+  },
+  {
+    "title": "8MP Analog Black & White",
+    "category": "CCTV Cameras",
+    "description": "8MP analog black and white Hikvision.",
+    "url": "/products/cctv/cameras/#item-8mp-analog-black-white",
+    "keywords": "8mp analog camera"
+  },
+  {
+    "title": "6MP Analog B/W Hikvision",
+    "category": "CCTV Cameras",
+    "description": "High-resolution 6MP analog black & white cameras with long-range IR.",
+    "url": "/products/cctv/cameras/#item-6mp-analog-b-w-hikvision",
+    "keywords": "6mp analog hikvision"
+  },
+  {
+    "title": "2MP Analog ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "Full-color 2MP analog ColorVu cameras with built-in warm LEDs.",
+    "url": "/products/cctv/cameras/#item-2mp-analog-colorvu-hikvision",
+    "keywords": "2mp colorvu analog"
+  },
+  {
+    "title": "4MP Analog ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "4MP analog ColorVu units ideal for retail and offices.",
+    "url": "/products/cctv/cameras/#item-4mp-analog-colorvu-hikvision",
+    "keywords": "4mp colorvu analog"
+  },
+  {
+    "title": "6MP Analog ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "Enhanced 6MP ColorVu cameras with smart deterrent lights.",
+    "url": "/products/cctv/cameras/#item-6mp-analog-colorvu-hikvision",
+    "keywords": "6mp colorvu analog"
+  },
+  {
+    "title": "8MP Analog ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "Ultra HD analog color system with HDR night imaging.",
+    "url": "/products/cctv/cameras/#item-8mp-analog-colorvu-hikvision",
+    "keywords": "8mp colorvu analog"
+  },
+  {
+    "title": "2MP IP ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "Network ColorVu cameras bringing vivid imagery to smart homes.",
+    "url": "/products/cctv/cameras/#item-2mp-ip-colorvu-hikvision",
+    "keywords": "2mp ip colorvu"
+  },
+  {
+    "title": "4MP IP ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "Mid-tier IP ColorVu set with analytics and PoE power.",
+    "url": "/products/cctv/cameras/#item-4mp-ip-colorvu-hikvision",
+    "keywords": "4mp ip colorvu"
+  },
+  {
+    "title": "6MP IP ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "High-resolution ColorVu IP cameras with AI-based detection.",
+    "url": "/products/cctv/cameras/#item-6mp-ip-colorvu-hikvision",
+    "keywords": "6mp ip colorvu"
+  },
+  {
+    "title": "8MP IP ColorVu Hikvision",
+    "category": "CCTV Cameras",
+    "description": "Flagship 8MP IP ColorVu suite delivering cinematic night footage.",
+    "url": "/products/cctv/cameras/#item-8mp-ip-colorvu-hikvision",
+    "keywords": "8mp ip colorvu"
+  },
+  {
+    "title": "Kit of 4 Cameras Black & White",
+    "category": "CCTV Cameras",
+    "description": "Complete 4-camera Hikvision kit with NVR, cabling, and power.",
+    "url": "/products/cctv/cameras/#item-kit-of-4-cameras-black-white",
+    "keywords": "4 camera kit black white"
+  },
+  {
+    "title": "Kit of 8 Cameras Black & White",
+    "category": "CCTV Cameras",
+    "description": "8-camera Hikvision bundle with storage, PoE, and mobile app setup.",
+    "url": "/products/cctv/cameras/#item-kit-of-8-cameras-black-white",
+    "keywords": "8 camera kit black white"
+  },
+  {
+    "title": "Kit of 4 Cameras ColorVu",
+    "category": "CCTV Cameras",
+    "description": "ColorVu Hikvision bundle with four cameras plus NVR.",
+    "url": "/products/cctv/cameras/#item-kit-of-4-cameras-colorvu",
+    "keywords": "4 camera kit colorvu"
+  },
+  {
+    "title": "Kit of 8 Cameras ColorVu",
+    "category": "CCTV Cameras",
+    "description": "Eight-camera ColorVu kit with storage, PoE, and mobile app setup.",
+    "url": "/products/cctv/cameras/#item-kit-of-8-cameras-colorvu",
+    "keywords": "8 camera kit colorvu"
+  },
+  {
+    "title": "Wi-Fi Panorama Camera",
+    "category": "CCTV Cameras",
+    "description": "360? Wi-Fi camera ideal for small shops and apartments.",
+    "url": "/products/cctv/cameras/#item-wi-fi-panorama-camera",
+    "keywords": "wifi panorama camera"
+  },
+  {
+    "title": "Hikvision DeepinView 12MP",
+    "category": "CCTV Cameras",
+    "description": "IDS-2CD7A26G0-IZS camera with analytics and varifocal lens.",
+    "url": "/products/cctv/cameras/#item-hikvision-deepinview-12mp",
+    "keywords": "deepinview 12mp"
+  },
+  {
+    "title": "Hikvision DS-2CD3686G2T-IZS (8MP)",
+    "category": "CCTV Cameras",
+    "description": "8MP varifocal camera with AcuSense for false alarm reduction.",
+    "url": "/products/cctv/cameras/#item-hikvision-ds-2cd3686g2t-izs-8mp",
+    "keywords": "acusense 8mp"
+  },
+  {
+    "title": "Wifi Uniarch 3MP 360? Camera",
+    "category": "CCTV Cameras",
+    "description": "Panoramic Uniarch camera ideal for offices and boutiques.",
+    "url": "/products/cctv/cameras/#item-wifi-uniarch-3mp-360-camera",
+    "keywords": "uniarch 3mp"
+  },
+  {
+    "title": "Wifi IMILAB C22 Home Security Camera",
+    "category": "CCTV Cameras",
+    "description": "Smart home security camera with crystal-clear video.",
+    "url": "/products/cctv/cameras/#item-wifi-imilab-c22-home-security-camera",
+    "keywords": "imilab c22"
+  },
+  {
+    "title": "Wifi EZVIZ EC Dual 2K (3MP)",
+    "category": "CCTV Cameras",
+    "description": "Dual-lens EZVIZ camera capturing vivid 3MP footage.",
+    "url": "/products/cctv/cameras/#item-wifi-ezviz-ec-dual-2k-3mp",
+    "keywords": "ezviz dual 2k"
+  },
+  {
+    "title": "Wifi IMILAB EC3 Lite 2K HD",
+    "category": "CCTV Cameras",
+    "description": "Outdoor-ready IMILAB camera with night vision and alerts.",
+    "url": "/products/cctv/cameras/#item-wifi-imilab-ec3-lite-2k-hd",
+    "keywords": "imilab ec3 lite"
+  },
+  {
+    "title": "1TB Surveillance HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Entry-level 24/7 rated SATA drive with 3-year warranty.",
+    "url": "/products/cctv/drives/#item-1tb-surveillance-hdd",
+    "keywords": "1tb surveillance hdd"
+  },
+  {
+    "title": "2TB Surveillance HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Reliable 2TB workload drive with vibration protection.",
+    "url": "/products/cctv/drives/#item-2tb-surveillance-hdd",
+    "keywords": "2tb surveillance hdd"
+  },
+  {
+    "title": "4TB Surveillance HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Large capacity drive balanced for NVR deployments.",
+    "url": "/products/cctv/drives/#item-4tb-surveillance-hdd",
+    "keywords": "4tb surveillance hdd"
+  },
+  {
+    "title": "6TB Surveillance HDD",
+    "category": "CCTV Storage & Power",
+    "description": "High-capacity 6TB disk ready for mission-critical retention.",
+    "url": "/products/cctv/drives/#item-6tb-surveillance-hdd",
+    "keywords": "6tb surveillance hdd"
+  },
+  {
+    "title": "8TB Surveillance HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Enterprise 8TB disk with smart vibration and cooling design.",
+    "url": "/products/cctv/drives/#item-8tb-surveillance-hdd",
+    "keywords": "8tb surveillance hdd"
+  },
+  {
+    "title": "10TB Surveillance HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Massive 10TB drive for multi-site recording archives.",
+    "url": "/products/cctv/drives/#item-10tb-surveillance-hdd",
+    "keywords": "10tb surveillance hdd"
+  },
+  {
+    "title": "1TB Standard HDD",
+    "category": "CCTV Storage & Power",
+    "description": "General-purpose 1TB SATA drive for auxiliary storage.",
+    "url": "/products/cctv/drives/#item-1tb-standard-hdd",
+    "keywords": "1tb standard hdd"
+  },
+  {
+    "title": "2TB Standard HDD",
+    "category": "CCTV Storage & Power",
+    "description": "2TB desktop-class drive suitable for backup footage.",
+    "url": "/products/cctv/drives/#item-2tb-standard-hdd",
+    "keywords": "2tb standard hdd"
+  },
+  {
+    "title": "4TB Standard HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Balanced 4TB drive for archives that don't require 24/7 duty.",
+    "url": "/products/cctv/drives/#item-4tb-standard-hdd",
+    "keywords": "4tb standard hdd"
+  },
+  {
+    "title": "6TB Standard HDD",
+    "category": "CCTV Storage & Power",
+    "description": "Capacity expansion drive for secondary NVR bays.",
+    "url": "/products/cctv/drives/#item-6tb-standard-hdd",
+    "keywords": "6tb standard hdd"
+  },
+  {
+    "title": "8TB Standard HDD",
+    "category": "CCTV Storage & Power",
+    "description": "High-capacity 8TB desktop disk for long-term footage.",
+    "url": "/products/cctv/drives/#item-8tb-standard-hdd",
+    "keywords": "8tb standard hdd"
+  },
+  {
+    "title": "10TB Standard HDD",
+    "category": "CCTV Storage & Power",
+    "description": "10TB general-purpose drive for nightly snapshots and exports.",
+    "url": "/products/cctv/drives/#item-10tb-standard-hdd",
+    "keywords": "10tb standard hdd"
+  },
+  {
+    "title": "32GB Wi-Fi Camera Card",
+    "category": "CCTV Storage & Power",
+    "description": "High-endurance microSD card tuned for basic Wi-Fi cameras.",
+    "url": "/products/cctv/drives/#item-32gb-wi-fi-camera-card",
+    "keywords": "32gb microsd"
+  },
+  {
+    "title": "64GB Wi-Fi Camera Card",
+    "category": "CCTV Storage & Power",
+    "description": "Extended recording for smart cameras needing longer clips.",
+    "url": "/products/cctv/drives/#item-64gb-wi-fi-camera-card",
+    "keywords": "64gb microsd"
+  },
+  {
+    "title": "128GB Wi-Fi Camera Card",
+    "category": "CCTV Storage & Power",
+    "description": "High-endurance 128GB microSD for busy home installations.",
+    "url": "/products/cctv/drives/#item-128gb-wi-fi-camera-card",
+    "keywords": "128gb microsd"
+  },
+  {
+    "title": "256GB Wi-Fi Camera Card",
+    "category": "CCTV Storage & Power",
+    "description": "Top-tier 256GB card for long-term on-camera storage.",
+    "url": "/products/cctv/drives/#item-256gb-wi-fi-camera-card",
+    "keywords": "256gb microsd"
+  },
+  {
+    "title": "4-Channel DVR",
+    "category": "CCTV Storage & Power",
+    "description": "Supports 2MP analog black & white kits with HDMI output and mobile app.",
+    "url": "/products/cctv/drives/#item-4-channel-dvr",
+    "keywords": "4 channel dvr"
+  },
+  {
+    "title": "8-Channel DVR",
+    "category": "CCTV Storage & Power",
+    "description": "Handles analog ColorVu cameras with smart search and QR setup.",
+    "url": "/products/cctv/drives/#item-8-channel-dvr",
+    "keywords": "8 channel dvr"
+  },
+  {
+    "title": "16-Channel DVR",
+    "category": "CCTV Storage & Power",
+    "description": "Hybrid DVR for analog PTZ and domes, includes redundant HDD bays.",
+    "url": "/products/cctv/drives/#item-16-channel-dvr",
+    "keywords": "16 channel dvr"
+  },
+  {
+    "title": "4-Channel NVR (IP ColorVu)",
+    "category": "CCTV Storage & Power",
+    "description": "PoE NVR tuned for IP ColorVu cameras with AI events.",
+    "url": "/products/cctv/drives/#item-4-channel-nvr-ip-colorvu",
+    "keywords": "4 channel nvr"
+  },
+  {
+    "title": "8-Channel NVR (IP ColorVu)",
+    "category": "CCTV Storage & Power",
+    "description": "PoE NVR tuned for IP ColorVu cameras with AI events.",
+    "url": "/products/cctv/drives/#item-8-channel-nvr-ip-colorvu",
+    "keywords": "8 channel nvr"
+  },
+  {
+    "title": "16-Channel NVR (IP Colorvu)",
+    "category": "CCTV Storage & Power",
+    "description": "Dual NICs, RAID-ready and ideal for 6-8MP ColorVu/IP turrets.",
+    "url": "/products/cctv/drives/#item-16-channel-nvr-ip-colorvu",
+    "keywords": "16 channel nvr"
+  },
+  {
+    "title": "32-Channel NVR",
+    "category": "CCTV Storage & Power",
+    "description": "Large-scale NVR supporting thermal, ColorVu, and PTZ in one rack.",
+    "url": "/products/cctv/drives/#item-32-channel-nvr",
+    "keywords": "32 channel nvr"
+  },
+  {
+    "title": "Coaxial Cable 20m",
+    "category": "CCTV Cables & Connectors",
+    "description": "20m pre-terminated coaxial cable for single-camera drops.",
+    "url": "/products/cctv/cables/#item-coaxial-cable-20m",
+    "keywords": "coaxial cable 20m"
+  },
+  {
+    "title": "Coaxial Cable 30m",
+    "category": "CCTV Cables & Connectors",
+    "description": "30m heavy-duty coaxial run with copper conductors.",
+    "url": "/products/cctv/cables/#item-coaxial-cable-30m",
+    "keywords": "coaxial cable 30m"
+  },
+  {
+    "title": "Cat 6 Cable 305m",
+    "category": "CCTV Cables & Connectors",
+    "description": "Full 305m box of Cat6 cabling for large IP deployments.",
+    "url": "/products/cctv/cables/#item-cat-6-cable-305m",
+    "keywords": "cat6 cable 305m"
+  },
+  {
+    "title": "Video Baluns (Pair)",
+    "category": "CCTV Cables & Connectors",
+    "description": "Convert coax runs to twisted pair for long-distance analog feeds.",
+    "url": "/products/cctv/cables/#item-video-baluns-pair",
+    "keywords": "video balun"
+  },
+  {
+    "title": "BNC Connector",
+    "category": "CCTV Cables & Connectors",
+    "description": "High-quality BNC connectors for quick field termination.",
+    "url": "/products/cctv/cables/#item-bnc-connector",
+    "keywords": "bnc connector"
+  },
+  {
+    "title": "Power Connector (Male/Female)",
+    "category": "CCTV Cables & Connectors",
+    "description": "DC power connectors for camera pigtails and power supplies.",
+    "url": "/products/cctv/cables/#item-power-connector-male-female",
+    "keywords": "dc power connector"
+  },
+  {
+    "title": "Business Laptop Collection",
+    "category": "IT Office Equipment",
+    "description": "HP ProBook and OmniBook fleet ready for professional tasks.",
+    "url": "/products/it-office/laptops/",
+    "keywords": "business laptop"
+  },
+  {
+    "title": "Mouse and Extensions",
+    "category": "IT Office Equipment",
+    "description": "Wireless and wired mice for every desk workflow.",
+    "url": "/products/it-office/mouse/",
+    "keywords": "office mouse"
+  },
+  {
+    "title": "Network Range Extension",
+    "category": "IT Office Equipment",
+    "description": "Wi-Fi routers and long-range access points.",
+    "url": "/products/it-office/network/",
+    "keywords": "network extension"
+  },
+  {
+    "title": "Computer Cables & Extensions",
+    "category": "IT Office Equipment",
+    "description": "USB, HDMI, printer, and VGA cables plus adapters.",
+    "url": "/products/it-office/cables/",
+    "keywords": "computer cables"
+  },
+  {
+    "title": "Portable Storage & Memory",
+    "category": "IT Office Equipment",
+    "description": "External drives, flash disks, and portable memory.",
+    "url": "/products/it-office/storage/",
+    "keywords": "portable storage"
+  },
+  {
+    "title": "HP ProBook G2",
+    "category": "Business Laptops",
+    "description": "Intel Core i5, 500GB HDD, 4GB RAM ? reliable workhorse for offices. RWF 200,000",
+    "url": "/products/it-office/laptops/#item-hp-probook-g2",
+    "keywords": "hp probook g2"
+  },
+  {
+    "title": "HP ProBook G3",
+    "category": "Business Laptops",
+    "description": "Upgraded Intel i5, 500GB HDD, 4GB RAM with refined chassis. RWF 260,000",
+    "url": "/products/it-office/laptops/#item-hp-probook-g3",
+    "keywords": "hp probook g3"
+  },
+  {
+    "title": "HP OmniBook Ultra 5",
+    "category": "Business Laptops",
+    "description": "Intel i5, 512GB SSD, 8GB RAM, touch 14-inch display. RWF 1,400,000",
+    "url": "/products/it-office/laptops/#item-hp-omnibook-ultra-5",
+    "keywords": "hp omnibook"
+  },
+  {
+    "title": "HP ProBook G13",
+    "category": "Business Laptops",
+    "description": "Intel i5, 512GB SSD, 8GB RAM, 128MB graphics, 15.6-inch panel. RWF 970,000",
+    "url": "/products/it-office/laptops/#item-hp-probook-g13",
+    "keywords": "hp probook g13"
+  },
+  {
+    "title": "USB to Ethernet Adapter",
+    "category": "Network Interfaces & Adapters",
+    "description": "Compact adapter to add wired internet to any laptop. RWF 25,000",
+    "url": "/products/it-office/nic/#item-usb-to-ethernet",
+    "keywords": "usb ethernet adapter"
+  },
+  {
+    "title": "USB to Ethernet with Extension",
+    "category": "Network Interfaces & Adapters",
+    "description": "Adapter plus powered USB extension for peripherals. RWF 35,000",
+    "url": "/products/it-office/nic/#item-usb-to-ethernet-with-usb-extension",
+    "keywords": "usb ethernet extension"
+  },
+  {
+    "title": "Type-C to Ethernet Adapter",
+    "category": "Network Interfaces & Adapters",
+    "description": "Type-C gigabit adapter perfect for ultrabooks. RWF 27,000",
+    "url": "/products/it-office/nic/#item-type-c-to-ethernet",
+    "keywords": "type-c ethernet"
+  },
+  {
+    "title": "USB Wi-Fi Device",
+    "category": "Network Interfaces & Adapters",
+    "description": "Plug-and-play Wi-Fi dongle for desktops or backup connections. RWF 9,000",
+    "url": "/products/it-office/nic/#item-usb-wi-fi-device",
+    "keywords": "usb wifi dongle"
+  },
+  {
+    "title": "Logitech Wireless Mouse",
+    "category": "Office Mice",
+    "description": "Silent wireless mouse with long battery life. RWF 25,000",
+    "url": "/products/it-office/mouse/#item-logitech-wireless-mouse",
+    "keywords": "logitech mouse"
+  },
+  {
+    "title": "Amazon Basics Wireless Mouse",
+    "category": "Office Mice",
+    "description": "LED mouse with Bluetooth 5.2, dongle, and rechargeable battery. RWF 22,000",
+    "url": "/products/it-office/mouse/#item-amazon-basics-wireless-mouse",
+    "keywords": "amazon basics mouse"
+  },
+  {
+    "title": "Wireless Mouse",
+    "category": "Office Mice",
+    "description": "Universal wireless mouse for laptops and desktops. RWF 15,000",
+    "url": "/products/it-office/mouse/#item-wireless-mouse",
+    "keywords": "wireless mouse"
+  },
+  {
+    "title": "Wired Mouse",
+    "category": "Office Mice",
+    "description": "USB wired mouse with precise optical sensor. RWF 6,000",
+    "url": "/products/it-office/mouse/#item-wired-mouse",
+    "keywords": "wired mouse"
+  },
+  {
+    "title": "USB to Type-C 1M",
+    "category": "Computer Cables & Extensions",
+    "description": "Fast-charge cable for modern phones and tablets. RWF 4,000",
+    "url": "/products/it-office/cables/#item-usb-to-type-c-1m",
+    "keywords": "usb to type-c"
+  },
+  {
+    "title": "Type-C to Type-C",
+    "category": "Computer Cables & Extensions",
+    "description": "High-speed Type-C cable for laptops and hubs. RWF 7,000",
+    "url": "/products/it-office/cables/#item-type-c-to-type-c",
+    "keywords": "type-c cable"
+  },
+  {
+    "title": "USB to HDMI Adapter Cable",
+    "category": "Computer Cables & Extensions",
+    "description": "Adapter cable to drive monitors from USB ports. RWF 7,000",
+    "url": "/products/it-office/cables/#item-usb-to-hdmi",
+    "keywords": "usb to hdmi"
+  },
+  {
+    "title": "USB to USB 3m",
+    "category": "Computer Cables & Extensions",
+    "description": "Extended USB cable for printers and docking stations. RWF 5,000",
+    "url": "/products/it-office/cables/#item-usb-to-usb-3m",
+    "keywords": "usb extension"
+  },
+  {
+    "title": "HDMI to HDMI 1.5M",
+    "category": "Computer Cables & Extensions",
+    "description": "Short HDMI cable for desktop monitors. RWF 4,000",
+    "url": "/products/it-office/cables/#item-hdmi-to-hdmi-1-5m",
+    "keywords": "hdmi cable 1.5m"
+  },
+  {
+    "title": "HDMI to HDMI 3M",
+    "category": "Computer Cables & Extensions",
+    "description": "Longer HDMI cable for conference rooms. RWF 8,000",
+    "url": "/products/it-office/cables/#item-hdmi-to-hdmi-3m",
+    "keywords": "hdmi cable 3m"
+  },
+  {
+    "title": "HDMI to HDMI 10M",
+    "category": "Computer Cables & Extensions",
+    "description": "High-quality 10m HDMI cable for projectors. RWF 15,000",
+    "url": "/products/it-office/cables/#item-hdmi-to-hdmi-10m",
+    "keywords": "hdmi cable 10m"
+  },
+  {
+    "title": "HDMI to HDMI 15M",
+    "category": "Computer Cables & Extensions",
+    "description": "15m HDMI for boardrooms and live events. RWF 20,000",
+    "url": "/products/it-office/cables/#item-hdmi-to-hdmi-15m",
+    "keywords": "hdmi cable 15m"
+  },
+  {
+    "title": "HDMI to HDMI 20M",
+    "category": "Computer Cables & Extensions",
+    "description": "Premium 20m HDMI cable for long signal runs. RWF 30,000",
+    "url": "/products/it-office/cables/#item-hdmi-to-hdmi-20m",
+    "keywords": "hdmi cable 20m"
+  },
+  {
+    "title": "Printer Cable",
+    "category": "Computer Cables & Extensions",
+    "description": "USB-B cable compatible with most printers. RWF 5,000",
+    "url": "/products/it-office/cables/#item-printer-cable",
+    "keywords": "printer cable"
+  },
+  {
+    "title": "VGA Cable 2M",
+    "category": "Computer Cables & Extensions",
+    "description": "Classic VGA cable for legacy monitors. RWF 4,500",
+    "url": "/products/it-office/cables/#item-vga-cable-2m",
+    "keywords": "vga cable"
+  },
+  {
+    "title": "Big Pin Laptop Charger",
+    "category": "Computer Cables & Extensions",
+    "description": "Replacement charger for older HP and Dell notebooks. RWF 15,000",
+    "url": "/products/it-office/cables/#item-big-pin-laptop-charger",
+    "keywords": "big pin charger"
+  },
+  {
+    "title": "Blue Pin Laptop Charger",
+    "category": "Computer Cables & Extensions",
+    "description": "Slim HP blue-pin adapter for ProBook/EliteBook. RWF 15,000",
+    "url": "/products/it-office/cables/#item-blue-pin-laptop-charger",
+    "keywords": "blue pin charger"
+  },
+  {
+    "title": "Type-C Laptop Charger",
+    "category": "Computer Cables & Extensions",
+    "description": "65W PD Type-C charger for ultrabooks. RWF 40,000",
+    "url": "/products/it-office/cables/#item-type-c-laptop-charger",
+    "keywords": "type-c laptop charger"
+  },
+  {
+    "title": "Lenovo Laptop Charger",
+    "category": "Computer Cables & Extensions",
+    "description": "Reliable charger for Lenovo ThinkPad/IdeaPad models. RWF 25,000",
+    "url": "/products/it-office/cables/#item-lenovo-laptop-charger",
+    "keywords": "lenovo charger"
+  },
+  {
+    "title": "External HDD 500GB",
+    "category": "Portable Storage",
+    "description": "Portable 500GB drive for quick backups. RWF 20,000",
+    "url": "/products/it-office/storage/#item-external-hdd-500gb",
+    "keywords": "external hdd 500gb"
+  },
+  {
+    "title": "External HDD 1TB",
+    "category": "Portable Storage",
+    "description": "1TB USB 3.0 drive for documents and media. RWF 45,000",
+    "url": "/products/it-office/storage/#item-external-hdd-1tb",
+    "keywords": "external hdd 1tb"
+  },
+  {
+    "title": "External HDD 2TB",
+    "category": "Portable Storage",
+    "description": "Rugged 2TB drive for field teams. RWF 65,000",
+    "url": "/products/it-office/storage/#item-external-hdd-2tb",
+    "keywords": "external hdd 2tb"
+  },
+  {
+    "title": "External HDD 4TB",
+    "category": "Portable Storage",
+    "description": "High-capacity portable drive for creative workloads. RWF 90,000",
+    "url": "/products/it-office/storage/#item-external-hdd-4tb",
+    "keywords": "external hdd 4tb"
+  },
+  {
+    "title": "RAM DDR4 8GB",
+    "category": "Portable Storage",
+    "description": "8GB DDR4 module to upgrade modern PCs. RWF 35,000",
+    "url": "/products/it-office/storage/#item-ram-ddr4-8gb",
+    "keywords": "ram ddr4 8gb"
+  },
+  {
+    "title": "RAM DDR4 16GB",
+    "category": "Portable Storage",
+    "description": "16GB DDR4 stick for multitasking power. RWF 45,000",
+    "url": "/products/it-office/storage/#item-ram-ddr4-16gb",
+    "keywords": "ram ddr4 16gb"
+  },
+  {
+    "title": "RAM DDR3 8GB",
+    "category": "Portable Storage",
+    "description": "DDR3 memory upgrade for legacy setups. RWF 30,000",
+    "url": "/products/it-office/storage/#item-ram-ddr3-8gb",
+    "keywords": "ram ddr3 8gb"
+  },
+  {
+    "title": "RAM DDR3 4GB",
+    "category": "Portable Storage",
+    "description": "Cost-effective 4GB DDR3 module. RWF 24,000",
+    "url": "/products/it-office/storage/#item-ram-ddr3-4gb",
+    "keywords": "ram ddr3 4gb"
+  },
+  {
+    "title": "RAM DDR4 4GB",
+    "category": "Portable Storage",
+    "description": "Entry-level DDR4 RAM for light machines. RWF 25,000",
+    "url": "/products/it-office/storage/#item-ram-ddr4-4gb",
+    "keywords": "ram ddr4 4gb"
+  },
+  {
+    "title": "Flash Disk 4GB",
+    "category": "Portable Storage",
+    "description": "Entry-level flash drive for firmware updates. RWF 5,000",
+    "url": "/products/it-office/storage/#item-flash-disk-4gb",
+    "keywords": "flash disk 4gb"
+  },
+  {
+    "title": "Flash Disk 8GB",
+    "category": "Portable Storage",
+    "description": "Everyday 8GB flash drive for small transfers. RWF 7,500",
+    "url": "/products/it-office/storage/#item-flash-disk-8gb",
+    "keywords": "flash disk 8gb"
+  },
+  {
+    "title": "Flash Disk 16GB",
+    "category": "Portable Storage",
+    "description": "Reliable 16GB USB stick for documents. RWF 8,000",
+    "url": "/products/it-office/storage/#item-flash-disk-16gb",
+    "keywords": "flash disk 16gb"
+  },
+  {
+    "title": "Flash Disk 32GB",
+    "category": "Portable Storage",
+    "description": "32GB USB drive for presentations and media kits. RWF 10,000",
+    "url": "/products/it-office/storage/#item-flash-disk-32gb",
+    "keywords": "flash disk 32gb"
+  },
+  {
+    "title": "Flash Disk 64GB",
+    "category": "Portable Storage",
+    "description": "High-capacity 64GB flash disk for installers. RWF 15,000",
+    "url": "/products/it-office/storage/#item-flash-disk-64gb",
+    "keywords": "flash disk 64gb"
+  },
+  {
+    "title": "Memory Card 128GB",
+    "category": "Portable Storage",
+    "description": "High-endurance microSD for on-camera storage. RWF 37,000",
+    "url": "/products/it-office/storage/#item-memory-card-128gb",
+    "keywords": "memory card 128gb"
+  },
+  {
+    "title": "TP-Link 300 Mbps Wi-Fi Router",
+    "category": "Network Range Extension",
+    "description": "4G LTE router delivering steady coverage for small offices. RWF 75,000",
+    "url": "/products/it-office/network/#item-tp-link-300-mbps-wi-fi-router",
+    "keywords": "tp-link router"
+  },
+  {
+    "title": "Ubiquiti / UniFi Dual-Radio AP",
+    "category": "Network Range Extension",
+    "description": "Long-range 2.4/5GHz access point with enterprise management. RWF 320,000",
+    "url": "/products/it-office/network/#item-ubiquiti-unifi-dual-radio-ap",
+    "keywords": "unifi access point"
+  },
+  {
+    "title": "D-Link Wi-Fi Router",
+    "category": "Network Range Extension",
+    "description": "Reliable router for homes and branch offices. RWF 65,000",
+    "url": "/products/it-office/network/#item-d-link-wi-fi-router",
+    "keywords": "d-link router"
+  },
+  {
+    "title": "D-Link 4G LTE DWR-1920 Router",
+    "category": "Network Range Extension",
+    "description": "High-speed LTE router with failover and VPN support. RWF 90,000",
+    "url": "/products/it-office/network/#item-d-link-4g-lte-dwr-1920-router",
+    "keywords": "dwr-1920 router"
+  },
+  {
+    "title": "D-Link DES-1008C Switch",
+    "category": "Network Range Extension",
+    "description": "8-port 10/100 Mbps desktop switch for LAN expansion. RWF 27,000",
+    "url": "/products/it-office/network/#item-d-link-des-1008c-switch",
+    "keywords": "des-1008c switch"
+  },
+  {
+    "title": "D-Link DES-1005C Switch",
+    "category": "Network Range Extension",
+    "description": "5-port 10/100 Mbps switch for desks and small pods. RWF 20,000",
+    "url": "/products/it-office/network/#item-d-link-des-1005c-switch",
+    "keywords": "des-1005c switch"
+  },
+  {
+    "title": "Hikvision 24-Port Smart Managed Switch",
+    "category": "Network Range Extension",
+    "description": "24-port 10/100 Mbps switch optimized for CCTV networks. RWF 300,000",
+    "url": "/products/it-office/network/#item-hikvision-24-port-smart-managed-switch",
+    "keywords": "hikvision 24 port switch"
+  },
+  {
+    "title": "Hikvision 16-Port Smart Managed Switch",
+    "category": "Network Range Extension",
+    "description": "16-port managed switch optimized for Hikvision deployments. RWF 270,000",
+    "url": "/products/it-office/network/#item-hikvision-16-port-smart-managed-switch",
+    "keywords": "hikvision 16 port switch"
+  },
+  {
+    "title": "8-Zone Addressable Panel",
+    "category": "Fire Arms & Safety",
+    "description": "LCD panel with GSM alerts and battery tray. RWF 780,000",
+    "url": "/products/fire/#item-8-zone-addressable-panel",
+    "keywords": "fire panel"
+  },
+  {
+    "title": "Optical Smoke Detectors (Pack of 6)",
+    "category": "Fire Arms & Safety",
+    "description": "Addressable modules pre-programmed with bases, isolators, and LED test buttons. RWF 315,000",
+    "url": "/products/fire/#item-optical-smoke-detectors",
+    "keywords": "smoke detectors"
+  },
+  {
+    "title": "Rate-of-Rise Heat Detectors (Pair)",
+    "category": "Fire Arms & Safety",
+    "description": "Factory-calibrated sensing heads ideal for kitchens and generator rooms. RWF 188,000",
+    "url": "/products/fire/#item-heat-detectors",
+    "keywords": "heat detectors"
+  },
+  {
+    "title": "Sounder & Strobe Beacons (4 Units)",
+    "category": "Fire Arms & Safety",
+    "description": "Wall and ceiling plates, selectable tone profiles, plus conduit accessories. RWF 255,000",
+    "url": "/products/fire/#item-sounder-beacons",
+    "keywords": "sounder beacon"
+  },
+  {
+    "title": "6kg ABC Fire Extinguishers (Set of 3)",
+    "category": "Fire Arms & Safety",
+    "description": "Mounting brackets, service tags, and safety pins included. RWF 420,000",
+    "url": "/products/fire/#item-6kg-abc-extinguishers",
+    "keywords": "fire extinguisher"
+  },
+  {
+    "title": "Manual Call Points (5 Units)",
+    "category": "Fire Arms & Safety",
+    "description": "Resettable glass elements, address switches, and surface boxes. RWF 265,000",
+    "url": "/products/fire/#item-manual-call-points",
+    "keywords": "manual call point"
+  },
+  {
+    "title": "Wi-Fi 6 Enterprise Router",
+    "category": "Network Equipments",
+    "description": "Tri-radio coverage, firewall licensing, and ceiling mounting plate. RWF 545,000",
+    "url": "/products/network/#item-wifi6-enterprise-router",
+    "keywords": "wifi 6 router"
+  },
+  {
+    "title": "24-Port Gigabit Switch",
+    "category": "Network Equipments",
+    "description": "Layer-3 routing, redundant PSU support, and rack ears. RWF 720,000",
+    "url": "/products/network/#item-24-port-switch",
+    "keywords": "24 port switch"
+  },
+  {
+    "title": "12U Wall Mount Rack",
+    "category": "Network Equipments",
+    "description": "Tempered glass door, cooling fans, PDU, and cable managers. RWF 395,000",
+    "url": "/products/network/#item-12u-wall-rack",
+    "keywords": "12u rack"
+  },
+  {
+    "title": "Fiber Termination Kit",
+    "category": "Network Equipments",
+    "description": "LC patch panel, pigtails, cleaver, polishing films, and visual fault locator. RWF 585,000",
+    "url": "/products/network/#item-fiber-termination-kit",
+    "keywords": "fiber termination kit"
+  },
+  {
+    "title": "Cat6 Patch Cord Bundle (30 pcs)",
+    "category": "Network Equipments",
+    "description": "Assorted lengths, factory-tested, with Velcro straps and labeling kit. RWF 160,000",
+    "url": "/products/network/#item-cat6-patch-cords",
+    "keywords": "cat6 patch cords"
+  },
+  {
+    "title": "Network UPS (2kVA)",
+    "category": "Network Equipments",
+    "description": "Rack-mount UPS with LCD diagnostics, SNMP card, and battery pack. RWF 690,000",
+    "url": "/products/network/#item-network-ups",
+    "keywords": "network ups"
+  },
+  {
+    "title": "Biometric Door Controller",
+    "category": "Security System",
+    "description": "Fingerprint & RFID combo reader with management software license. RWF 520,000",
+    "url": "/products/security/#item-biometric-door-controller",
+    "keywords": "biometric controller"
+  },
+  {
+    "title": "600lbs Magnetic Lock Kit",
+    "category": "Security System",
+    "description": "Surface brackets, exit button, power supply, and LED status indicator. RWF 195,000",
+    "url": "/products/security/#item-magnetic-lock",
+    "keywords": "magnetic lock kit"
+  },
+  {
+    "title": "Hybrid Alarm Control Panel",
+    "category": "Security System",
+    "description": "Wireless & wired zone alarm controller with GSM dialer. RWF 455,000",
+    "url": "/products/security/#item-hybrid-alarm-control",
+    "keywords": "alarm control panel"
+  },
+  {
+    "title": "Dual-Tech Motion Detectors (4)",
+    "category": "Security System",
+    "description": "Microwave + PIR sensors with pet immunity and swivel brackets. RWF 220,000",
+    "url": "/products/security/#item-dual-tech-motion",
+    "keywords": "dual tech motion"
+  },
+  {
+    "title": "Outdoor IR Beam Pair",
+    "category": "Security System",
+    "description": "100m range beams with heater module, pole clamps, and relay interface. RWF 265,000",
+    "url": "/products/security/#item-outdoor-ir-beam",
+    "keywords": "outdoor ir beam"
+  },
+  {
+    "title": "Security Workstation Console",
+    "category": "Security System",
+    "description": "Dual-monitor desk, alarm annunciator, and operator intercom handset. RWF 985,000",
+    "url": "/products/security/#item-security-console",
+    "keywords": "security console"
+  },
+  {
+    "title": "12,000 BTU Wall Split Unit",
+    "category": "Air Conditions",
+    "description": "Inverter compressor, copper piping kit, and remote thermostat. RWF 890,000",
+    "url": "/products/air/#item-12000btu-split",
+    "keywords": "12000 btu split"
+  },
+  {
+    "title": "Ceiling Cassette 36,000 BTU",
+    "category": "Air Conditions",
+    "description": "Four-way airflow cassette with condensate pump and wired controller. RWF 3,250,000",
+    "url": "/products/air/#item-ceiling-cassette",
+    "keywords": "ceiling cassette ac"
+  },
+  {
+    "title": "Portable Spot Cooler",
+    "category": "Air Conditions",
+    "description": "Self-contained unit with 3-speed fan, casters, and quick duct kit. RWF 640,000",
+    "url": "/products/air/#item-portable-spot-cooler",
+    "keywords": "portable spot cooler"
+  },
+  {
+    "title": "Smart Thermostat Pack (3)",
+    "category": "Air Conditions",
+    "description": "Wi-Fi enabled controllers with humidity sensing and glass touch panels. RWF 195,000",
+    "url": "/products/air/#item-smart-thermostat-pack",
+    "keywords": "smart thermostat"
+  },
+  {
+    "title": "Ducting Accessories Kit",
+    "category": "Air Conditions",
+    "description": "Insulated flexible ducts, grills, hangers, and aluminum tape. RWF 315,000",
+    "url": "/products/air/#item-ducting-accessories",
+    "keywords": "ducting kit"
+  },
+  {
+    "title": "Preventive Maintenance Kit",
+    "category": "Air Conditions",
+    "description": "Fin comb, coil cleaner, condensate tablets, and filter replacements. RWF 158,000",
+    "url": "/products/air/#item-preventive-maintenance-kit",
+    "keywords": "maintenance kit"
+  },
+  {
+    "title": "CCTV & Command Service",
+    "category": "Services",
+    "description": "4K domes, PTZ towers, SOC dashboards, and AI alerts.",
+    "url": "/services/cctv/",
+    "keywords": "cctv service"
+  },
+  {
+    "title": "Enterprise Networking Service",
+    "category": "Services",
+    "description": "Fiber backbones, Wi-Fi 6 design, and Starlink redundancy.",
+    "url": "/services/network/",
+    "keywords": "network service"
+  },
+  {
+    "title": "Security & Access Service",
+    "category": "Services",
+    "description": "Biometrics, visitor management, and intrusion alarms.",
+    "url": "/services/security/",
+    "keywords": "security service"
+  },
+  {
+    "title": "HVAC & Air Quality Service",
+    "category": "Services",
+    "description": "Split units, ducted systems, and smart thermostats.",
+    "url": "/services/hvac/",
+    "keywords": "hvac service"
+  },
+  {
+    "title": "Fire Alarm Systems Service",
+    "category": "Services",
+    "description": "Addressable panels, detectors, and emergency drills.",
+    "url": "/services/fire/",
+    "keywords": "fire service"
+  },
+  {
+    "title": "Power & Generator Service",
+    "category": "Services",
+    "description": "Generator sizing, ATS integration, and remote diagnostics.",
+    "url": "/services/generator/",
+    "keywords": "generator service"
+  },
+  {
+    "title": "Digital & Web Service",
+    "category": "Services",
+    "description": "Web platforms and dashboards for modern teams.",
+    "url": "/services/webdev/",
+    "keywords": "web service"
+  }
+]

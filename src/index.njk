@@ -1,0 +1,213 @@
+---
+layout: base.njk
+title: Home
+---
+
+<section class="relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    <div class="space-y-6">
+      <p class="ink-chip">A&amp;B Innovation</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+        Rearchitecting buildings into living, responsive experiences.
+      </h1>
+      <p class="text-lg text-gray-400">
+        CCTV, networking, HVAC, fire safety, generators, and immersive digital layers delivered as one orchestrated engagement. Rwanda to the region, 24/7.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="ink-action ink-action--primary text-base">Book a site visit</a>
+        <a href="/products/" class="ink-action ink-action--secondary text-base">Browse equipment</a>
+      </div>
+      <div class="grid grid-cols-2 gap-6 pt-4">
+        <div class="ink-card ink-card--soft p-4">
+          <p class="text-xs uppercase tracking-[0.6em] text-gray-500">Active feeds</p>
+          <p class="text-3xl font-bold">112</p>
+          <p class="text-sm text-gray-500">Live camera, access control & HVAC dashboards.</p>
+        </div>
+        <div class="ink-card ink-card--soft p-4">
+          <p class="text-xs uppercase tracking-[0.6em] text-gray-500">Response SLA</p>
+          <p class="text-3xl font-bold">99.7%</p>
+          <p class="text-sm text-gray-500">Mission critical uptime across campuses.</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="ink-card ink-grid-pattern overflow-hidden rounded-3xl">
+        <img src="/assets/product/Starlink.jpg" alt="Technicians on site" class="w-full h-80 object-cover">
+      </div>
+      <div class="grid grid-cols-2 gap-5 mt-6">
+        <div class="ink-card p-4 space-y-2">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Field force</p>
+          <p class="text-lg font-semibold">Technicians obsessed with craft</p>
+          <p class="text-sm text-gray-500">Fiber fusion, immaculate racks, drone surveys.</p>
+        </div>
+        <div class="ink-card p-4 space-y-2">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Live dispatch</p>
+          <p class="text-2xl font-semibold">Kigali → Region</p>
+          <p class="text-sm text-gray-500">Crews deployed with compliance packs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% set pillars = [
+  {title:"CCTV & Command", desc:"4K domes, PTZ towers, SOC dashboards and AI alerts for estates, retail, and campuses.", link:"/services/cctv/"},
+  {title:"Enterprise Networking", desc:"Fiber backbones, Wi-Fi 6, Starlink redundancy and secure SD-WAN overlays.", link:"/services/network/"},
+  {title:"Security & Access", desc:"Biometrics, visitor management, intrusion and control room orchestration.", link:"/services/security/"},
+  {title:"HVAC & Comfort", desc:"Split units, ducted systems, smart thermostats and air quality analytics.", link:"/services/hvac/"},
+  {title:"Fire & Safety", desc:"Addressable panels, smoke detection, emergency lighting and drills.", link:"/services/fire/"},
+  {title:"Power & Generators", desc:"Sizing, installation, ATS integration and remote diagnostics.", link:"/services/generator/"},
+  {title:"Digital & Web", desc:"Web platforms and dashboards that extend physical investments online.", link:"/services/webdev/"},
+  {title:"Products", desc:"Curated hardware for CCTV, networking, HVAC, safety and IT operations.", link:"/products/"}
+] %}
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto space-y-10">
+    <div class="text-center space-y-3 max-w-2xl mx-auto">
+      <p class="ink-chip">Integrated expertise</p>
+      <h2 class="text-3xl font-bold">Every environment receives a cross-functional squad.</h2>
+      <p class="text-gray-400">We blend installers, software engineers, and service designers to deliver spaces that perform beautifully.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {% for card in pillars %}
+      <a href="{{ card.link }}" class="ink-card p-5 space-y-3 hover:-translate-y-1 transition block" data-search-entry data-search-title="{{ card.title }}" data-search-category="Services" data-search-description="{{ card.desc }}" data-search-url="{{ card.link }}">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Capability</p>
+        <p class="text-xl font-semibold">{{ card.title }}</p>
+        <p class="text-gray-400 text-sm">{{ card.desc }}</p>
+        <span class="text-sm font-semibold text-blue-400 inline-flex items-center">Explore
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 space-y-8">
+      <div class="ink-card p-8 space-y-4">
+        <p class="ink-chip">Experience-first build</p>
+        <h3 class="text-3xl font-bold">Journey, racks, and reporting delivered as one story.</h3>
+        <p class="text-gray-400">We wrap every deployment with photo essays, as-built documentation, and operations playbooks so stakeholders remain confident long after handover.</p>
+        <ul class="grid sm:grid-cols-3 gap-4 text-sm text-gray-300">
+          <li class="ink-card ink-card--soft p-4">Fiber fusion & OTDR diagnostics</li>
+          <li class="ink-card ink-card--soft p-4">Cleanroom-level CCTV calibration</li>
+          <li class="ink-card ink-card--soft p-4">Thermal drone surveys for rooftop links</li>
+        </ul>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="ink-card p-5 space-y-2">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">01</p>
+          <p class="text-lg font-semibold">Site pulse</p>
+          <p class="text-sm text-gray-400">Laser scans, electrical audits, user interviews.</p>
+        </div>
+        <div class="ink-card p-5 space-y-2">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">02</p>
+          <p class="text-lg font-semibold">Co-create</p>
+          <p class="text-sm text-gray-400">Experience boards, BOQs, live demos.</p>
+        </div>
+        <div class="ink-card p-5 space-y-2">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">03</p>
+          <p class="text-lg font-semibold">Deploy + Support</p>
+          <p class="text-sm text-gray-400">Daily reports, QA sheets, 24/7 monitoring.</p>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <div class="ink-card p-6 space-y-3">
+        <p class="ink-chip">Mission control</p>
+        <h3 class="text-2xl font-semibold">Live dashboards, predictive maintenance, emergency workflows.</h3>
+        <p class="text-gray-400 text-sm">Operators orchestrate everything from Kigali SOC with proactive prompts.</p>
+      </div>
+      <div class="ink-card p-6 space-y-4">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Dispatch log</p>
+        <div class="space-y-3 text-sm text-gray-300">
+          <div class="flex items-center justify-between">
+            <span>Kigali HQ retrofit</span>
+            <span class="text-blue-400">CCTV + HVAC sync</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Goma mining hub</span>
+            <span class="text-blue-400">Starlink redundancy</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Lagos fintech campus</span>
+            <span class="text-blue-400">Security command</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto space-y-6">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <p class="ink-chip">Equipment spotlight</p>
+        <h2 class="text-3xl font-bold mt-4">Curated technology ready for deployment.</h2>
+      </div>
+      <a href="/products/" class="ink-action ink-action--primary text-base">View catalogue</a>
+    </div>
+    <div class="tech-marquee">
+      <div class="tech-marquee-track">
+        <img src="/assets/product/landing/starlink.jpg" alt="">
+        <img src="/assets/product/landing/unifi1.jpeg" alt="">
+        <img src="/assets/product/landing/laptop.jpeg" alt="">
+        <img src="/assets/product/landing/cctv1.jpg" alt="">
+        <img src="/assets/product/landing/network.jpg" alt="">
+        <img src="/assets/product/landing/mouse.jpeg" alt="">
+        <img src="/assets/product/landing/router.jpeg" alt="">
+        <img src="/assets/product/landing/charger.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="ink-card overflow-hidden rounded-3xl">
+      <img src="/assets/product/House1.png" alt="Smart home exterior" class="w-full h-full object-cover">
+    </div>
+    <div class="space-y-6">
+      <p class="ink-chip">Insight</p>
+      <h3 class="text-3xl font-bold">Install CCTV at home from only <span class="text-blue-400">RWF 60,000</span> with a 4-camera kit.</h3>
+      <p class="text-gray-400 text-lg">
+        Monitor your gate, living room, backyard, and entry points directly from your smartphone. Enjoy motion alerts, crystal-clear night vision, and cloud backups without breaking the bank.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/products/cctv/" class="ink-action ink-action--primary">See CCTV options</a>
+        <a href="/contact/" class="ink-action ink-action--secondary">Talk to an engineer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 pb-20">
+  <div class="ink-shell grid lg:grid-cols-2 gap-10 items-center">
+    <div class="space-y-4">
+      <p class="ink-chip">Collaborate</p>
+      <h2 class="text-4xl font-bold">Tell us the feeling you want the moment someone walks in.</h2>
+      <p class="text-gray-300">We design landing experiences for HQs, retail, data centers, and mixed-use spaces using rigorous engineering and storytelling.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="ink-action ink-action--primary">Schedule a discovery call</a>
+        <a href="/gallery/" class="ink-action ink-action--secondary">See immersive builds</a>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <div class="ink-card p-5 space-y-2">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Latest dispatch</p>
+        <p class="text-lg font-semibold">Need a partner to orchestrate everything end-to-end? A&amp;B Innovation is ready.</p>
+      </div>
+      <div class="ink-card p-5 space-y-3">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Engagement blueprint</p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>• Discovery workshops & surveys</li>
+          <li>• Experience prototyping & approvals</li>
+          <li>• Clean deployment with daily visual logs</li>
+          <li>• Remote monitoring + quarterly optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

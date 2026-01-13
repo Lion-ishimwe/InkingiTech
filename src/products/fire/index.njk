@@ -1,0 +1,174 @@
+---
+layout: base.njk
+title: Fire Arms & Safety
+---
+
+<div class="bg-red-900 text-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-red-200">Fire Arms & Safety</p>
+    <h1 class="text-4xl font-bold">Detection, Suppression & Alerts</h1>
+    <p class="text-red-100">
+      Integrated fire alarm accessories supplied with local installation support and pricing in RWF.
+    </p>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+  <a href="/products/" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition">
+    &#8592; Back to Categories
+  </a>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+  <div class="space-y-4">
+    <div>
+      <p class="uppercase tracking-[0.3em] text-xs text-red-500">Addressable Components</p>
+      <h2 class="text-3xl font-semibold text-slate-900">AsenWare Addressable Line-Up</h2>
+      <p class="text-gray-600">Pair these UL-compliant modules with programmable loops for smart cause-and-effect logic.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      {% set addressable_items = [
+        {
+          title: "Addressable Manual Call Point",
+          price: "RWF 47,000",
+          desc: "Resettable break-glass station from AsenWare for immediate evacuation triggers.",
+          img: "/assets/product/landing/addressable.jpg"
+        },
+        {
+          title: "Photo/Thermo Addressable Smoke Detector",
+          price: "RWF 47,000",
+          desc: "Fast-response detector covering 30㎡, combining photoelectric and thermal sensing for all fire profiles.",
+          img: "/assets/product/landing/photo.jpg"
+        },
+        {
+          title: "Addressable Sounder & Strobe",
+          price: "RWF 47,000",
+          desc: "Combined electronic sounder/strobe delivering 90 dB @ 2 m with synchronized flashes.",
+          img: "/assets/product/landing/Sounder.jpg"
+        },
+        {
+          title: "3-Loop Addressable Fire Alarm Control Panel",
+          price: "Contact for quote",
+          desc: "Microprocessor AsenWare FACP supporting 3 loops, 159 detectors + 159 modules per loop, supplied with 72-hour standby batteries.",
+          img: "/assets/product/landing/panel.JPG"
+        },
+        {
+          title: "Addressable Panel Loop Card",
+          price: "RWF 115,000",
+          desc: "Plug-in loop card to expand existing AsenWare control panels with additional addressable circuits.",
+          img: "/assets/product/landing/panel card.JPG"
+        },
+        {
+          title: "Detector & Sounder Wiring (30m)",
+          price: "RWF 142,000",
+          desc: "Allowance for 30m of 1.5mm² 2-core fire-resistant cable (BS 5839/5266 & BS 7239 LSOH).",
+          img: "/assets/product/landing/2core.JPG"
+        }
+      ] %}
+      {% for item in addressable_items %}
+      {% set slug = item.title | slug %}
+      <div id="item-{{ slug }}" class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden" data-search-entry data-search-title="{{ item.title }}" data-search-category="Fire Arms & Safety" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+        <img src="{{ item.img }}" alt="{{ item.title }}" class="h-56 w-full object-cover">
+        <div class="p-6 flex flex-col h-full gap-3">
+          <h3 class="text-2xl font-semibold text-slate-900">{{ item.title }}</h3>
+          <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+          <p class="text-lg font-semibold text-red-600">{{ item.price }}</p>
+          <button
+            type="button"
+            class="mt-4 inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-addressable-{{ slug }}"
+            data-cart-title="{{ item.title }}"
+            data-cart-price="{{ item.price }}"
+            data-cart-desc="{{ item.desc }}"
+            data-cart-img="{{ item.img }}"
+            data-cart-category="Addressable Components"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <div>
+      <p class="uppercase tracking-[0.3em] text-xs text-red-500">Conventional Accessories</p>
+      <h2 class="text-3xl font-semibold text-slate-900">Essentials for Legacy Panels</h2>
+      <p class="text-gray-600">Reliable peripherals that keep two-wire conventional loops compliant and serviceable.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      {% set conventional_items = [
+        {
+          title: "Conventional Manual Call Point",
+          price: "RWF 27,000",
+          desc: "Break-glass call point with surface box, suited for retrofits and small premises.",
+          img: "/assets/product/landing/convetional.jfif"
+        },
+        {
+          title: "Conventional Smoke Detector",
+          price: "RWF 26,000",
+          desc: "Photoelectric detector with LED indicator compatible with most 2-wire loops.",
+          img: "/assets/product/landing/convetional smoke.jpg"
+        },
+        {
+          title: "Conventional Sounder 90 dB",
+          price: "RWF 25,000",
+          desc: "High-output siren producing 90 dB @ 1 m for clear audible warnings.",
+          img: "/assets/product/landing/convetional sound.jpg"
+        },
+        {
+          title: "4-Loop Conventional Control Panel",
+          price: "Contact for quote",
+          desc: "Metal enclosure panel supporting four supervised conventional zones.",
+          img: "/assets/product/landing/panel metal.jpg"
+        },
+        {
+          title: "Fire System Battery Pack",
+          price: "RWF 40,000",
+          desc: "12V sealed battery option to keep panels powered during outages.",
+          img: "/assets/product/landing/battery.JPG"
+        },
+        {
+          title: "Emergency Exit Sign with Light",
+          price: "RWF 37,000",
+          desc: "Illuminated exit sign with backup battery for safe egress guidance.",
+          img: "/assets/product/landing/exit.JPG"
+        }
+      ] %}
+      {% for item in conventional_items %}
+      {% set slug = item.title | slug %}
+      <div id="item-{{ slug }}" class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden" data-search-entry data-search-title="{{ item.title }}" data-search-category="Fire Arms & Safety" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+        <img src="{{ item.img }}" alt="{{ item.title }}" class="h-56 w-full object-cover">
+        <div class="p-6 flex flex-col h-full gap-3">
+          <h3 class="text-2xl font-semibold text-slate-900">{{ item.title }}</h3>
+          <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+          <p class="text-lg font-semibold text-red-600">{{ item.price }}</p>
+          <button
+            type="button"
+            class="mt-4 inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-conventional-{{ slug }}"
+            data-cart-title="{{ item.title }}"
+            data-cart-price="{{ item.price }}"
+            data-cart-desc="{{ item.desc }}"
+            data-cart-img="{{ item.img }}"
+            data-cart-category="Conventional Accessories"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

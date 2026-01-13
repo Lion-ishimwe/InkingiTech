@@ -1,0 +1,86 @@
+---
+layout: base.njk
+title: Computer Cables & Extensions
+---
+
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">IT Office Equipment</p>
+    <h1 class="text-4xl font-bold">Cables, Extensions & Adapters</h1>
+    <p class="text-gray-200">USB, HDMI, printer, and VGA cables to outfit every workstation.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/it-office/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to IT Equipment</a>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="it-cable-search">Search cables</label>
+    <div class="relative">
+      <input id="it-cable-search" type="text" placeholder="Type to filter cables..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="it-cable-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% set cables = [
+      {title:"USB to Type-C 1M", price:"RWF 4,000", desc:"Fast-charge cable for modern phones and tablets.", img:"https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=800&h=600&fit=crop"},
+      {title:"Type-C to Type-C", price:"RWF 7,000", desc:"High-speed Type-C cable for laptops and hubs.", img:"https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=800&h=600&fit=crop"},
+      {title:"USB to HDMI", price:"RWF 7,000", desc:"Adapter cable to drive monitors from USB ports.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"USB to USB 3m", price:"RWF 5,000", desc:"Extended USB cable for printers and docking stations.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"HDMI to HDMI 1.5M", price:"RWF 4,000", desc:"Short HDMI cable for desktop monitors.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"HDMI to HDMI 3M", price:"RWF 8,000", desc:"Longer HDMI cable for conference rooms.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"HDMI to HDMI 10M", price:"RWF 15,000", desc:"High-quality 10m HDMI cable for projectors.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"HDMI to HDMI 15M", price:"RWF 20,000", desc:"15m HDMI for boardrooms and live events.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"HDMI to HDMI 20M", price:"RWF 30,000", desc:"Premium 20m HDMI cable for long signal runs.", img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"},
+      {title:"Printer Cable", price:"RWF 5,000", desc:"USB-B cable compatible with most printers.", img:"https://images.unsplash.com/photo-1457264635001-828d0cbd483e?w=800&h=600&fit=crop"},
+      {title:"VGA Cable 2M", price:"RWF 4,500", desc:"Classic VGA cable for legacy monitors.", img:"https://images.unsplash.com/photo-1457264635001-828d0cbd483e?w=800&h=600&fit=crop"},
+      {title:"Big Pin Laptop Charger", price:"RWF 15,000", desc:"Replacement charger for older HP and Dell notebooks.", img:"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"},
+      {title:"Blue Pin Laptop Charger", price:"RWF 15,000", desc:"Slim HP blue-pin adapter for ProBook/EliteBook.", img:"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"},
+      {title:"Type-C Laptop Charger", price:"RWF 40,000", desc:"65W PD Type-C charger for ultrabooks.", img:"https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=800&h=600&fit=crop"},
+      {title:"Lenovo Laptop Charger", price:"RWF 25,000", desc:"Reliable charger for Lenovo ThinkPad/IdeaPad models.", img:"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"}
+    ] %}
+    {% for item in cables %}
+    {% set slug = item.title | slug %}
+    <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col it-cable-card" data-search-entry data-search-title="{{ item.title }}" data-search-category="Computer Cables & Extensions" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+      <img src="{{ item.img }}" alt="{{ item.title }}" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">{{ item.title }}</h2>
+        <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+        <span class="text-blue-600 font-bold">{{ item.price }}</span>
+        <button
+          type="button"
+          class="mt-auto inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="{{ page.url }}-{{ slug }}"
+          data-cart-title="{{ item.title }}"
+          data-cart-price="{{ item.price }}"
+          data-cart-desc="{{ item.desc }}"
+          data-cart-img="{{ item.img }}"
+          data-cart-category="Computer Cables & Extensions"
+          data-cart-url="{{ page.url }}#item-{{ slug }}"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.querySelector('#it-cable-search');
+    const cards = document.querySelectorAll('.it-cable-card');
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase();
+      cards.forEach(card => card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none');
+    });
+  });
+</script>

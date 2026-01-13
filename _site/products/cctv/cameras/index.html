@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030711">
+  <title>CCTV Cameras - Collections - A&amp;B Innovation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/index.css">
+</head>
+<body class="min-h-screen antialiased">
+  <nav class="sticky top-0 z-50 bg-slate-950 bg-opacity-80 backdrop-blur-xl border-b border-white border-opacity-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-15 flex items-center justify-center">
+          <img src="/assets/product/logo.png" alt="A&amp;B Innovation logo" class="h-10 w-10 object-contain">
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.6em] text-gray-500">A&amp;B</p>
+          <p class="text-xl font-semibold text-white">A&amp;B Innovation</p>
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center space-x-4 text-sm font-semibold">
+        <a href="/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Home</a>
+        <a href="/services/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Services</a>
+        <a href="/products/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Products</a>
+        <a href="/gallery/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Gallery</a>
+        <a href="/about/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">About</a>
+        <a href="/contact/" class="bg-white text-green-900 px-4 py-2 rounded-full border border-white hover:opacity-90 transition">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center space-x-3">
+        <button type="button" class="ink-action text-sm bg-white text-green-900 border-white" data-search-trigger>
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+          Search
+        </button>
+        <a href="tel:+250785576541" class="ink-action text-sm bg-white text-green-900 border-white">
+          Call dispatch
+        </a>
+      </div>
+      <div class="flex items-center gap-3 lg:hidden">
+        <button type="button" class="p-2 rounded-full border border-white border-opacity-20 text-gray-200" data-search-trigger>
+          <span class="sr-only">Search catalog</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+        </button>
+        <button type="button" class="p-2 rounded-full border border-white border-opacity-20 text-gray-200" id="mobile-menu-button" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="lg:hidden hidden border-t border-white border-opacity-10 bg-slate-950 bg-opacity-90" id="mobile-menu">
+    <div class="px-4 py-4 space-y-2">
+      <button type="button" class="w-full flex items-center justify-center ink-action bg-white text-green-900 border-white" data-search-trigger>
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+        </svg>
+        Search catalog
+      </button>
+      <a href="/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Home</a>
+      <a href="/services/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Services</a>
+      <a href="/products/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Products</a>
+      <a href="/gallery/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Gallery</a>
+      <a href="/about/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">About</a>
+      <a href="/contact/" class="block px-4 py-2 rounded-full bg-white text-green-900 border border-white">Contact</a>
+      <a href="tel:+250785576541" class="block text-center ink-action bg-white text-green-900 border-white w-full">Call dispatch</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!expanded).toString());
+    });
+  }
+</script>
+
+  <div id="global-search-overlay" class="hidden fixed inset-0 bg-slate-950 bg-opacity-90 backdrop-blur-2xl px-4 py-12 z-50 overflow-y-auto">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="ink-card p-8 relative space-y-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div>
+            <p class="ink-chip text-xs">Quick lookup</p>
+            <h2 class="text-3xl font-semibold mt-3">Search products & services</h2>
+            <p class="text-sm text-gray-500">Type at least two letters and press Enter to open the leading suggestion.</p>
+          </div>
+          <button type="button" class="ink-action ink-action--secondary px-4 py-2 text-sm" data-search-close>
+            Close overlay
+          </button>
+        </div>
+        <div class="relative">
+          <input id="global-search-input" type="text" placeholder="Search devices, services, accessories..." class="w-full filter-input pl-12 pr-4 py-3 text-base bg-transparent" autocomplete="off" />
+          <svg class="w-5 h-5 absolute left-4 top-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+          </svg>
+        </div>
+        <div id="global-search-results" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+          <p class="text-sm text-gray-500">Start typing to see matching items.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button type="button" class="ink-action ink-action--secondary" data-search-close>Cancel</button>
+          <a href="/contact/" class="ink-action ink-action--primary">Talk to an engineer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="relative z-10">
+    
+<section class="relative overflow-hidden bg-green-900 text-white">
+  <div class="absolute inset-0 opacity-25" style="background-image:url('https://images.unsplash.com/photo-1431440869543-efaf3388c585?w=1600&h=900&fit=crop');background-size:cover;background-position:center;"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4 relative z-10">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">CCTV Cameras</p>
+    <h1 class="text-4xl font-bold">Camera Kits & Monitoring Bundles</h1>
+    <p class="text-gray-200">Choose from dome, bullet, and PTZ packages with installation-ready accessories and smartphone monitoring.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <a href="/products/cctv/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">&#8592; Back to CCTV overview</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterInputs = document.querySelectorAll('.filter-input');
+    filterInputs.forEach(input => {
+      const listClass = input.dataset.filterList;
+      input.addEventListener('input', () => {
+        const query = input.value.toLowerCase();
+        document.querySelectorAll(`.${listClass}`).forEach(card => {
+          card.style.display = card.innerText.toLowerCase().includes(query) ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="mb-8">
+    <label class="block text-gray-700 font-semibold mb-2" for="camera-search">Search cameras</label>
+    <div class="relative">
+      <input id="camera-search" type="text" placeholder="Type to filter kits..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 filter-input" data-filter-list="camera-card">
+      <span class="absolute right-4 top-3 text-gray-400">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    
+    
+    
+    <div id="item-2mp-analog-black-and-white" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="2MP Analog Black &amp; White" data-search-category="CCTV Cameras" data-search-description="2MP analog black and white Hikvision. RWF 30,000" data-search-url="/products/cctv/cameras/#item-2mp-analog-black-and-white">
+      <img src="/assets/product/cctv 2mp.jpg" alt="2MP Analog Black &amp; White" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">2MP Analog Black &amp; White</h2>
+        <p class="text-gray-600 flex-1">2MP analog black and white Hikvision.</p>
+        <span class="text-blue-600 font-bold">RWF 30,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-2mp-analog-black-and-white"
+            data-cart-title="2MP Analog Black &amp; White"
+            data-cart-price="RWF 30,000"
+            data-cart-desc="2MP analog black and white Hikvision."
+            data-cart-img="/assets/product/cctv 2mp.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-2mp-analog-black-and-white"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-4mp-analog-black-and-white" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="4MP Analog Black &amp; White" data-search-category="CCTV Cameras" data-search-description="4MP analog black and white Hikvision. RWF 420,000" data-search-url="/products/cctv/cameras/#item-4mp-analog-black-and-white">
+      <img src="/assets/product/analog 4mp.jpg" alt="4MP Analog Black &amp; White" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">4MP Analog Black &amp; White</h2>
+        <p class="text-gray-600 flex-1">4MP analog black and white Hikvision.</p>
+        <span class="text-blue-600 font-bold">RWF 420,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-4mp-analog-black-and-white"
+            data-cart-title="4MP Analog Black &amp; White"
+            data-cart-price="RWF 420,000"
+            data-cart-desc="4MP analog black and white Hikvision."
+            data-cart-img="/assets/product/analog 4mp.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-4mp-analog-black-and-white"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-8mp-analog-black-and-white" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="8MP Analog Black &amp; White " data-search-category="CCTV Cameras" data-search-description="8MP analog black and white Hikvision. RWF 980,000" data-search-url="/products/cctv/cameras/#item-8mp-analog-black-and-white">
+      <img src="/assets/product/analog 8mp.jpg" alt="8MP Analog Black &amp; White " class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">8MP Analog Black &amp; White </h2>
+        <p class="text-gray-600 flex-1">8MP analog black and white Hikvision.</p>
+        <span class="text-blue-600 font-bold">RWF 980,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-8mp-analog-black-and-white"
+            data-cart-title="8MP Analog Black &amp; White "
+            data-cart-price="RWF 980,000"
+            data-cart-desc="8MP analog black and white Hikvision."
+            data-cart-img="/assets/product/analog 8mp.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-8mp-analog-black-and-white"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-6mp-analog-bw-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="6MP Analog B/W Hikvision" data-search-category="CCTV Cameras" data-search-description="High-resolution 6MP analog black &amp; white cameras with long-range IR. RWF 530,000" data-search-url="/products/cctv/cameras/#item-6mp-analog-bw-hikvision">
+      <img src="/assets/product/analog 6mp.jpg" alt="6MP Analog B/W Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">6MP Analog B/W Hikvision</h2>
+        <p class="text-gray-600 flex-1">High-resolution 6MP analog black &amp; white cameras with long-range IR.</p>
+        <span class="text-blue-600 font-bold">RWF 530,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-6mp-analog-bw-hikvision"
+            data-cart-title="6MP Analog B/W Hikvision"
+            data-cart-price="RWF 530,000"
+            data-cart-desc="High-resolution 6MP analog black &amp; white cameras with long-range IR."
+            data-cart-img="/assets/product/analog 6mp.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-6mp-analog-bw-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-2mp-analog-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="2MP Analog ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="Full-color 2MP analog ColorVu cameras with built-in warm LEDs. RWF 460,000" data-search-url="/products/cctv/cameras/#item-2mp-analog-colorvu-hikvision">
+      <img src="/assets/product/2mp full.jpg" alt="2MP Analog ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">2MP Analog ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">Full-color 2MP analog ColorVu cameras with built-in warm LEDs.</p>
+        <span class="text-blue-600 font-bold">RWF 460,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-2mp-analog-colorvu-hikvision"
+            data-cart-title="2MP Analog ColorVu Hikvision"
+            data-cart-price="RWF 460,000"
+            data-cart-desc="Full-color 2MP analog ColorVu cameras with built-in warm LEDs."
+            data-cart-img="/assets/product/2mp full.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-2mp-analog-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-4mp-analog-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="4MP Analog ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="4MP analog ColorVu units ideal for retail and offices. RWF 520,000" data-search-url="/products/cctv/cameras/#item-4mp-analog-colorvu-hikvision">
+      <img src="/assets/product/4mp full.png" alt="4MP Analog ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">4MP Analog ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">4MP analog ColorVu units ideal for retail and offices.</p>
+        <span class="text-blue-600 font-bold">RWF 520,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-4mp-analog-colorvu-hikvision"
+            data-cart-title="4MP Analog ColorVu Hikvision"
+            data-cart-price="RWF 520,000"
+            data-cart-desc="4MP analog ColorVu units ideal for retail and offices."
+            data-cart-img="/assets/product/4mp full.png"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-4mp-analog-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-6mp-analog-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="6MP Analog ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="Enhanced 6MP ColorVu cameras with smart deterrent lights. RWF 650,000" data-search-url="/products/cctv/cameras/#item-6mp-analog-colorvu-hikvision">
+      <img src="/assets/product/6mp full.jpg" alt="6MP Analog ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">6MP Analog ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">Enhanced 6MP ColorVu cameras with smart deterrent lights.</p>
+        <span class="text-blue-600 font-bold">RWF 650,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-6mp-analog-colorvu-hikvision"
+            data-cart-title="6MP Analog ColorVu Hikvision"
+            data-cart-price="RWF 650,000"
+            data-cart-desc="Enhanced 6MP ColorVu cameras with smart deterrent lights."
+            data-cart-img="/assets/product/6mp full.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-6mp-analog-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-8mp-analog-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="8MP Analog ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="Ultra HD analog color system with HDR night imaging. RWF 780,000" data-search-url="/products/cctv/cameras/#item-8mp-analog-colorvu-hikvision">
+      <img src="/assets/product/CCTV1 8MP.jpg" alt="8MP Analog ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">8MP Analog ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">Ultra HD analog color system with HDR night imaging.</p>
+        <span class="text-blue-600 font-bold">RWF 780,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-8mp-analog-colorvu-hikvision"
+            data-cart-title="8MP Analog ColorVu Hikvision"
+            data-cart-price="RWF 780,000"
+            data-cart-desc="Ultra HD analog color system with HDR night imaging."
+            data-cart-img="/assets/product/CCTV1 8MP.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-8mp-analog-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-2mp-ip-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="2MP IP ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="Network ColorVu cameras bringing vivid imagery to smart homes. RWF 495,000" data-search-url="/products/cctv/cameras/#item-2mp-ip-colorvu-hikvision">
+      <img src="/assets/product/2MP IP.jpg" alt="2MP IP ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">2MP IP ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">Network ColorVu cameras bringing vivid imagery to smart homes.</p>
+        <span class="text-blue-600 font-bold">RWF 495,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-2mp-ip-colorvu-hikvision"
+            data-cart-title="2MP IP ColorVu Hikvision"
+            data-cart-price="RWF 495,000"
+            data-cart-desc="Network ColorVu cameras bringing vivid imagery to smart homes."
+            data-cart-img="/assets/product/2MP IP.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-2mp-ip-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-4mp-ip-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="4MP IP ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="Mid-tier IP ColorVu set with analytics and PoE power. RWF 555,000" data-search-url="/products/cctv/cameras/#item-4mp-ip-colorvu-hikvision">
+      <img src="/assets/product/4MP IP.jpg" alt="4MP IP ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">4MP IP ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">Mid-tier IP ColorVu set with analytics and PoE power.</p>
+        <span class="text-blue-600 font-bold">RWF 555,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-4mp-ip-colorvu-hikvision"
+            data-cart-title="4MP IP ColorVu Hikvision"
+            data-cart-price="RWF 555,000"
+            data-cart-desc="Mid-tier IP ColorVu set with analytics and PoE power."
+            data-cart-img="/assets/product/4MP IP.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-4mp-ip-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-6mp-ip-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="6MP IP ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="High-resolution ColorVu IP cameras with AI-based detection. RWF 690,000" data-search-url="/products/cctv/cameras/#item-6mp-ip-colorvu-hikvision">
+      <img src="/assets/product/6MP IP.jpg" alt="6MP IP ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">6MP IP ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">High-resolution ColorVu IP cameras with AI-based detection.</p>
+        <span class="text-blue-600 font-bold">RWF 690,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-6mp-ip-colorvu-hikvision"
+            data-cart-title="6MP IP ColorVu Hikvision"
+            data-cart-price="RWF 690,000"
+            data-cart-desc="High-resolution ColorVu IP cameras with AI-based detection."
+            data-cart-img="/assets/product/6MP IP.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-6mp-ip-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-8mp-ip-colorvu-hikvision" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="8MP IP ColorVu Hikvision" data-search-category="CCTV Cameras" data-search-description="Flagship 8MP IP ColorVu suite delivering cinematic night footage. RWF 830,000" data-search-url="/products/cctv/cameras/#item-8mp-ip-colorvu-hikvision">
+      <img src="/assets/product/8MP IP.jpg" alt="8MP IP ColorVu Hikvision" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">8MP IP ColorVu Hikvision</h2>
+        <p class="text-gray-600 flex-1">Flagship 8MP IP ColorVu suite delivering cinematic night footage.</p>
+        <span class="text-blue-600 font-bold">RWF 830,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-8mp-ip-colorvu-hikvision"
+            data-cart-title="8MP IP ColorVu Hikvision"
+            data-cart-price="RWF 830,000"
+            data-cart-desc="Flagship 8MP IP ColorVu suite delivering cinematic night footage."
+            data-cart-img="/assets/product/8MP IP.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-8mp-ip-colorvu-hikvision"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-kit-of-4-cameras-black-and-white" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Kit of 4 Cameras Black &amp; White" data-search-category="CCTV Cameras" data-search-description="Complete 4-camera Hikvision kit with NVR, cabling, and power. RWF 890,000" data-search-url="/products/cctv/cameras/#item-kit-of-4-cameras-black-and-white">
+      <img src="/assets/product/KIT 4.jpg" alt="Kit of 4 Cameras Black &amp; White" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Kit of 4 Cameras Black &amp; White</h2>
+        <p class="text-gray-600 flex-1">Complete 4-camera Hikvision kit with NVR, cabling, and power.</p>
+        <span class="text-blue-600 font-bold">RWF 890,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-kit-of-4-cameras-black-and-white"
+            data-cart-title="Kit of 4 Cameras Black &amp; White"
+            data-cart-price="RWF 890,000"
+            data-cart-desc="Complete 4-camera Hikvision kit with NVR, cabling, and power."
+            data-cart-img="/assets/product/KIT 4.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-kit-of-4-cameras-black-and-white"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-kit-of-8-cameras-black-and-white" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Kit of 8 Cameras Black &amp; White" data-search-category="CCTV Cameras" data-search-description="8-camera Hikvision bundle with storage, PoE, and mobile app setup. RWF 1,450,000" data-search-url="/products/cctv/cameras/#item-kit-of-8-cameras-black-and-white">
+      <img src="/assets/product/KIT 8.jpg" alt="Kit of 8 Cameras Black &amp; White" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Kit of 8 Cameras Black &amp; White</h2>
+        <p class="text-gray-600 flex-1">8-camera Hikvision bundle with storage, PoE, and mobile app setup.</p>
+        <span class="text-blue-600 font-bold">RWF 1,450,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-kit-of-8-cameras-black-and-white"
+            data-cart-title="Kit of 8 Cameras Black &amp; White"
+            data-cart-price="RWF 1,450,000"
+            data-cart-desc="8-camera Hikvision bundle with storage, PoE, and mobile app setup."
+            data-cart-img="/assets/product/KIT 8.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-kit-of-8-cameras-black-and-white"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-kit-of-4-cameras-colorvu" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Kit of 4 Cameras ColorVu" data-search-category="CCTV Cameras" data-search-description="ColorVu Hikvision bundle with four cameras plus NVR. RWF 1,020,000" data-search-url="/products/cctv/cameras/#item-kit-of-4-cameras-colorvu">
+      <img src="/assets/product/KIT 4 color.jpg" alt="Kit of 4 Cameras ColorVu" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Kit of 4 Cameras ColorVu</h2>
+        <p class="text-gray-600 flex-1">ColorVu Hikvision bundle with four cameras plus NVR.</p>
+        <span class="text-blue-600 font-bold">RWF 1,020,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-kit-of-4-cameras-colorvu"
+            data-cart-title="Kit of 4 Cameras ColorVu"
+            data-cart-price="RWF 1,020,000"
+            data-cart-desc="ColorVu Hikvision bundle with four cameras plus NVR."
+            data-cart-img="/assets/product/KIT 4 color.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-kit-of-4-cameras-colorvu"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-kit-of-8-cameras-colorvu" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Kit of 8 Cameras ColorVu" data-search-category="CCTV Cameras" data-search-description="Eight-camera ColorVu kit with storage, PoE, and mobile app setup. RWF 1,780,000" data-search-url="/products/cctv/cameras/#item-kit-of-8-cameras-colorvu">
+      <img src="/assets/product/KIT 8 color.jpg" alt="Kit of 8 Cameras ColorVu" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Kit of 8 Cameras ColorVu</h2>
+        <p class="text-gray-600 flex-1">Eight-camera ColorVu kit with storage, PoE, and mobile app setup.</p>
+        <span class="text-blue-600 font-bold">RWF 1,780,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-kit-of-8-cameras-colorvu"
+            data-cart-title="Kit of 8 Cameras ColorVu"
+            data-cart-price="RWF 1,780,000"
+            data-cart-desc="Eight-camera ColorVu kit with storage, PoE, and mobile app setup."
+            data-cart-img="/assets/product/KIT 8 color.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-kit-of-8-cameras-colorvu"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-wi-fi-panorama-camera" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Wi-Fi Panorama Camera" data-search-category="CCTV Cameras" data-search-description="360° Wi-Fi camera ideal for small shops and apartments. RWF 50,000" data-search-url="/products/cctv/cameras/#item-wi-fi-panorama-camera">
+      <img src="/assets/product/panaroma.jpg" alt="Wi-Fi Panorama Camera" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Wi-Fi Panorama Camera</h2>
+        <p class="text-gray-600 flex-1">360° Wi-Fi camera ideal for small shops and apartments.</p>
+        <span class="text-blue-600 font-bold">RWF 50,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-wi-fi-panorama-camera"
+            data-cart-title="Wi-Fi Panorama Camera"
+            data-cart-price="RWF 50,000"
+            data-cart-desc="360° Wi-Fi camera ideal for small shops and apartments."
+            data-cart-img="/assets/product/panaroma.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-wi-fi-panorama-camera"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-hikvision-deepinview-12mp" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Hikvision DeepinView 12MP" data-search-category="CCTV Cameras" data-search-description="IDS-2CD7A26G0-IZS camera with analytics and varifocal lens. RWF 460,000" data-search-url="/products/cctv/cameras/#item-hikvision-deepinview-12mp">
+      <img src="/assets/product/12mp.jpg" alt="Hikvision DeepinView 12MP" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Hikvision DeepinView 12MP</h2>
+        <p class="text-gray-600 flex-1">IDS-2CD7A26G0-IZS camera with analytics and varifocal lens.</p>
+        <span class="text-blue-600 font-bold">RWF 460,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-hikvision-deepinview-12mp"
+            data-cart-title="Hikvision DeepinView 12MP"
+            data-cart-price="RWF 460,000"
+            data-cart-desc="IDS-2CD7A26G0-IZS camera with analytics and varifocal lens."
+            data-cart-img="/assets/product/12mp.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-hikvision-deepinview-12mp"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-hikvision-ds-2cd3686g2t-izs-(8mp)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Hikvision DS-2CD3686G2T-IZS (8MP)" data-search-category="CCTV Cameras" data-search-description="8MP varifocal camera with AcuSense for false alarm reduction. Contact for quote" data-search-url="/products/cctv/cameras/#item-hikvision-ds-2cd3686g2t-izs-(8mp)">
+      <img src="/assets/product/8mp dome.jpg" alt="Hikvision DS-2CD3686G2T-IZS (8MP)" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Hikvision DS-2CD3686G2T-IZS (8MP)</h2>
+        <p class="text-gray-600 flex-1">8MP varifocal camera with AcuSense for false alarm reduction.</p>
+        <span class="text-blue-600 font-bold">Contact for quote</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-hikvision-ds-2cd3686g2t-izs-(8mp)"
+            data-cart-title="Hikvision DS-2CD3686G2T-IZS (8MP)"
+            data-cart-price="Contact for quote"
+            data-cart-desc="8MP varifocal camera with AcuSense for false alarm reduction."
+            data-cart-img="/assets/product/8mp dome.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-hikvision-ds-2cd3686g2t-izs-(8mp)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-wifi-uniarch-3mp-360-camera" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Wifi Uniarch 3MP 360° Camera" data-search-category="CCTV Cameras" data-search-description="Panoramic Uniarch camera ideal for offices and boutiques. RWF 110,000" data-search-url="/products/cctv/cameras/#item-wifi-uniarch-3mp-360-camera">
+      <img src="/assets/product/uniarch.png" alt="Wifi Uniarch 3MP 360° Camera" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Wifi Uniarch 3MP 360° Camera</h2>
+        <p class="text-gray-600 flex-1">Panoramic Uniarch camera ideal for offices and boutiques.</p>
+        <span class="text-blue-600 font-bold">RWF 110,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-wifi-uniarch-3mp-360-camera"
+            data-cart-title="Wifi Uniarch 3MP 360° Camera"
+            data-cart-price="RWF 110,000"
+            data-cart-desc="Panoramic Uniarch camera ideal for offices and boutiques."
+            data-cart-img="/assets/product/uniarch.png"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-wifi-uniarch-3mp-360-camera"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-wifi-imilab-c22-home-security-camera" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Wifi IMILAB C22 Home Security Camera" data-search-category="CCTV Cameras" data-search-description="Smart home security camera with crystal-clear video. RWF 65,000" data-search-url="/products/cctv/cameras/#item-wifi-imilab-c22-home-security-camera">
+      <img src="/assets/product/imilab.JPG" alt="Wifi IMILAB C22 Home Security Camera" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Wifi IMILAB C22 Home Security Camera</h2>
+        <p class="text-gray-600 flex-1">Smart home security camera with crystal-clear video.</p>
+        <span class="text-blue-600 font-bold">RWF 65,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-wifi-imilab-c22-home-security-camera"
+            data-cart-title="Wifi IMILAB C22 Home Security Camera"
+            data-cart-price="RWF 65,000"
+            data-cart-desc="Smart home security camera with crystal-clear video."
+            data-cart-img="/assets/product/imilab.JPG"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-wifi-imilab-c22-home-security-camera"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-wifi-ezviz-ec-dual-2k-(3mp)" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Wifi EZVIZ EC Dual 2K (3MP)" data-search-category="CCTV Cameras" data-search-description="Dual-lens EZVIZ camera capturing vivid 3MP footage. RWF 117,000" data-search-url="/products/cctv/cameras/#item-wifi-ezviz-ec-dual-2k-(3mp)">
+      <img src="/assets/product/EZVIZ EC.jpg" alt="Wifi EZVIZ EC Dual 2K (3MP)" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Wifi EZVIZ EC Dual 2K (3MP)</h2>
+        <p class="text-gray-600 flex-1">Dual-lens EZVIZ camera capturing vivid 3MP footage.</p>
+        <span class="text-blue-600 font-bold">RWF 117,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-wifi-ezviz-ec-dual-2k-(3mp)"
+            data-cart-title="Wifi EZVIZ EC Dual 2K (3MP)"
+            data-cart-price="RWF 117,000"
+            data-cart-desc="Dual-lens EZVIZ camera capturing vivid 3MP footage."
+            data-cart-img="/assets/product/EZVIZ EC.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-wifi-ezviz-ec-dual-2k-(3mp)"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="item-wifi-imilab-ec3-lite-2k-hd" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col camera-card" data-search-entry data-search-title="Wifi IMILAB EC3 Lite 2K HD" data-search-category="CCTV Cameras" data-search-description="Outdoor-ready IMILAB camera with night vision and alerts. RWF 70,000" data-search-url="/products/cctv/cameras/#item-wifi-imilab-ec3-lite-2k-hd">
+      <img src="/assets/product/imilabec3.jpg" alt="Wifi IMILAB EC3 Lite 2K HD" class="h-48 w-full object-cover">
+      <div class="p-6 space-y-3 flex-1 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Wifi IMILAB EC3 Lite 2K HD</h2>
+        <p class="text-gray-600 flex-1">Outdoor-ready IMILAB camera with night vision and alerts.</p>
+        <span class="text-blue-600 font-bold">RWF 70,000</span>
+        <div class="pt-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="/products/cctv/cameras/-wifi-imilab-ec3-lite-2k-hd"
+            data-cart-title="Wifi IMILAB EC3 Lite 2K HD"
+            data-cart-price="RWF 70,000"
+            data-cart-desc="Outdoor-ready IMILAB camera with night vision and alerts."
+            data-cart-img="/assets/product/imilabec3.jpg"
+            data-cart-category="CCTV Cameras"
+            data-cart-url="/products/cctv/cameras/#item-wifi-imilab-ec3-lite-2k-hd"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  </main>
+  <div id="whatsapp-cart" class="hidden fixed bottom-5 right-5 w-full max-w-sm px-4 sm:px-0 z-40">
+    <div class="ink-card ink-card--soft p-5 space-y-4 border border-white border-opacity-10">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-blue-500">WhatsApp Cart</p>
+          <p class="text-lg font-semibold" data-cart-count>0 items selected</p>
+        </div>
+        <button type="button" class="text-xs text-gray-500 hover:text-gray-300 font-semibold" data-cart-clear>Clear</button>
+      </div>
+      <p class="text-sm text-gray-500" data-cart-preview>Add products to get started.</p>
+      <p class="text-sm font-semibold" data-cart-total-label></p>
+      <div class="flex flex-col sm:flex-row gap-2">
+        <a href="/contact/" class="flex-1 inline-flex items-center justify-center ink-action ink-action--secondary text-sm" data-cart-review>Review items</a>
+        <button type="button" class="flex-1 inline-flex items-center justify-center ink-action ink-action--primary text-sm" data-cart-send disabled>Send on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <section class="px-4 sm:px-6 lg:px-8 py-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="ink-card ink-card--soft p-6 sm:p-8 text-sm space-y-3">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="ink-chip">Service terms</span>
+          <p class="text-xs text-gray-500">Transparent logistics & installation policy</p>
+        </div>
+        <p><strong>Payment policy:</strong> Pay after receiving standard products. For delivery + installation, settle 50% before dispatch and the remaining 50% once installation is completed. Installations outside Kigali can be negotiated.</p>
+        <p><strong>Delivery:</strong> Free within Kigali. Outside Kigali, delivery terms are negotiable based on destination.</p>
+      <p><strong>Installation-only:</strong> If you prefer A&amp;B Innovation to install equipment you already have on site, services are available and priced on a negotiated rate.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-slate-950 bg-opacity-80 border-t border-white border-opacity-10 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid gap-10 lg:grid-cols-4">
+      <div class="space-y-4">
+        <p class="ink-chip">A&amp;B Innovation</p>
+        <p class="text-2xl font-semibold">Engineering immersive, resilient infrastructure for Africa.</p>
+        <p class="text-sm text-gray-500">CCTV, networking, HVAC, fire safety, power, and digital experiences orchestrated by a single crew.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/contact/" class="ink-action ink-action--primary text-sm">Schedule a discovery call</a>
+          <a href="/gallery/" class="ink-action ink-action--secondary text-sm">See deployments</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Navigation</p>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-white transition">Home</a></li>
+          <li><a href="/services/" class="hover:text-white transition">Services</a></li>
+          <li><a href="/products/" class="hover:text-white transition">Product catalog</a></li>
+          <li><a href="/gallery/" class="hover:text-white transition">Project gallery</a></li>
+          <li><a href="/about/" class="hover:text-white transition">About the team</a></li>
+          <li><a href="/contact/" class="hover:text-white transition">Contact & support</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Reach us</p>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li>
+            <p class="font-semibold text-white">Dispatch line</p>
+            <a href="tel:+250785576541" class="hover:text-white transition">+250 785 576 541</a>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Email</p>
+            <a href="mailto:technicprosolution@gmail.com" class="hover:text-white transition">technicprosolution@gmail.com</a>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Office</p>
+            <p class="text-gray-500">123 Tech Avenue, Kigali, Rwanda</p>
+          </li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Operations</p>
+        <div class="ink-card p-4 space-y-2 text-sm">
+          <p class="text-gray-400">Working hours</p>
+          <p class="text-lg font-semibold text-white">24/7 response crews</p>
+          <p class="text-gray-500 text-sm">Emergency technicians available in Kigali and across the region.</p>
+        </div>
+        <div class="ink-card p-4 space-y-2 text-sm">
+          <p class="text-gray-400">WhatsApp command</p>
+          <p class="text-lg font-semibold text-white">+250 785 576 541</p>
+          <p class="text-gray-500 text-sm">Send your cart or ping us for immediate coordination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white border-opacity-5 text-center text-xs text-gray-500 py-6">
+    © 2026 A&amp;B Innovation — Built with Eleventy & human touch.
+  </div>
+</footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script id="global-search-data" type="application/json">
+        []
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('global-search-overlay');
+      const input = document.getElementById('global-search-input');
+      const results = document.getElementById('global-search-results');
+      const dataElement = document.getElementById('global-search-data');
+      if (!overlay || !input || !results || !dataElement) {
+        return;
+      }
+
+      let staticEntries = [];
+      try {
+        staticEntries = JSON.parse(dataElement.textContent.trim()) || [];
+      } catch (error) {
+        console.error('Failed to parse search index', error);
+      }
+      let searchIndex = staticEntries.slice();
+      let indexReady = false;
+      const remoteIndexUrl = '/assets/search-index.json';
+      let remoteIndexPromise = null;
+
+      const triggers = document.querySelectorAll('[data-search-trigger]');
+      const closeButtons = overlay.querySelectorAll('[data-search-close]');
+
+      const fetchRemoteIndex = () => {
+        if (!remoteIndexPromise) {
+          remoteIndexPromise = fetch(remoteIndexUrl, { cache: 'force-cache' })
+            .then(response => response.ok ? response.json() : [])
+            .catch(() => []);
+        }
+        return remoteIndexPromise;
+      };
+
+      const collectDynamicEntries = () => {
+        return Array.from(document.querySelectorAll('[data-search-entry]')).map(node => {
+          const title = (node.dataset.searchTitle || node.getAttribute('data-search-title') || '').trim();
+          const url = (node.dataset.searchUrl || node.getAttribute('data-search-url') || '').trim();
+          if (!title || !url) {
+            return null;
+          }
+          return {
+            title,
+            category: (node.dataset.searchCategory || node.getAttribute('data-search-category') || 'Products').trim(),
+            description: (node.dataset.searchDescription || node.getAttribute('data-search-description') || '').trim(),
+            url
+          };
+        }).filter(Boolean);
+      };
+
+      const refreshSearchIndex = () => {
+        indexReady = false;
+        return fetchRemoteIndex().then(remoteEntries => {
+          const unique = new Map();
+          [...staticEntries, ...(remoteEntries || []), ...collectDynamicEntries()].forEach(item => {
+            const key = `${item.title}-${item.url}`;
+            if (!unique.has(key)) {
+              unique.set(key, item);
+            }
+          });
+          searchIndex = Array.from(unique.values());
+          indexReady = true;
+        }).catch(() => {
+          const unique = new Map();
+          [...staticEntries, ...collectDynamicEntries()].forEach(item => {
+            const key = `${item.title}-${item.url}`;
+            if (!unique.has(key)) {
+              unique.set(key, item);
+            }
+          });
+          searchIndex = Array.from(unique.values());
+          indexReady = true;
+        });
+      };
+
+      const lockScroll = (shouldLock) => {
+        document.body.classList.toggle('overflow-hidden', shouldLock);
+      };
+
+      const openOverlay = () => {
+        overlay.classList.remove('hidden');
+        input.value = '';
+        results.innerHTML = '<p class="text-sm text-gray-500">Loading search index...</p>';
+        lockScroll(true);
+        setTimeout(() => input.focus(), 100);
+        refreshSearchIndex().then(() => renderResults(''));
+      };
+
+      const closeOverlay = () => {
+        overlay.classList.add('hidden');
+        lockScroll(false);
+      };
+
+      const getMatches = (term) => {
+        if (!term) {
+          return searchIndex.slice(0, 12);
+        }
+        const q = term.toLowerCase();
+        return searchIndex.filter(item => {
+          return `${item.title} ${item.description} ${item.category} ${item.keywords || ''}`.toLowerCase().includes(q);
+        }).slice(0, 12);
+      };
+
+      const renderResults = (term) => {
+        const matches = getMatches(term);
+        if (!matches.length) {
+          results.innerHTML = '<p class="text-sm text-gray-500">No matches yet. Try refining your keywords.</p>';
+          return;
+        }
+
+        results.innerHTML = matches.map(item => `
+          <a href="${item.url}" class="block border border-gray-200 rounded-2xl px-4 py-3 hover:border-blue-500 hover:-translate-y-0.5 transition transform">
+            <div class="flex items-center justify-between text-xs uppercase tracking-wide text-blue-500">
+              <span>${item.category}</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+            <p class="text-lg font-semibold text-gray-900 mt-1">${item.title}</p>
+            <p class="text-sm text-gray-500 mt-1">${item.description}</p>
+          </a>
+        `).join('');
+      };
+
+      triggers.forEach(button => button.addEventListener('click', () => openOverlay()));
+      closeButtons.forEach(button => button.addEventListener('click', () => closeOverlay()));
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      input.addEventListener('input', (event) => {
+        if (!indexReady) {
+          results.innerHTML = '<p class="text-sm text-gray-500">Loading search index...</p>';
+          return;
+        }
+        renderResults(event.target.value.trim());
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (overlay.classList.contains('hidden')) {
+          return;
+        }
+        if (event.key === 'Escape') {
+          closeOverlay();
+        }
+        if (event.key === 'Enter') {
+          if (!indexReady) {
+            return;
+          }
+          const firstResult = results.querySelector('a');
+          if (firstResult) {
+            firstResult.click();
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+    (function() {
+      const CART_STORAGE_KEY = 'abinnovation-cart-items';
+      const WHATSAPP_NUMBER = '250785576541';
+      const DEFAULT_MESSAGE = 'Hello, I would like to speak with A&B Innovation about your products and services.';
+      const subscribers = new Set();
+      const state = {
+        cart: []
+      };
+
+      const parsePriceText = (value) => {
+        if (value === undefined || value === null) {
+          return null;
+        }
+        const numeric = String(value).replace(/[^0-9.]/g, '');
+        if (!numeric) {
+          return null;
+        }
+        const parsed = parseFloat(numeric);
+        return Number.isFinite(parsed) ? parsed : null;
+      };
+
+      const formatCurrency = (amount) => {
+        if (typeof amount !== 'number' || !Number.isFinite(amount) || amount <= 0) {
+          return '';
+        }
+        return `RWF ${Math.round(amount).toLocaleString('en-US')}`;
+      };
+
+      const normalizeItem = (item) => {
+        if (!item) {
+          return null;
+        }
+        const normalized = Object.assign({}, item);
+        const parsedAmount = typeof normalized.amount === 'number' && Number.isFinite(normalized.amount)
+          ? normalized.amount
+          : parsePriceText(normalized.price);
+        normalized.amount = parsedAmount || null;
+        return normalized;
+      };
+
+      const readCartFromStorage = () => {
+        try {
+          const stored = sessionStorage.getItem(CART_STORAGE_KEY);
+          if (!stored) {
+            return [];
+          }
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            return parsed.map(normalizeItem).filter(item => item && item.id);
+          }
+          return [];
+        } catch (error) {
+          console.warn('Unable to read cart state', error);
+          return [];
+        }
+      };
+
+      state.cart = readCartFromStorage();
+
+      const persistCart = () => {
+        try {
+          sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(state.cart));
+        } catch (error) {
+          console.warn('Unable to persist cart selection', error);
+        }
+      };
+
+      const getItems = () => state.cart.slice();
+      const getCartTotal = () => state.cart.reduce((sum, item) => sum + (item.amount || 0), 0);
+
+      const findIndex = (id) => {
+        if (!id) {
+          return -1;
+        }
+        return state.cart.findIndex(item => item.id === id);
+      };
+
+      const buildCartMessage = (items) => {
+        if (!items || !items.length) {
+          return DEFAULT_MESSAGE;
+        }
+        const lines = [
+          'Hello, I would like to discuss the following A&B Innovation items:',
+          ''
+        ];
+        items.forEach((item, index) => {
+          const displayPrice = item.price || (item.amount ? formatCurrency(item.amount) : '');
+          lines.push(`${index + 1}. ${item.title || 'Unnamed item'}${displayPrice ? ` (${displayPrice})` : ''}`);
+          if (item.category) {
+            lines.push(`   Category: ${item.category}`);
+          }
+          if (item.description) {
+            lines.push(`   Details: ${item.description}`);
+          }
+          if (item.url) {
+            lines.push(`   Link: ${item.url}`);
+          }
+          lines.push('');
+        });
+        lines.push('Please advise pricing, delivery, and installation support.');
+        return lines.join('\n');
+      };
+
+      const updateToggleButtons = () => {
+        const items = getItems();
+        document.querySelectorAll('[data-cart-toggle]').forEach((button) => {
+          const id = button.getAttribute('data-cart-id');
+          const isSelected = findIndex(id) !== -1;
+          const label = button.querySelector('[data-cart-label]');
+          if (label) {
+            label.textContent = isSelected ? 'Added to WhatsApp cart' : 'Add to WhatsApp cart';
+          }
+          button.classList.toggle('bg-green-600', isSelected);
+          button.classList.toggle('text-white', isSelected);
+          button.classList.toggle('border-green-600', isSelected);
+          button.classList.toggle('border-gray-300', !isSelected);
+          button.classList.toggle('text-gray-900', !isSelected);
+        });
+      };
+
+      const updateFloatingWidget = () => {
+        const wrapper = document.getElementById('whatsapp-cart');
+        if (!wrapper) {
+          return;
+        }
+        const count = state.cart.length;
+        wrapper.classList.toggle('hidden', count === 0);
+        const countNode = wrapper.querySelector('[data-cart-count]');
+        if (countNode) {
+          countNode.textContent = count ? `${count} item${count === 1 ? '' : 's'} selected` : '0 items selected';
+        }
+        const previewNode = wrapper.querySelector('[data-cart-preview]');
+        if (previewNode) {
+          if (!count) {
+            previewNode.textContent = 'Add products to get started.';
+          } else {
+            const titles = state.cart.map(item => item.title || 'Unnamed item').slice(0, 3);
+            previewNode.textContent = titles.join(', ') + (count > 3 ? ` +${count - 3} more` : '');
+          }
+        }
+        const totalNode = wrapper.querySelector('[data-cart-total-label]');
+        if (totalNode) {
+          const totalAmount = getCartTotal();
+          totalNode.textContent = totalAmount ? `Estimated total: ${formatCurrency(totalAmount)}` : 'Estimated total: --';
+        }
+        const sendButton = wrapper.querySelector('[data-cart-send]');
+        if (sendButton) {
+          sendButton.disabled = count === 0;
+          sendButton.classList.toggle('opacity-50', count === 0);
+          sendButton.classList.toggle('cursor-not-allowed', count === 0);
+        }
+      };
+
+      const notify = () => {
+        updateToggleButtons();
+        updateFloatingWidget();
+        subscribers.forEach((callback) => {
+          try {
+            callback(getItems());
+          } catch (error) {
+            console.warn('Cart subscriber error', error);
+          }
+        });
+      };
+
+      const addItem = (item) => {
+        const normalized = normalizeItem(item);
+        if (!normalized || !normalized.id) {
+          return;
+        }
+        const index = findIndex(normalized.id);
+        if (index === -1) {
+          state.cart.push(normalized);
+        } else {
+          state.cart[index] = Object.assign({}, state.cart[index], normalized);
+        }
+        persistCart();
+        notify();
+      };
+
+      const removeItem = (id) => {
+        const index = findIndex(id);
+        if (index === -1) {
+          return;
+        }
+        state.cart.splice(index, 1);
+        persistCart();
+        notify();
+      };
+
+      const toggleItem = (item) => {
+        if (!item || !item.id) {
+          return;
+        }
+        if (findIndex(item.id) === -1) {
+          addItem(item);
+        } else {
+          removeItem(item.id);
+        }
+      };
+
+      const clearCart = () => {
+        if (!state.cart.length) {
+          return;
+        }
+        state.cart = [];
+        persistCart();
+        notify();
+      };
+
+      const readItemFromNode = (node) => {
+        const get = (attr, fallbackAttr) => node.getAttribute(attr) || (fallbackAttr ? node.getAttribute(fallbackAttr) : '') || '';
+        const title = get('data-cart-title', 'data-order-title');
+        const id = get('data-cart-id') || `${title}-${get('data-cart-price', 'data-order-price')}`;
+        return normalizeItem({
+          id,
+          title,
+          price: get('data-cart-price', 'data-order-price'),
+          description: get('data-cart-desc', 'data-order-desc'),
+          image: get('data-cart-img', 'data-order-img'),
+          category: get('data-cart-category', 'data-order-category'),
+          url: get('data-cart-url') || node.getAttribute('href') || window.location.href
+        });
+      };
+
+      const sendCartToWhatsApp = () => {
+        const message = buildCartMessage(getItems());
+        const encoded = encodeURIComponent(message.trim());
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+        window.open(url, '_blank');
+      };
+
+      document.addEventListener('click', (event) => {
+        const toggle = event.target.closest('[data-cart-toggle]');
+        if (toggle) {
+          event.preventDefault();
+          toggleItem(readItemFromNode(toggle));
+          return;
+        }
+        const clearButton = event.target.closest('[data-cart-clear]');
+        if (clearButton) {
+          event.preventDefault();
+          clearCart();
+          return;
+        }
+        const sendButton = event.target.closest('[data-cart-send]');
+        if (sendButton) {
+          event.preventDefault();
+          if (getItems().length) {
+            sendCartToWhatsApp();
+          }
+        }
+      });
+
+      window.abInnovationCart = {
+        getItems,
+        getTotal: () => getCartTotal(),
+        addItem,
+        removeItem,
+        toggleItem,
+        clear: clearCart,
+        buildMessage: buildCartMessage,
+        formatCurrency,
+        subscribe: (callback) => {
+          if (typeof callback !== 'function') {
+            return () => {};
+          }
+          subscribers.add(callback);
+          return () => subscribers.delete(callback);
+        }
+      };
+
+      notify();
+    })();
+  </script>
+</body>
+</html>

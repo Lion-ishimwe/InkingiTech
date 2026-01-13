@@ -1,0 +1,313 @@
+---
+layout: base.njk
+title: Air Conditions
+---
+
+<div class="bg-blue-900 text-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center space-y-4">
+    <p class="uppercase tracking-[0.3em] text-xs text-blue-200">Air Conditioning</p>
+    <h1 class="text-4xl font-bold">Cooling Units & Installation Kits</h1>
+    <p class="text-blue-100">
+      Energy-efficient AC systems, spare parts, and controls available with full installation in Rwanda.
+    </p>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+  <a href="/products/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
+    &#8592; Back to Categories
+  </a>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+  <div class="bg-white rounded-2xl border border-blue-100 shadow p-6 space-y-3">
+    <p class="text-sm text-gray-600">A&amp;B Innovation stocks full Bosch and LG climate systems plus every installation consumable required on site. The catalog below references the requested line items with their model numbers, descriptions, and WhatsApp cart toggles so you can mix equipment and fittings \"one on one.\"</p>
+    <p class="text-sm text-gray-600">Need a configuration not listed? Tap any card to add it to the WhatsApp cart and include your notes before sending.</p>
+  </div>
+
+  {% set systems = [
+    {
+      title: "Bosch Wall Mount Split 12,000 BTU (Inverter)",
+      model: "CLIMATE Line 5000i CLL5000i W35",
+      price: "RWF 800,000",
+      desc: "High-efficiency inverter split for bedrooms, clinics, and compact offices.",
+      img: "/assets/product/landing/inverter.jpg"
+    },
+    {
+      title: "Bosch Wall Mount Split 12,000 BTU (Non-Inverter)",
+      model: "CLIMATE Line 2000 CLL2000 W35",
+      price: "RWF 700,000",
+      desc: "Fixed-speed wall mount supplied with remote control and copper kit.",
+      img: "/assets/product/landing/non-inverter.JPG"
+    },
+    {
+      title: "Bosch Wall Mount Split 18,000 BTU (Inverter)",
+      model: "CLIMATE Line 5000i CLL5000i W53",
+      price: "RWF 1,100,000",
+      desc: "Bigger 18k BTU inverter delivering silent performance and rapid cooling.",
+      img: "/assets/product/landing/18k inverter.png"
+    },
+    {
+      title: "Bosch Wall Mount Split 18,000 BTU (Non-Inverter)",
+      model: "CLIMATE Line 2000 CLL2000 W53",
+      price: "RWF 1,000,000",
+      desc: "Reliable fixed-speed split ideal for living rooms and executive suites.",
+      img: "/assets/product/landing/18k non-inverter.jpg"
+    },
+    {
+      title: "Bosch Wall Mount Split 24,000 BTU (Non-Inverter)",
+      model: "CLIMATE Line 2000 CLL2000 W70",
+      price: "RWF 1,400,000",
+      desc: "Large capacity wall mount for open-plan offices and reception halls.",
+      img: "/assets/product/landing/24k non-inverter.jpg"
+    },
+    {
+      title: "Bosch Wall Mount Split 22,000 BTU (Inverter)",
+      model: "CLIMATE Line 5000i CLL5000i W65",
+      price: "RWF 1,450,000",
+      desc: "22k BTU inverter split bridging the gap between commercial and residential needs.",
+      img: "/assets/product/landing/22k inverter.png"
+    },
+    {
+      title: "Bosch VRF Outdoor 18 kW",
+      model: "CLIMATE 5000 VRF MDCI18-3 60btu",
+      price: "RWF 4,500,000",
+      desc: "VRF outdoor module supporting multiple indoor units on a single loop.",
+      img: "/assets/product/landing/vrf 18k.jpg"
+    },
+    {
+      title: "Bosch VRF Outdoor 56 kW",
+      model: "AIR FLUX 5300 A AF5300A 56-3",
+      price: "RWF 9,550,000",
+      desc: "High-tonnage VRF condenser for malls, hospitals, and campuses.",
+      img: "/assets/product/landing/vrf 56kw.png"
+    },
+    {
+      title: "Bosch 18,000 BTU Ductable Split",
+      model: "CLIMATE 5000 SCI 18-1 OU",
+      price: "RWF 3,500,000",
+      desc: "Ductable indoor/outdoor pair ready for concealed distribution.",
+      img: "/assets/product/landing/18k Ductable Split.jpg"
+    },
+    {
+      title: "LG Cassette 18,000 BTU 4-Way",
+      model: "ATUQ22GPLA2",
+      price: "RWF 2,100,000",
+      desc: "Four-way cassette with drain pump and round diffuser fascia.",
+      img: "/assets/product/landing/casette 18k LG.jpg"
+    },
+    {
+      title: "LG Cassette 24,000 BTU 4-Way",
+      model: "ATUQ30GPLA2",
+      price: "RWF 2,400,000",
+      desc: "Mid-size cassette for boardrooms and retail spaces.",
+      img: "/assets/product/landing/LG Cassette 24k.jpg"
+    },
+    {
+      title: "LG Cassette 36,000 BTU 4-Way",
+      price: "RWF 3,400,000",
+      desc: "High-capacity LG cassette with 360-degree discharge and wired controller.",
+      img: "/assets/product/landing/LG Cassette 36k.jpg"
+    },
+    {
+      title: "LG Cassette 48,000 BTU 4-Way",
+      price: "RWF 4,500,000",
+      desc: "Largest LG cassette supporting expansive halls up to 48k BTU.",
+      img: "/assets/product/landing/LG Cassette 48k.JPG"
+    },
+    {
+      title: "Floor Standing 60,000 BTU",
+      price: "RWF 2,600,000",
+      desc: "Tower-style indoor unit for showrooms and churches.",
+      img: "/assets/product/landing/Floor Standing 60k.png"
+    },
+    {
+      title: "VRF Cassette Bosch 90-1P",
+      model: "AF-4CR 90-1 P (36000 BTU)",
+      price: "RWF 2,000,000",
+      desc: "Bosch VRF cassette with Y-branch-ready headers.",
+      img: "/assets/product/landing/VRF Cassette Bosch 90-1P.jpg"
+    },
+    {
+      title: "VRF Cassette Bosch 71-2P",
+      model: "AF-4CR 71-2 P (24000 BTU)",
+      price: "RWF 1,000,000",
+      desc: "Compact VRF cassette optimized for hotel rooms.",
+      img: "/assets/product/landing/VRF Cassette Bosch 71-2P.png"
+    },
+    {
+      title: "VRF Panel Bosch 90-1P",
+      price: "RWF 680,000",
+      desc: "Bosch fascia panel for 90-1P cassette bodies.",
+      img: "/assets/product/landing/VRF Panel Bosch 90-1P.jpg"
+    },
+    {
+      title: "VRF Panel Bosch 71-2P",
+      model: "AF-P 4CR8733500457",
+      price: "RWF 580,000",
+      desc: "Decor panel matched to Bosch 71-2P cassettes.",
+      img: "/assets/product/landing/VRF Panel Bosch 71-2P.JPG"
+    }
+  ] %}
+  <section class="space-y-6">
+    <div class="space-y-2">
+      <p class="uppercase tracking-[0.3em] text-xs text-blue-500">Featured Systems</p>
+      <h2 class="text-3xl font-semibold text-slate-900">Bosch & LG Climate Lineup</h2>
+      <p class="text-gray-600">Mix inverter splits, VRF outdoor units, cassette bodies, and fascia panels as needed. Each card lists the exact model reference from your inventory sheet.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      {% for item in systems %}
+      {% set slug = item.title | slug %}
+      <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden flex flex-col" data-search-entry data-search-title="{{ item.title }}" data-search-category="Air Conditions" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+        <img src="{{ item.img }}" alt="{{ item.title }}" class="h-48 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <div>
+            <h3 class="text-2xl font-semibold text-slate-900">{{ item.title }}</h3>
+            {% if item.model %}
+            <p class="text-sm text-gray-500">Model: {{ item.model }}</p>
+            {% endif %}
+          </div>
+          <p class="text-gray-600 flex-1">{{ item.desc }}</p>
+          <p class="text-xl font-bold text-blue-600">{{ item.price }}</p>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+            data-cart-toggle
+            data-cart-id="{{ page.url }}-system-{{ slug }}"
+            data-cart-title="{{ item.title }}"
+            data-cart-price="{{ item.price }}"
+            data-cart-desc="{{ item.desc }}"
+            data-cart-img="{{ item.img }}"
+            data-cart-category="Air Conditioning Systems"
+            data-cart-url="{{ page.url }}#item-{{ slug }}"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+            </svg>
+            <span data-cart-label>Add to WhatsApp cart</span>
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% set components = [
+    {title:"Insulation Kit 1/4\" + 3/8\"", price:"RWF 52,000", desc:"Twin-tube elastomeric insulation sized for standard mini-split lines.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+    {title:"Insulation Kit 1/4\" + 1/2\"", price:"RWF 55,000", desc:"Pre-slit insulation for medium capacity suction + liquid lines.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+    {title:"Insulation Kit 3/8\" + 5/8\"", price:"RWF 75,000", desc:"Thicker kit to keep VRF branch runs sweat-free.", img:"https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=600&fit=crop"},
+    {title:"Air Condition AF-BJ03 Y-Branch", model:"AF-BJ03", price:"RWF 120,000", desc:"Refnet kit for splitting VRF refrigerant circuits.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Air Condition AF-BJ05 Y-Branch", model:"AF-BJ05", price:"RWF 170,000", desc:"Heavy-duty Y-branch for multi-port VRF trees.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Air Condition AF-BJ06 Y-Branch", model:"AF-BJ06", price:"RWF 200,000", desc:"Supports additional indoor heads and longer piping.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Air Condition AF-BJ07 Y-Branch", model:"AF-BJ07", price:"RWF 390,000", desc:"Largest Bosch refnet with brazed reducers.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Axial Ventilation Fan", model:"AXC900-10/13-4(B)", price:"Contact for quote", desc:"Large axial fan for plant rooms and heat exhaust.", img:"https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&h=600&fit=crop"},
+    {title:"Black Rubber Insulation 1 1/8\"", price:"RWF 2,500", desc:"Flexible insulation sleeve for suction pipes.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Black Rubber Insulation 1 3/8\"", price:"RWF 3,500", desc:"Thick wall insulation for larger VRF lines.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Black Rubber Insulation 1 5/8\"", price:"RWF 4,000", desc:"Premium elastomeric insulation for 1 5/8\" pipes.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Black Rubber Insulation 1 3/4\"", price:"RWF 3,000", desc:"Continuous tube insulation for risers and plenums.", img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&h=600&fit=crop"},
+    {title:"Copper Coil 1/4\"", price:"RWF 42,000", desc:"Soft-drawn refrigeration copper for liquid lines.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Copper Coil 3/8\"", price:"RWF 67,000", desc:"Flexible 3/8\" coil for VRF branches and drain pans.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Copper Coil 1/2\"", price:"RWF 75,000", desc:"1/2\" refrigeration tubing supplied in 15m rolls.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Copper Coil 5/8\"", price:"RWF 125,000", desc:"5/8\" coil for high-capacity suction lines.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Copper Coil 3/4\"", price:"RWF 156,000", desc:"3/4\" refrigeration coil for long VRF runs.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Copper Coil 7/8\"", price:"RWF 243,000", desc:"7/8\" soft copper for trunk lines.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Fire Dump", price:"RWF 250,000", desc:"Fire damper/dump assembly for duct safety shutoff.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Galvanized Sheet 0.6 mm", price:"RWF 36,000", desc:"Gauge 0.6 mm sheet for duct fabrication.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Galvanized Sheet 0.8 mm", price:"RWF 48,000", desc:"Stiffer GI sheet for plenums and transitions.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Galvanized Sheet 1.0 mm", price:"RWF 65,000", desc:"Heavy gauge duct sheet for outdoor sections.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"PVC Pipe PN16 50 mm", price:"RWF 11,000", desc:"High-pressure condensate/header drain pipe.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"PVC Pipe 63 mm", price:"RWF 16,000", desc:"Rigid PVC for gravity drains and pump discharge.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"PVC Pipe 90 mm", price:"RWF 26,000", desc:"90 mm drain/duct sleeve pipe.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"PVC Pipe 110 mm", price:"Contact for quote", desc:"Oversized PVC for multiple condensate lines.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Refrigerant Gas R410A", price:"RWF 130,000", desc:"Virgin R410A cylinders suitable for inverter units.", img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"},
+    {title:"Remote Controller (Not Wired)", price:"RWF 60,000", desc:"IR remote kit for wall splits and consoles.", img:"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop"},
+    {title:"Remote Controller (Wired)", price:"RWF 260,000", desc:"Wall-mounted wired controller for VRF/ducted units.", img:"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop"},
+    {title:"Small Fan Assembly", price:"RWF 300,000", desc:"Compact fresh air fan for utility rooms.", img:"https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&h=600&fit=crop"},
+    {title:"VRF Panel Bosch 90-1P", price:"RWF 680,000", desc:"Replacement decorative panel for 90-1P cassette.", img:"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop"},
+    {title:"VRF Panel Bosch 71-2P", model:"AF-P 4CR8733500457", price:"RWF 580,000", desc:"Panel for Bosch 71-2P units.", img:"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&h=600&fit=crop"},
+    {title:"MDB1 Distribution Board", price:"RWF 6,500,000", desc:"Main distribution board for HVAC plant control.", img:"https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&h=600&fit=crop"},
+    {title:"MDB2 Distribution Board", price:"RWF 6,500,000", desc:"Redundant MDB tailored for multi-compressor sites.", img:"https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&h=600&fit=crop"},
+    {title:"Grill 150 x 600 mm", price:"Contact for quote", desc:"Supply or return aluminum grill powder-coated to spec.", img:"https://images.unsplash.com/photo-1457084882212-4a6bb2240588?w=800&h=600&fit=crop"}
+  ] %}
+  <section class="space-y-6">
+    <div class="space-y-2">
+      <p class="uppercase tracking-[0.3em] text-xs text-blue-500">Installation Parts</p>
+      <h2 class="text-3xl font-semibold text-slate-900">Accessories, Copper, Insulation & Controls</h2>
+      <p class="text-gray-600">Each consumable below corresponds to the provided spreadsheet so site engineers can pick only what is needed.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {% for item in components %}
+      {% set slug = item.title | slug %}
+      <div id="item-{{ slug }}" class="bg-white rounded-2xl border border-gray-200 shadow p-5 space-y-3" data-search-entry data-search-title="{{ item.title }}" data-search-category="Air Conditioning Accessories" data-search-description="{{ item.desc }} {{ item.price }}" data-search-url="{{ page.url }}#item-{{ slug }}">
+        <div>
+          <p class="text-xl font-semibold text-slate-900">{{ item.title }}</p>
+          {% if item.model %}
+          <p class="text-xs uppercase tracking-[0.3em] text-gray-500">Model: {{ item.model }}</p>
+          {% endif %}
+        </div>
+        <p class="text-gray-600">{{ item.desc }}</p>
+        <p class="text-lg font-bold text-blue-600">{{ item.price }}</p>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:border-gray-400 hover:-translate-y-0.5 transition"
+          data-cart-toggle
+          data-cart-id="{{ page.url }}-component-{{ slug }}"
+          data-cart-title="{{ item.title }}"
+          data-cart-price="{{ item.price }}"
+          data-cart-desc="{{ item.desc }}"
+          data-cart-img="{{ item.img }}"
+          data-cart-category="Air Conditioning Accessories"
+          data-cart-url="{{ page.url }}#item-{{ slug }}"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 4.05A1 1 0 0 0 6.6 18h11.8M7 13L5 5m2 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 4.001A2 2 0 0 0 17 18z"></path>
+          </svg>
+          <span data-cart-label>Add to WhatsApp cart</span>
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% set reference_rows = [
+    {model:"Bosch Wall Mount Split", capacity:"12,000 BTU", warranty:"1 year", price:"RWF 680,000"},
+    {model:"Bosch Wall Mount Split", capacity:"18,000 BTU", warranty:"1 year", price:"RWF 950,000"},
+    {model:"Bosch Wall Mount Split", capacity:"24,000 BTU", warranty:"1 year", price:"RWF 1,400,000"},
+    {model:"LG Cassette Units", capacity:"18,000 BTU", warranty:"1 year", price:"RWF 2,100,000"},
+    {model:"LG Cassette Units", capacity:"24,000 BTU", warranty:"1 year", price:"RWF 2,400,000"},
+    {model:"LG Cassette Units", capacity:"36,000 BTU", warranty:"1 year", price:"RWF 3,400,000"},
+    {model:"LG Cassette Units", capacity:"48,000 BTU", warranty:"1 year", price:"RWF 4,500,000"},
+    {model:"VRF Units", capacity:"Custom tonnage", warranty:"1 year", price:"Depends on design"},
+    {model:"Floor Standing", capacity:"60,000 BTU", warranty:"1 year", price:"RWF 2,600,000"},
+    {model:"Ductable Air Conditioner", capacity:"18,000 BTU", warranty:"1 year", price:"RWF 3,500,000"}
+  ] %}
+  <section class="bg-white rounded-2xl border border-gray-200 shadow p-6 space-y-4">
+    <div>
+      <p class="uppercase tracking-[0.3em] text-xs text-blue-500">Quick Reference</p>
+      <h3 class="text-2xl font-semibold text-slate-900">Warranty Snapshot (per provided sheet)</h3>
+      <p class="text-gray-600">This table replicates the warranty/price pairs from your scanned attachment for fast quoting.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50 text-xs font-semibold uppercase tracking-wider text-gray-500">
+          <tr>
+            <th class="px-4 py-2 text-left">Model</th>
+            <th class="px-4 py-2 text-left">Capacity</th>
+            <th class="px-4 py-2 text-left">Warranty</th>
+            <th class="px-4 py-2 text-left">Price</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 text-sm text-gray-700">
+          {% for row in reference_rows %}
+          <tr>
+            <td class="px-4 py-2">{{ row.model }}</td>
+            <td class="px-4 py-2">{{ row.capacity }}</td>
+            <td class="px-4 py-2">{{ row.warranty }}</td>
+            <td class="px-4 py-2 font-semibold text-gray-900">{{ row.price }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>

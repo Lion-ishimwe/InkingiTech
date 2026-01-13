@@ -1,0 +1,115 @@
+---
+layout: base.njk
+title: About Us
+---
+
+<section class="px-4 sm:px-6 lg:px-8 py-20">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <p class="ink-chip">A&amp;B Innovation origins</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Engineering spaces that feel secure, connected, and alive.</h1>
+      <p class="text-gray-300 text-lg">Born in Kigali with one belief: physical environments should feel as intentional as the digital products they host. From private villas to national banks, we design experiences that inspire trust.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gallery/" class="ink-action ink-action--primary">See our work</a>
+        <a href="/contact/" class="ink-action ink-action--secondary">Meet the team</a>
+      </div>
+    </div>
+    <div class="ink-card overflow-hidden rounded-3xl">
+      <img src="/assets/product/about/about.png" alt="A&amp;B Innovation team" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <p class="ink-chip">Our manifesto</p>
+      <h2 class="text-3xl font-bold">Technology should feel human.</h2>
+      <p class="text-gray-400">We merge craftsmanship with software sensibilities. Rack layouts mimic art galleries, user flows drive camera placement, and clients receive playbooks for every install.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="ink-card ink-card--soft p-4">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">DNA</p>
+          <p class="text-lg font-semibold">Design · Safety · Continuity</p>
+        </div>
+        <div class="ink-card ink-card--soft p-4">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Region</p>
+          <p class="text-lg font-semibold">East & Central Africa</p>
+        </div>
+      </div>
+    </div>
+    <div class="ink-shell space-y-4">
+      <p class="text-sm text-gray-400">“Our goal is not to simply install devices. We choreograph how people experience a space, from the entrance scent to the command dashboards.”</p>
+      <p class="text-gray-200 font-semibold">— A&amp;B Innovation leadership</p>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16 bg-black bg-opacity-30">
+  <div class="max-w-6xl mx-auto space-y-10">
+    <div class="text-center space-y-3 max-w-3xl mx-auto">
+      <p class="ink-chip">Leadership</p>
+      <h2 class="text-3xl font-bold">A multidisciplinary team built for bold deployments.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {% set leaders = [
+        {name: "Aimee Uwase", role: "Founder & CEO", desc: "Architecting the vision across engineering, design, and client success.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop"},
+        {name: "Samuel Karemera", role: "Chief Technology Officer", desc: "Leads R&D for CCTV analytics, networking, and integrated platforms.", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop"},
+        {name: "Diane Mugabo", role: "Director of Operations", desc: "Runs deployment squads, quality assurance, and aftercare programs.", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=600&h=600&fit=crop"}
+      ] %}
+      {% for leader in leaders %}
+      <div class="ink-card overflow-hidden flex flex-col" >
+        <img src="{{ leader.image }}" alt="{{ leader.name }}" class="h-64 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <h3 class="text-2xl font-semibold">{{ leader.name }}</h3>
+          <p class="text-blue-400 font-semibold text-sm">{{ leader.role }}</p>
+          <p class="text-gray-400 text-sm flex-1">{{ leader.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto space-y-10">
+    <div class="text-center space-y-3">
+      <p class="ink-chip">Culture</p>
+      <h2 class="text-3xl font-bold">Principles guiding every install.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      {% set culture = [
+        {title:"Design clarity in action", subtitle:"Look inside", copy:"Watch how we model wiring diagrams, 3D visualizations, and handoff kits so future crews inherit excellence.", url:"https://www.youtube.com/embed/qkJGEc0Y868"},
+        {title:"Transparency & lifetime partnership", subtitle:"Behind the scenes", copy:"Daily build logs, remote monitoring, and response teams keep clients updated and confident.", url:"https://www.youtube.com/embed/p4n8y9Wk3dE"}
+      ] %}
+      {% for item in culture %}
+      <div class="ink-card overflow-hidden">
+        <div class="relative pb-[56.25%]">
+          <iframe class="absolute inset-0 w-full h-full" src="{{ item.url }}" title="{{ item.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-6 space-y-2">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500">{{ item.subtitle }}</p>
+          <h3 class="text-2xl font-semibold">{{ item.title }}</h3>
+          <p class="text-gray-400 text-sm">{{ item.copy }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-8 pb-20">
+  <div class="ink-shell grid md:grid-cols-2 gap-10 items-center">
+    <div class="space-y-4">
+      <p class="ink-chip">Join the movement</p>
+      <h2 class="text-3xl font-bold">Want to build unforgettable environments?</h2>
+      <p class="text-gray-300">Create places people remember long after they leave.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="ink-action ink-action--primary">Start a conversation</a>
+        <a href="/products/" class="ink-action ink-action--secondary">Explore our toolkit</a>
+      </div>
+    </div>
+    <div class="ink-card overflow-hidden rounded-3xl">
+      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&h=900&fit=crop" alt="A&amp;B Innovation culture" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
